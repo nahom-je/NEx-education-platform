@@ -150,14 +150,9 @@ export default function FilePreview({ fileUrl, title }) {
   }
 
   // ─────────────────────────────────────────────────────────────────────────
-  // 2. PDF VIEWER (WORKSHEETS, EXAMS, MODULES, NOTES)
+  // 2. PDF VIEWER (STANDARD PDF FOR ALL)
   // ─────────────────────────────────────────────────────────────────────────
   if (isPdf) {
-    // Determine the optimal source: On mobile, Google viewer enables continuous multi-page scrolling!
-    const pdfSrc = viewEngine === 'google' 
-      ? googleEmbedUrl 
-      : `${fileUrl}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`
-
     return (
       <>
         <div 
@@ -170,21 +165,10 @@ export default function FilePreview({ fileUrl, title }) {
           <div className="bg-[#1F2937] text-white px-4 py-3 flex items-center justify-between gap-3 shrink-0">
             <div className="flex items-center gap-2.5 text-sm font-medium truncate min-w-0">
               <FileText size={18} className="text-[#0D9488] shrink-0" />
-              <span className="truncate">{title || 'PDF Worksheet'}</span>
+              <span className="truncate">{title || 'PDF Document'}</span>
             </div>
 
             <div className="flex items-center gap-2 shrink-0">
-              {/* Full multi-page mobile scroll toggle */}
-              <button
-                type="button"
-                onClick={() => setViewEngine(prev => prev === 'google' ? 'native' : 'google')}
-                className="text-[11px] text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 px-2.5 py-1 rounded-lg border border-gray-700 transition inline-flex items-center gap-1"
-                title="Toggle continuous all-pages scroll mode"
-              >
-                <RefreshCw size={11} />
-                <span>{viewEngine === 'google' ? 'Standard PDF' : 'Continuous Scroll'}</span>
-              </button>
-
               <div className="flex items-center gap-1.5 text-[11px] text-teal-400 bg-teal-900/40 px-2.5 py-1 rounded-lg border border-teal-800/50">
                 <Shield size={12} />
                 <span className="font-semibold">Protected View</span>
@@ -202,9 +186,9 @@ export default function FilePreview({ fileUrl, title }) {
             </div>
           </div>
 
-          {/* Embedded PDF iframe with watermark overlay */}
+          {/* Embedded Standard PDF iframe with watermark overlay */}
           <div className={`w-full bg-gray-100 relative ${
-            isFullscreen ? 'flex-1 h-[calc(100vh-50px)]' : 'h-[680px] sm:h-[820px]'
+            isFullscreen ? 'flex-1 h-[calc(100vh-50px)]' : 'h-[700px] sm:h-[850px]'
           }`}>
             {/* Transparent dynamic watermark stamp across the viewer */}
             <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-around items-center opacity-[0.06] rotate-[-25deg] select-none text-[#1F2937] font-black text-xs sm:text-base tracking-widest uppercase">
@@ -215,7 +199,7 @@ export default function FilePreview({ fileUrl, title }) {
             </div>
 
             <iframe
-              src={pdfSrc}
+              src={`${fileUrl}#toolbar=0&navpanes=0`}
               title={title || 'PDF Preview'}
               className="w-full h-full border-none"
               onError={() => setLoadError(true)}
@@ -224,8 +208,8 @@ export default function FilePreview({ fileUrl, title }) {
 
           {/* Footer note */}
           <div className="bg-gray-50 border-t border-gray-200 px-4 py-2 flex items-center justify-between text-[11px] text-gray-500 shrink-0">
-            <span>Scroll vertically through all worksheet pages · Protected read-only</span>
-            <span>Jimma University Platform</span>
+            <span>Standard PDF Reader · Read-only inside NEx Platform</span>
+            <span>Jimma University</span>
           </div>
         </div>
       </>
