@@ -1,16 +1,46 @@
-import { useState } from 'react'
-import { FileText, AlertCircle, Eye, Shield } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { 
+  FileText, AlertCircle, Eye, Shield, Maximize2, Minimize2, 
+  Presentation, FileSpreadsheet, RefreshCw, ZoomIn, ZoomOut, Check
+} from 'lucide-react'
 import { useAuthStore } from '../contexts/useAuthStore'
 
 export default function FilePreview({ fileUrl, title }) {
   const [loadError, setLoadError] = useState(false)
+  const [isFullscreen, setIsFullscreen] = useState(false)
+  const [viewEngine, setViewEngine] = useState('office') // 'office' | 'google' | 'native'
+  const [imageZoom, setImageZoom] = useState(1)
   const { user } = useAuthStore()
+
+  // Handle escape key to exit fullscreen
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isFullscreen) {
+        setIsFullscreen(false)
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isFullscreen])
+
+  // Prevent background body scroll when in fullscreen mode
+  useEffect(() => {
+    if (isFullscreen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isFullscreen])
 
   if (!fileUrl) {
     return (
       <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 text-center text-gray-500">
         <AlertCircle className="mx-auto text-amber-500 mb-2" size={32} />
-        <p>No file available for preview.</p>
+        <p className="font-semibold text-gray-700">No document available for preview.</p>
+        <p className="text-xs text-gray-400 mt-1">This material may still be processing.</p>
       </div>
     )
   }
@@ -18,100 +48,298 @@ export default function FilePreview({ fileUrl, title }) {
   const cleanUrl = fileUrl.split('?')[0].toLowerCase()
   const isPdf = cleanUrl.endsWith('.pdf')
   const isImage = cleanUrl.endsWith('.png') || cleanUrl.endsWith('.jpg') || cleanUrl.endsWith('.jpeg') || cleanUrl.endsWith('.webp') || cleanUrl.endsWith('.svg')
+  const isPresentation = cleanUrl.endsWith('.pptx') || cleanUrl.endsWith('.ppt')
+  const isWordDoc = cleanUrl.endsWith('.docx') || cleanUrl.endsWith('.doc') || cleanUrl.endsWith('.txt')
+  const isSpreadsheet = cleanUrl.endsWith('.xlsx') || cleanUrl.endsWith('.xls') || cleanUrl.endsWith('.csv')
+  const isOfficeDoc = isPresentation || isWordDoc || isSpreadsheet
 
   // Dynamic watermark text with student identity
-  const watermarkText = `${user?.name || 'Jimma Student'} • ${user?.email || 'NEx Platform'} • ${new Date().toLocaleDateString()}`
+  const watermarkText = `${user?.name || 'Jimma Student'} • ${user?.phone || user?.email || 'NEx Platform'} • ${new Date().toLocaleDateString()}`
 
   // Common wrapper styling that deters right-click and selection
   const handleContextMenu = (e) => {
     e.preventDefault()
   }
 
-  // 1. PDF Viewer with toolbar disabled and dynamic watermark overlay
-  if (isPdf) {
+  // Pre-calculate embed URLs
+  const officeEmbedUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(fileUrl)}`
+  const googleEmbedUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(fileUrl)}&embedded=true`
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // 1. PRESENTATIONS (PPT / PPTX) AND WORD DOCUMENTS (DOCX / DOC)
+  // ─────────────────────────────────────────────────────────────────────────
+  if (isOfficeDoc) {
+    const currentEmbed = viewEngine === 'google' ? googleEmbedUrl : officeEmbedUrl
+
     return (
-      <div 
-        className="bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden shadow-sm flex flex-col select-none"
-        onContextMenu={handleContextMenu}
-      >
-        <div className="bg-[#1F2937] text-white px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-sm font-medium truncate">
-            <FileText size={18} className="text-[#0D9488] shrink-0" />
-            <span className="truncate">{title || 'PDF Document'}</span>
+      <>
+        <div 
+          className={`bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden shadow-sm flex flex-col select-none ${
+            isFullscreen ? 'fixed inset-0 z-50 rounded-none h-screen' : ''
+          }`}
+          onContextMenu={handleContextMenu}
+        >
+          {/* Header */}
+          <div className="bg-[#1F2937] text-white px-4 py-3 flex items-center justify-between gap-3 shrink-0">
+            <div className="flex items-center gap-2.5 text-sm font-medium truncate min-w-0">
+              {isPresentation ? (
+                <Presentation size={18} className="text-[#0D9488] shrink-0" />
+              ) : (
+                <FileText size={18} className="text-[#0D9488] shrink-0" />
+              )}
+              <span className="truncate">{title || (isPresentation ? 'Presentation' : 'Document')}</span>
+            </div>
+
+            <div className="flex items-center gap-2 shrink-0">
+              {/* Switch viewer if one engine is slow */}
+              <button
+                type="button"
+                onClick={() => setViewEngine(prev => prev === 'office' ? 'google' : 'office')}
+                className="text-[11px] text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 px-2.5 py-1 rounded-lg border border-gray-700 transition hidden sm:inline-flex items-center gap-1"
+                title="Switch between Microsoft Office & Google Document viewers"
+              >
+                <RefreshCw size={11} />
+                <span>{viewEngine === 'office' ? 'Google Engine' : 'Office Engine'}</span>
+              </button>
+
+              <div className="flex items-center gap-1.5 text-[11px] text-teal-400 bg-teal-900/40 px-2.5 py-1 rounded-lg border border-teal-800/50">
+                <Shield size={12} />
+                <span className="font-semibold">Protected View</span>
+              </div>
+
+              {/* Fullscreen Expand Button */}
+              <button
+                type="button"
+                onClick={() => setIsFullscreen(!isFullscreen)}
+                className="p-1.5 text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-lg transition"
+                title={isFullscreen ? 'Exit Fullscreen' : 'Expand to Fullscreen'}
+              >
+                {isFullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+              </button>
+            </div>
           </div>
-          <div className="flex items-center gap-1.5 text-[11px] text-teal-400 bg-teal-900/40 px-2.5 py-1 rounded-lg border border-teal-800/50">
-            <Shield size={12} />
-            <span>Protected Read-Only</span>
+
+          {/* Document Frame */}
+          <div className={`w-full bg-gray-100 relative ${
+            isFullscreen ? 'flex-1 h-[calc(100vh-50px)]' : 'h-[650px] sm:h-[800px]'
+          }`}>
+            {/* Watermark overlay */}
+            <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-around items-center opacity-[0.06] rotate-[-25deg] select-none text-[#1F2937] font-black text-xs sm:text-base tracking-widest uppercase">
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+            </div>
+
+            <iframe
+              src={currentEmbed}
+              title={title || 'Document Preview'}
+              className="w-full h-full border-none"
+              onError={() => setLoadError(true)}
+            />
+          </div>
+
+          {/* Footer bar */}
+          <div className="bg-gray-50 border-t border-gray-200 px-4 py-2 flex items-center justify-between text-[11px] text-gray-500 shrink-0">
+            <span>Interactive {isPresentation ? 'Slides' : 'Document'} · Scroll & flip through pages</span>
+            <span>Protected View (Read-Only)</span>
           </div>
         </div>
-
-        {/* Embedded PDF iframe with watermark overlay */}
-        <div className="w-full h-[520px] sm:h-[650px] bg-gray-100 relative overflow-hidden">
-          {/* Transparent dynamic watermark stamp across the viewer */}
-          <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-around items-center opacity-[0.08] rotate-[-25deg] select-none text-[#1F2937] font-black text-sm sm:text-base tracking-widest uppercase">
-            <div>{watermarkText}</div>
-            <div>{watermarkText}</div>
-            <div>{watermarkText}</div>
-            <div>{watermarkText}</div>
-          </div>
-
-          <iframe
-            src={`${fileUrl}#toolbar=0&navpanes=0`}
-            title={title || 'PDF Preview'}
-            className="w-full h-full border-none"
-            onError={() => setLoadError(true)}
-          />
-        </div>
-      </div>
+      </>
     )
   }
 
-  // 2. Image Viewer
+  // ─────────────────────────────────────────────────────────────────────────
+  // 2. PDF VIEWER (WORKSHEETS, EXAMS, MODULES, NOTES)
+  // ─────────────────────────────────────────────────────────────────────────
+  if (isPdf) {
+    // Determine the optimal source: On mobile, Google viewer enables continuous multi-page scrolling!
+    const pdfSrc = viewEngine === 'google' 
+      ? googleEmbedUrl 
+      : `${fileUrl}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`
+
+    return (
+      <>
+        <div 
+          className={`bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden shadow-sm flex flex-col select-none ${
+            isFullscreen ? 'fixed inset-0 z-50 rounded-none h-screen' : ''
+          }`}
+          onContextMenu={handleContextMenu}
+        >
+          {/* Header */}
+          <div className="bg-[#1F2937] text-white px-4 py-3 flex items-center justify-between gap-3 shrink-0">
+            <div className="flex items-center gap-2.5 text-sm font-medium truncate min-w-0">
+              <FileText size={18} className="text-[#0D9488] shrink-0" />
+              <span className="truncate">{title || 'PDF Worksheet'}</span>
+            </div>
+
+            <div className="flex items-center gap-2 shrink-0">
+              {/* Full multi-page mobile scroll toggle */}
+              <button
+                type="button"
+                onClick={() => setViewEngine(prev => prev === 'google' ? 'native' : 'google')}
+                className="text-[11px] text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 px-2.5 py-1 rounded-lg border border-gray-700 transition inline-flex items-center gap-1"
+                title="Toggle continuous all-pages scroll mode"
+              >
+                <RefreshCw size={11} />
+                <span>{viewEngine === 'google' ? 'Standard PDF' : 'Continuous Scroll'}</span>
+              </button>
+
+              <div className="flex items-center gap-1.5 text-[11px] text-teal-400 bg-teal-900/40 px-2.5 py-1 rounded-lg border border-teal-800/50">
+                <Shield size={12} />
+                <span className="font-semibold">Protected View</span>
+              </div>
+
+              {/* Fullscreen Expand Button */}
+              <button
+                type="button"
+                onClick={() => setIsFullscreen(!isFullscreen)}
+                className="p-1.5 text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-lg transition"
+                title={isFullscreen ? 'Exit Fullscreen' : 'Expand to Fullscreen'}
+              >
+                {isFullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+              </button>
+            </div>
+          </div>
+
+          {/* Embedded PDF iframe with watermark overlay */}
+          <div className={`w-full bg-gray-100 relative ${
+            isFullscreen ? 'flex-1 h-[calc(100vh-50px)]' : 'h-[680px] sm:h-[820px]'
+          }`}>
+            {/* Transparent dynamic watermark stamp across the viewer */}
+            <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-around items-center opacity-[0.06] rotate-[-25deg] select-none text-[#1F2937] font-black text-xs sm:text-base tracking-widest uppercase">
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+            </div>
+
+            <iframe
+              src={pdfSrc}
+              title={title || 'PDF Preview'}
+              className="w-full h-full border-none"
+              onError={() => setLoadError(true)}
+            />
+          </div>
+
+          {/* Footer note */}
+          <div className="bg-gray-50 border-t border-gray-200 px-4 py-2 flex items-center justify-between text-[11px] text-gray-500 shrink-0">
+            <span>Scroll vertically through all worksheet pages · Protected read-only</span>
+            <span>Jimma University Platform</span>
+          </div>
+        </div>
+      </>
+    )
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // 3. IMAGE VIEWER (PHOTO EXAMS, DIAGRAMS, SCANNED SHEETS)
+  // ─────────────────────────────────────────────────────────────────────────
   if (isImage) {
     return (
-      <div 
-        className="bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden shadow-sm flex flex-col select-none"
-        onContextMenu={handleContextMenu}
-      >
-        <div className="bg-[#1F2937] text-white px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-sm font-medium truncate">
-            <Eye size={18} className="text-[#0D9488] shrink-0" />
-            <span className="truncate">{title || 'Image Preview'}</span>
+      <>
+        <div 
+          className={`bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden shadow-sm flex flex-col select-none ${
+            isFullscreen ? 'fixed inset-0 z-50 rounded-none h-screen' : ''
+          }`}
+          onContextMenu={handleContextMenu}
+        >
+          {/* Header */}
+          <div className="bg-[#1F2937] text-white px-4 py-3 flex items-center justify-between gap-3 shrink-0">
+            <div className="flex items-center gap-2 text-sm font-medium truncate min-w-0">
+              <Eye size={18} className="text-[#0D9488] shrink-0" />
+              <span className="truncate">{title || 'Exam Image'}</span>
+            </div>
+
+            <div className="flex items-center gap-2 shrink-0">
+              {/* Zoom Controls */}
+              <button
+                type="button"
+                onClick={() => setImageZoom(z => Math.max(0.5, z - 0.25))}
+                className="p-1 text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-lg transition"
+                title="Zoom Out"
+              >
+                <ZoomOut size={15} />
+              </button>
+              <span className="text-xs text-gray-300 min-w-9 text-center font-mono">
+                {Math.round(imageZoom * 100)}%
+              </span>
+              <button
+                type="button"
+                onClick={() => setImageZoom(z => Math.min(3, z + 0.25))}
+                className="p-1 text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-lg transition"
+                title="Zoom In"
+              >
+                <ZoomIn size={15} />
+              </button>
+
+              <div className="flex items-center gap-1.5 text-[11px] text-teal-400 bg-teal-900/40 px-2.5 py-1 rounded-lg border border-teal-800/50">
+                <Shield size={12} />
+                <span className="font-semibold">Protected View</span>
+              </div>
+
+              {/* Fullscreen Button */}
+              <button
+                type="button"
+                onClick={() => setIsFullscreen(!isFullscreen)}
+                className="p-1.5 text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-lg transition"
+                title={isFullscreen ? 'Exit Fullscreen' : 'Expand to Fullscreen'}
+              >
+                {isFullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+              </button>
+            </div>
           </div>
-          <div className="flex items-center gap-1.5 text-[11px] text-teal-400 bg-teal-900/40 px-2.5 py-1 rounded-lg border border-teal-800/50">
-            <Shield size={12} />
-            <span>Protected View</span>
+
+          {/* Scrollable Image viewport */}
+          <div className={`p-4 bg-gray-50 flex items-center justify-center overflow-auto relative ${
+            isFullscreen ? 'flex-1 h-[calc(100vh-50px)]' : 'min-h-[400px] max-h-[82vh]'
+          }`}>
+            <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-around items-center opacity-[0.07] rotate-[-25deg] select-none text-[#1F2937] font-black text-xs sm:text-sm tracking-widest uppercase">
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+            </div>
+            <img
+              src={fileUrl}
+              alt={title || 'Resource'}
+              style={{ transform: `scale(${imageZoom})`, transformOrigin: 'center center' }}
+              className="w-auto max-w-full rounded-lg shadow-sm pointer-events-none transition-transform duration-150"
+            />
           </div>
         </div>
-        <div className="p-4 bg-gray-50 flex items-center justify-center min-h-[250px] relative">
-          <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-around items-center opacity-[0.08] rotate-[-25deg] select-none text-[#1F2937] font-black text-xs sm:text-sm tracking-widest uppercase">
-            <div>{watermarkText}</div>
-            <div>{watermarkText}</div>
-          </div>
-          <img
-            src={fileUrl}
-            alt={title || 'Resource image'}
-            className="w-auto max-w-full max-h-[75vh] object-contain rounded-lg shadow-sm pointer-events-none"
-          />
-        </div>
-      </div>
+      </>
     )
   }
 
-  // 3. Fallback for non-previewable formats
-  const extMatch = cleanUrl.match(/\.([a-z0-9]+)$/)
-  const ext = extMatch ? extMatch[1].toUpperCase() : 'FILE'
-
+  // ─────────────────────────────────────────────────────────────────────────
+  // 4. FALLBACK VIEWER (Try Google Docs Viewer for other unknown document extensions)
+  // ─────────────────────────────────────────────────────────────────────────
   return (
-    <div className="bg-white border border-[#E5E7EB] rounded-2xl p-8 sm:p-12 text-center space-y-4 shadow-sm select-none">
-      <div className="w-16 h-16 bg-teal-50 text-[#0D9488] rounded-2xl flex items-center justify-center mx-auto">
-        <FileText size={32} />
+    <div 
+      className={`bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden shadow-sm flex flex-col select-none ${
+        isFullscreen ? 'fixed inset-0 z-50 rounded-none h-screen' : ''
+      }`}
+      onContextMenu={handleContextMenu}
+    >
+      <div className="bg-[#1F2937] text-white px-4 py-3 flex items-center justify-between">
+        <div className="flex items-center gap-2 text-sm font-medium truncate">
+          <FileText size={18} className="text-[#0D9488] shrink-0" />
+          <span className="truncate">{title}</span>
+        </div>
+        <div className="flex items-center gap-1.5 text-[11px] text-teal-400 bg-teal-900/40 px-2.5 py-1 rounded-lg border border-teal-800/50">
+          <Shield size={12} />
+          <span>Protected View</span>
+        </div>
       </div>
-      <div>
-        <h3 className="text-lg font-bold text-[#1F2937] mb-1">{title}</h3>
-        <p className="text-sm text-[#6B7280] max-w-md mx-auto">
-          Preview is only available for PDF and image formats. Direct downloads are disabled on NEx to protect instructor and student course materials.
-        </p>
+
+      <div className={`w-full bg-gray-100 relative ${
+        isFullscreen ? 'flex-1 h-[calc(100vh-50px)]' : 'h-[650px] sm:h-[800px]'
+      }`}>
+        <iframe
+          src={googleEmbedUrl}
+          title={title}
+          className="w-full h-full border-none"
+        />
       </div>
     </div>
   )
