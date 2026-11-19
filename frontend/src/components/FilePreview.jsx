@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import { 
   FileText, AlertCircle, Eye, Shield, Maximize2, Minimize2, 
-  Presentation, FileSpreadsheet, RefreshCw, ZoomIn, ZoomOut, Check
+  Presentation, FileSpreadsheet, ZoomIn, ZoomOut
 } from 'lucide-react'
 import { useAuthStore } from '../contexts/useAuthStore'
 
 export default function FilePreview({ fileUrl, title }) {
   const [loadError, setLoadError] = useState(false)
   const [isFullscreen, setIsFullscreen] = useState(false)
-  const [viewEngine, setViewEngine] = useState('office') // 'office' | 'google' | 'native'
   const [imageZoom, setImageZoom] = useState(1)
   const { user } = useAuthStore()
 
@@ -69,7 +68,7 @@ export default function FilePreview({ fileUrl, title }) {
   // 1. PRESENTATIONS (PPT / PPTX) AND WORD DOCUMENTS (DOCX / DOC)
   // ─────────────────────────────────────────────────────────────────────────
   if (isOfficeDoc) {
-    const currentEmbed = viewEngine === 'google' ? googleEmbedUrl : officeEmbedUrl
+    const currentEmbed = officeEmbedUrl
 
     return (
       <>
@@ -91,17 +90,6 @@ export default function FilePreview({ fileUrl, title }) {
             </div>
 
             <div className="flex items-center gap-2 shrink-0">
-              {/* Switch viewer if one engine is slow */}
-              <button
-                type="button"
-                onClick={() => setViewEngine(prev => prev === 'office' ? 'google' : 'office')}
-                className="text-[11px] text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 px-2.5 py-1 rounded-lg border border-gray-700 transition hidden sm:inline-flex items-center gap-1"
-                title="Switch between Microsoft Office & Google Document viewers"
-              >
-                <RefreshCw size={11} />
-                <span>{viewEngine === 'office' ? 'Google Engine' : 'Office Engine'}</span>
-              </button>
-
               <div className="flex items-center gap-1.5 text-[11px] text-teal-400 bg-teal-900/40 px-2.5 py-1 rounded-lg border border-teal-800/50">
                 <Shield size={12} />
                 <span className="font-semibold">Protected View</span>
