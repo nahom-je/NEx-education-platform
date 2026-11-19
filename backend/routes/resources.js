@@ -145,7 +145,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // @route   POST api/resources
-// @desc    Upload a new resource with a file
+// @desc    Upload a new resource with a file (stored in Supabase Storage)
 // @access  Private
 router.post('/', authMiddleware, upload.single('file'), async (req, res) => {
   try {
@@ -159,7 +159,7 @@ router.post('/', authMiddleware, upload.single('file'), async (req, res) => {
     const semester = req.body.semester || null;
     const course_id = req.body.course_id || req.body.course || null;
     const description = req.body.description || '';
-    
+
     // Parse tags
     let tags = [];
     if (req.body.tags) {
@@ -168,7 +168,30 @@ router.post('/', authMiddleware, upload.single('file'), async (req, res) => {
         : req.body.tags;
     }
 
-    const fileUrl = `http://localhost:5000/uploads/${req.file.filename.replace(/\\/g, '/')}`;
+    // Upload file buffer to Supabase Storage
+    const path = require('path');
+    const ext = path.extname(req.file.originalname) || '';
+    const uniqueName = `${Date.now()}-${Math.round(Math.random() * 1e9)}${ext}`;
+    const storagePath = `resources/${uniqueName}`;
+
+    const { error: uploadError } = await supabase.storage
+      .from('nex-files')
+      .upload(storagePath, req.file.buffer, {
+        contentType: req.file.mimetype,
+        upsert: false
+      });
+
+    if (uploadError) {
+      console.error('Supabase storage upload error:', uploadError.message);
+      return res.status(500).json({ message: 'File upload to storage failed: ' + uploadError.message });
+    }
+
+    // Get public URL
+    const { data: publicUrlData } = supabase.storage
+      .from('nex-files')
+      .getPublicUrl(storagePath);
+
+    const fileUrl = publicUrlData?.publicUrl || '';
     const fileSize = (req.file.size / 1024 / 1024).toFixed(2) + ' MB';
 
     const { data: resource, error } = await supabase
