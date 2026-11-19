@@ -232,7 +232,7 @@ export default function Pricing() {
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
               Pay just <span className="font-extrabold text-white bg-teal-500/30 px-2 py-0.5 rounded-md border border-teal-400/40">70 ETB</span> for the entire{' '}
-              <strong>Freshman First Semester</strong> package — unlocking all past exams, lecture notes, and worksheets across all 7 courses.
+              <strong>Freshman First Semester</strong> package — unlocking all past exams, lecture notes, and worksheets across all 6 courses.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-slate-300">
@@ -305,7 +305,7 @@ export default function Pricing() {
                 <h3 className="font-bold text-sm text-slate-900">Select Package (70 ETB)</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Choose your semester package (<strong>Freshman Natural Science — Semester 1</strong>). 70 ETB unlocks all 7 core subjects.
+                Choose your semester package (<strong>Freshman Natural Science — Semester 1</strong>). 70 ETB unlocks all 6 core subjects.
               </p>
             </div>
 
@@ -361,7 +361,7 @@ export default function Pricing() {
             <div>
               <h3 className="font-extrabold text-sm sm:text-base text-white">Current Active Enrollment: Freshman Natural Science</h3>
               <p className="text-xs text-teal-200/90 mt-0.5">
-                70 ETB unlocks all 7 core courses with 208+ verified materials. Other departments stay locked while our tutors compile and verify materials.
+                70 ETB unlocks all 6 core courses with 208+ verified materials. Other departments stay locked while our tutors compile and verify materials.
               </p>
             </div>
           </div>
@@ -529,7 +529,7 @@ export default function Pricing() {
             {[
               {
                 q: 'Does 70 ETB cover the entire semester or just one course?',
-                a: '70 ETB covers the ENTIRE semester package! For example, purchasing Freshman Natural Science Semester 1 unlocks all 7 courses (Physics, Math, English, Geography, Logic, Psychology, Physical Fitness) at once.'
+                a: '70 ETB covers the ENTIRE semester package! For example, purchasing Freshman Natural Science Semester 1 unlocks all 6 courses (Physics, Math, English, Geography, Logic, Psychology) at once.'
               },
               {
                 q: 'How fast is my payment verified?',
