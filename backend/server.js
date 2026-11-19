@@ -77,10 +77,14 @@ app.use('/api/settings',       settingsRoutes);
 app.use('/api/payments',       paymentsRoutes);
 app.use('/api/admin/payments', adminPaymentsRoutes);
 
-// Database Connection (MongoDB kept for legacy compatibility)
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('✅ Connected to MongoDB'))
-  .catch((err) => console.error('❌ MongoDB connection error:', err));
+// Database Connection (Supabase is the primary production DB; MongoDB is optional legacy)
+if (process.env.MONGODB_URI && !process.env.MONGODB_URI.includes('localhost')) {
+  mongoose.connect(process.env.MONGODB_URI)
+    .then(() => console.log('✅ Connected to MongoDB'))
+    .catch((err) => console.warn('⚠️ MongoDB connection skipped (Supabase is active):', err.message));
+} else {
+  console.log('⚡ Primary database: Supabase (PostgreSQL) is active. MongoDB not required.');
+}
 
 // Basic Route for testing
 app.get('/', (req, res) => {
