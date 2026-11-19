@@ -549,8 +549,8 @@ export default function PaymentPage() {
 
       {/* ── Confirm Modal ── */}
       {showConfirmModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-end sm:items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl p-6 max-w-sm w-full space-y-5 shadow-2xl">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-[100] p-4 pb-20 sm:pb-4">
+          <div className="bg-white rounded-3xl p-6 max-w-sm w-full space-y-5 shadow-2xl animate-in zoom-in-95 duration-150">
             <div className="flex items-start justify-between">
               <h3 className="font-bold text-[#1F2937] text-base">Confirm Submission</h3>
               <button onClick={() => setShowConfirmModal(false)}>

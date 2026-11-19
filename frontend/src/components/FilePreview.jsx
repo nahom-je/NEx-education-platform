@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { 
   FileText, AlertCircle, Eye, Shield, Maximize2, Minimize2, 
-  Presentation, FileSpreadsheet, ZoomIn, ZoomOut
+  Presentation, FileSpreadsheet, ZoomIn, ZoomOut, RefreshCw
 } from 'lucide-react'
 import { useAuthStore } from '../contexts/useAuthStore'
 
@@ -10,6 +10,13 @@ export default function FilePreview({ fileUrl, title }) {
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [imageZoom, setImageZoom] = useState(1)
   const { user } = useAuthStore()
+
+  // On mobile (iOS Safari / Android), raw iframe only renders page 1.
+  // Google Docs Viewer enables continuous multi-page scrolling through ALL pages.
+  const isMobileDevice = typeof window !== 'undefined' && (
+    window.innerWidth < 768 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  )
+  const [pdfEngine, setPdfEngine] = useState(isMobileDevice ? 'google' : 'native')
 
   // Handle escape key to exit fullscreen
   useEffect(() => {
@@ -138,9 +145,13 @@ export default function FilePreview({ fileUrl, title }) {
   }
 
   // ─────────────────────────────────────────────────────────────────────────
-  // 2. PDF VIEWER (STANDARD PDF FOR ALL)
+  // 2. PDF VIEWER (MULTI-PAGE SCROLL ON MOBILE, STANDARD ON DESKTOP)
   // ─────────────────────────────────────────────────────────────────────────
   if (isPdf) {
+    const pdfSrc = pdfEngine === 'google' 
+      ? `https://docs.google.com/viewer?url=${encodeURIComponent(fileUrl)}&embedded=true` 
+      : `${fileUrl}#toolbar=0&navpanes=0`
+
     return (
       <>
         <div 
@@ -157,6 +168,17 @@ export default function FilePreview({ fileUrl, title }) {
             </div>
 
             <div className="flex items-center gap-2 shrink-0">
+              {/* Toggle to allow student to switch engines anytime */}
+              <button
+                type="button"
+                onClick={() => setPdfEngine(prev => prev === 'google' ? 'native' : 'google')}
+                className="text-[11px] text-teal-300 hover:text-white bg-gray-800 hover:bg-gray-700 px-2.5 py-1 rounded-lg border border-gray-700 transition inline-flex items-center gap-1 font-medium"
+                title="Switch between all-pages continuous scroll and standard viewer"
+              >
+                <RefreshCw size={11} />
+                <span>{pdfEngine === 'google' ? 'Standard PDF' : 'Scroll All Pages'}</span>
+              </button>
+
               <div className="flex items-center gap-1.5 text-[11px] text-teal-400 bg-teal-900/40 px-2.5 py-1 rounded-lg border border-teal-800/50">
                 <Shield size={12} />
                 <span className="font-semibold">Protected View</span>
@@ -174,10 +196,13 @@ export default function FilePreview({ fileUrl, title }) {
             </div>
           </div>
 
-          {/* Embedded Standard PDF iframe with watermark overlay */}
-          <div className={`w-full bg-gray-100 relative ${
-            isFullscreen ? 'flex-1 h-[calc(100vh-50px)]' : 'h-[700px] sm:h-[850px]'
-          }`}>
+          {/* Embedded PDF iframe with watermark overlay */}
+          <div 
+            className={`w-full bg-gray-100 relative ${
+              isFullscreen ? 'flex-1 h-[calc(100vh-50px)]' : 'h-[700px] sm:h-[850px]'
+            }`}
+            style={{ WebkitOverflowScrolling: 'touch' }}
+          >
             {/* Transparent dynamic watermark stamp across the viewer */}
             <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-around items-center opacity-[0.06] rotate-[-25deg] select-none text-[#1F2937] font-black text-xs sm:text-base tracking-widest uppercase">
               <div>{watermarkText}</div>
@@ -187,7 +212,7 @@ export default function FilePreview({ fileUrl, title }) {
             </div>
 
             <iframe
-              src={`${fileUrl}#toolbar=0&navpanes=0`}
+              src={pdfSrc}
               title={title || 'PDF Preview'}
               className="w-full h-full border-none"
               onError={() => setLoadError(true)}
@@ -196,7 +221,7 @@ export default function FilePreview({ fileUrl, title }) {
 
           {/* Footer note */}
           <div className="bg-gray-50 border-t border-gray-200 px-4 py-2 flex items-center justify-between text-[11px] text-gray-500 shrink-0">
-            <span>Standard PDF Reader · Read-only inside NEx Platform</span>
+            <span>Scroll vertically through all worksheet pages · Protected read-only</span>
             <span>Jimma University</span>
           </div>
         </div>

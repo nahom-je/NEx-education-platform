@@ -579,17 +579,17 @@ export default function Pricing() {
 
       {/* ── FLOATING CHECKOUT BAR (Visible when package is selected) ── */}
       {selectedPackages.length > 0 && (
-        <div className="fixed bottom-4 sm:bottom-6 left-0 right-0 flex justify-center z-50 px-4 pointer-events-none">
-          <div className="pointer-events-auto bg-[#1F2937]/95 backdrop-blur-md text-white rounded-2xl shadow-2xl border border-slate-700/80 p-3.5 sm:px-6 sm:py-4 flex items-center justify-between gap-4 max-w-xl w-full animate-in fade-in slide-in-from-bottom-4 duration-200">
+        <div className="fixed bottom-20 md:bottom-6 left-0 right-0 flex justify-center z-40 px-4 pointer-events-none">
+          <div className="pointer-events-auto bg-[#1F2937]/95 backdrop-blur-md text-white rounded-2xl shadow-2xl border border-slate-700/80 p-3 sm:px-6 sm:py-3.5 flex items-center justify-between gap-3 sm:gap-4 max-w-xl w-full animate-in fade-in slide-in-from-bottom-4 duration-200">
             <div className="min-w-0">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
+              <div className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse shrink-0" />
                 <p className="text-xs text-slate-300 font-medium truncate">
-                  {selectedPackages.length} Package{selectedPackages.length > 1 ? 's' : ''} Selected
+                  {selectedPackages.length} Package Selected
                 </p>
               </div>
-              <p className="text-lg sm:text-xl font-black text-white tracking-tight">
-                {totalETB} ETB <span className="text-xs font-normal text-slate-400">total for all courses</span>
+              <p className="text-base sm:text-xl font-black text-white tracking-tight">
+                {totalETB} ETB <span className="text-[11px] sm:text-xs font-normal text-slate-400">total</span>
               </p>
             </div>
 
@@ -602,11 +602,11 @@ export default function Pricing() {
               </button>
               <button
                 onClick={handleCheckout}
-                className="flex items-center gap-2 bg-[#0D9488] hover:bg-teal-600 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition shadow-lg hover:shadow-teal-500/25 cursor-pointer active:scale-95"
+                className="flex items-center gap-1.5 sm:gap-2 bg-[#0D9488] hover:bg-teal-600 text-white font-bold px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm transition shadow-lg hover:shadow-teal-500/25 cursor-pointer active:scale-95"
               >
-                <ShoppingCart className="w-4 h-4" />
+                <ShoppingCart className="w-4 h-4 shrink-0" />
                 <span>Checkout ({totalETB} ETB)</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 shrink-0" />
               </button>
             </div>
           </div>
