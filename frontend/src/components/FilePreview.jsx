@@ -83,7 +83,7 @@ export default function FilePreview({ fileUrl, title }) {
             <span>Protected View</span>
           </div>
         </div>
-        <div className="p-4 bg-gray-50 flex items-center justify-center min-h-[300px] max-h-[600px] overflow-auto relative">
+        <div className="p-4 bg-gray-50 flex items-center justify-center min-h-[250px] relative">
           <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-around items-center opacity-[0.08] rotate-[-25deg] select-none text-[#1F2937] font-black text-xs sm:text-sm tracking-widest uppercase">
             <div>{watermarkText}</div>
             <div>{watermarkText}</div>
@@ -91,7 +91,7 @@ export default function FilePreview({ fileUrl, title }) {
           <img
             src={fileUrl}
             alt={title || 'Resource image'}
-            className="max-h-[550px] w-auto max-w-full object-contain rounded-lg shadow-sm pointer-events-none"
+            className="w-auto max-w-full max-h-[75vh] object-contain rounded-lg shadow-sm pointer-events-none"
           />
         </div>
       </div>
