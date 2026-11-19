@@ -1,0 +1,4544 @@
+[
+  {
+    "chapter_number": 1,
+    "title": "Basics of Economics",
+    "description": "Definition and rationale; microeconomics and macroeconomics; positive/normative analysis; inductive/deductive reasoning; scarcity, opportunity cost and PPF; central economic questions; economic systems; circular flow.",
+    "questions": [
+      {
+        "question_number": 1,
+        "difficulty": "Easy",
+        "question_text": "Which statement best matches the module’s commonly accepted definition of economics?",
+        "options": [
+          {
+            "id": "A",
+            "text": "The social science of efficiently allocating scarce resources to meet unlimited human wants"
+          },
+          {
+            "id": "B",
+            "text": "The study of how to eliminate all choices"
+          },
+          {
+            "id": "C",
+            "text": "The study of how to maximize money regardless of resources"
+          },
+          {
+            "id": "D",
+            "text": "The study of government taxation alone"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The module defines economics around scarcity, allocation, efficiency, and unlimited human wants. It is broader than money or taxation, and scarcity means choices cannot be eliminated."
+      },
+      {
+        "question_number": 2,
+        "difficulty": "Easy",
+        "question_text": "What two facts provide the foundation for economics in the module?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Unlimited resources and limited wants"
+          },
+          {
+            "id": "B",
+            "text": "Equal incomes and fixed prices"
+          },
+          {
+            "id": "C",
+            "text": "Limited wants and unlimited production"
+          },
+          {
+            "id": "D",
+            "text": "Unlimited material wants and scarce economic resources"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Economics arises because wants are unlimited while resources are limited. The other pairs reverse or replace the central scarcity problem."
+      },
+      {
+        "question_number": 3,
+        "difficulty": "Easy",
+        "question_text": "Which is a microeconomic topic?",
+        "options": [
+          {
+            "id": "A",
+            "text": "The general price level of the whole country"
+          },
+          {
+            "id": "B",
+            "text": "The output decision of one individual firm"
+          },
+          {
+            "id": "C",
+            "text": "National output growth"
+          },
+          {
+            "id": "D",
+            "text": "The unemployment rate for the entire economy"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Microeconomics studies individual units such as households, firms, and particular markets. National output, aggregate price levels, and economy-wide unemployment are macroeconomic topics."
+      },
+      {
+        "question_number": 4,
+        "difficulty": "Easy",
+        "question_text": "Which statement is normative?",
+        "options": [
+          {
+            "id": "A",
+            "text": "A firm produced 500 units last month"
+          },
+          {
+            "id": "B",
+            "text": "The number of buyers increased"
+          },
+          {
+            "id": "C",
+            "text": "The government ought to expand job opportunities for women"
+          },
+          {
+            "id": "D",
+            "text": "The price of wheat rose this year"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Normative economics expresses a value judgment about what ought to happen. The other statements describe events or quantities that can be checked against evidence."
+      },
+      {
+        "question_number": 5,
+        "difficulty": "Easy",
+        "question_text": "Inductive reasoning moves primarily from:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Specific observations toward a general principle"
+          },
+          {
+            "id": "B",
+            "text": "A conclusion to an unrelated opinion"
+          },
+          {
+            "id": "C",
+            "text": "General assumptions to a specific conclusion"
+          },
+          {
+            "id": "D",
+            "text": "A theory to a definition without evidence"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Induction generalizes from particular facts or observations. Deduction instead begins with general assumptions and reasons toward specific conclusions."
+      },
+      {
+        "question_number": 6,
+        "difficulty": "Easy",
+        "question_text": "Which is an example of a factor of production whose reward is rent?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Entrepreneurship"
+          },
+          {
+            "id": "B",
+            "text": "Labour"
+          },
+          {
+            "id": "C",
+            "text": "Land and natural resources"
+          },
+          {
+            "id": "D",
+            "text": "Capital equipment"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "In the module’s classification, land includes natural resources and earns rent. Labour earns wages, capital earns interest, and entrepreneurship earns profit."
+      },
+      {
+        "question_number": 7,
+        "difficulty": "Easy",
+        "question_text": "A shortage differs from scarcity because shortage is described as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A universal, permanent condition"
+          },
+          {
+            "id": "B",
+            "text": "The same thing as opportunity cost"
+          },
+          {
+            "id": "C",
+            "text": "An inability to obtain the desired amount at the prevailing price"
+          },
+          {
+            "id": "D",
+            "text": "A condition caused only by unlimited wants"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Scarcity is the enduring imbalance between wants and available resources; shortage refers to not obtaining the desired amount at the current price and is treated as a more specific, short-term problem."
+      },
+      {
+        "question_number": 8,
+        "difficulty": "Easy",
+        "question_text": "On a production possibilities frontier, a point inside the curve is generally:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Unattainable with current resources"
+          },
+          {
+            "id": "B",
+            "text": "Proof that resources are unlimited"
+          },
+          {
+            "id": "C",
+            "text": "Attainable but inefficient"
+          },
+          {
+            "id": "D",
+            "text": "Always the only efficient choice"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The module explains that points on the PPF are attainable and efficient, points inside are attainable but inefficient, and points outside are unattainable with current resources and technology."
+      },
+      {
+        "question_number": 9,
+        "difficulty": "Easy",
+        "question_text": "Which three questions are central to every economic system?",
+        "options": [
+          {
+            "id": "A",
+            "text": "What to tax, what to borrow, and what to export?"
+          },
+          {
+            "id": "B",
+            "text": "What to produce, how to produce, and for whom to produce?"
+          },
+          {
+            "id": "C",
+            "text": "When to consume, where to save, and how to advertise?"
+          },
+          {
+            "id": "D",
+            "text": "Who owns money, who prints money, and who imports?"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Scarcity forces societies to choose the goods and quantities, production techniques, and distribution of output. The other choices are not the module’s three basic economic questions."
+      },
+      {
+        "question_number": 10,
+        "difficulty": "Easy",
+        "question_text": "In the two-sector circular-flow model, households primarily:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sell final goods to firms and buy labour from firms"
+          },
+          {
+            "id": "B",
+            "text": "Set all prices through central planning"
+          },
+          {
+            "id": "C",
+            "text": "Collect taxes and provide public goods"
+          },
+          {
+            "id": "D",
+            "text": "Own and sell factors of production and buy goods and services"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Households supply factors in factor markets and purchase final goods and services in product markets. Firms do the reverse, while the government appears in the three-sector model."
+      },
+      {
+        "question_number": 11,
+        "difficulty": "Medium",
+        "question_text": "An economy moves from point B to C: food falls from 420 to 320 tons while computers rise from 500 to 1,000. What is the opportunity cost per additional computer over this move?",
+        "options": [
+          {
+            "id": "A",
+            "text": "500 metric tons of food"
+          },
+          {
+            "id": "B",
+            "text": "100 metric tons of food"
+          },
+          {
+            "id": "C",
+            "text": "2 metric tons of food"
+          },
+          {
+            "id": "D",
+            "text": "0.2 metric tons of food"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Food sacrificed is 420−320=100 tons; computers gained are 1,000−500=500. Opportunity cost per computer is 100/500=0.2 tons of food. The other values do not divide the sacrificed output by the additional computers."
+      },
+      {
+        "question_number": 12,
+        "difficulty": "Medium",
+        "question_text": "A rise in the price of a good, with other factors unchanged, causes:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The PPF to shift outward"
+          },
+          {
+            "id": "B",
+            "text": "An increase in the number of buyers"
+          },
+          {
+            "id": "C",
+            "text": "The demand curve to shift right"
+          },
+          {
+            "id": "D",
+            "text": "A movement along the demand curve for that good"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "A change in the good’s own price changes quantity demanded and produces movement along the same demand curve. Demand shifters such as income, tastes, and buyer numbers shift the curve."
+      },
+      {
+        "question_number": 13,
+        "difficulty": "Medium",
+        "question_text": "Which change is most likely to shift a country’s PPF outward?",
+        "options": [
+          {
+            "id": "A",
+            "text": "An increase in unemployment with no resource change"
+          },
+          {
+            "id": "B",
+            "text": "A fall in available capital"
+          },
+          {
+            "id": "C",
+            "text": "An increase in resource quality or an advance in technology"
+          },
+          {
+            "id": "D",
+            "text": "A move from one point on the existing curve to another"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The module identifies increased quantity/quality of resources and technological progress as sources of economic growth, represented by an outward PPF shift. Moving along the existing curve is choice, not growth."
+      },
+      {
+        "question_number": 14,
+        "difficulty": "Medium",
+        "question_text": "A researcher gathers data from several markets and then proposes a general rule about consumer behaviour. This is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Inductive reasoning"
+          },
+          {
+            "id": "B",
+            "text": "Normative analysis"
+          },
+          {
+            "id": "C",
+            "text": "A command allocation decision"
+          },
+          {
+            "id": "D",
+            "text": "Deductive reasoning"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The researcher moves from specific observations toward a generalization, which is induction. Deduction starts with general assumptions; normative analysis concerns value judgments."
+      },
+      {
+        "question_number": 15,
+        "difficulty": "Medium",
+        "question_text": "Which feature most clearly distinguishes a command economy from a capitalist economy?",
+        "options": [
+          {
+            "id": "A",
+            "text": "A complete absence of government involvement"
+          },
+          {
+            "id": "B",
+            "text": "Private ownership of all productive assets"
+          },
+          {
+            "id": "C",
+            "text": "Consumer sovereignty through decentralized prices alone"
+          },
+          {
+            "id": "D",
+            "text": "Central planning and state control of production and distribution"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "The module describes command economies as having collective ownership and centralized planning with a strong state role. Private ownership and a limited state role are features of capitalism."
+      },
+      {
+        "question_number": 16,
+        "difficulty": "Medium",
+        "question_text": "A mixed economy is best described as one in which:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Every productive asset is privately owned and government never regulates"
+          },
+          {
+            "id": "B",
+            "text": "Public and private sectors coexist, with roles for both"
+          },
+          {
+            "id": "C",
+            "text": "Markets and prices do not exist in any sector"
+          },
+          {
+            "id": "D",
+            "text": "All production decisions are made by a single central authority"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "A mixed economy combines features of market capitalism and state activity. It permits private enterprise while public-sector activity and regulation remain important."
+      },
+      {
+        "question_number": 17,
+        "difficulty": "Medium",
+        "question_text": "If a government chooses to produce more military goods and fewer consumer goods, which basic problem is it addressing?",
+        "options": [
+          {
+            "id": "A",
+            "text": "How to produce"
+          },
+          {
+            "id": "B",
+            "text": "How to measure inflation"
+          },
+          {
+            "id": "C",
+            "text": "What to produce"
+          },
+          {
+            "id": "D",
+            "text": "For whom to produce"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The “what to produce” question concerns the mix and quantity of outputs, including consumption versus military or capital goods. The technique is “how,” and distribution is “for whom.”"
+      },
+      {
+        "question_number": 18,
+        "difficulty": "Medium",
+        "question_text": "In the circular-flow model, wages, rent, and interest flow from firms to households because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The government prints them as transfer payments"
+          },
+          {
+            "id": "B",
+            "text": "Firms collect these payments as taxes"
+          },
+          {
+            "id": "C",
+            "text": "Households purchase final products in factor markets"
+          },
+          {
+            "id": "D",
+            "text": "Households supply productive resources that firms use"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Factor payments are income to households for supplying labour, land, and capital. Purchases of final products happen in product markets, and taxes/transfers are separate government flows."
+      },
+      {
+        "question_number": 19,
+        "difficulty": "Medium",
+        "question_text": "Why does a PPF commonly become concave to the origin in the module’s account?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Technology changes at every point on the curve"
+          },
+          {
+            "id": "B",
+            "text": "All resources are equally productive in every use"
+          },
+          {
+            "id": "C",
+            "text": "Opportunity cost is always zero"
+          },
+          {
+            "id": "D",
+            "text": "Resources are not equally adaptable to alternative uses, so opportunity cost rises"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Specialization means some inputs are better suited to one output than another. As production shifts, increasingly unsuitable resources are reassigned, raising opportunity cost. The PPF assumptions hold technology fixed."
+      },
+      {
+        "question_number": 20,
+        "difficulty": "Medium",
+        "question_text": "Which statement about positive economics is most accurate?",
+        "options": [
+          {
+            "id": "A",
+            "text": "It describes and analyzes facts without judging them good or bad"
+          },
+          {
+            "id": "B",
+            "text": "It is identical to voting on policy preferences"
+          },
+          {
+            "id": "C",
+            "text": "It decides which outcome is morally best"
+          },
+          {
+            "id": "D",
+            "text": "It can never be checked using evidence"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Positive analysis asks what was, is, or will be and can be tested against facts. Normative analysis evaluates what ought to be and depends on value judgments."
+      },
+      {
+        "question_number": 21,
+        "difficulty": "Hard",
+        "question_text": "A society is operating at full employment on its PPF and wants more computers. Why must it sacrifice some food?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Because limited resources are already fully and efficiently used"
+          },
+          {
+            "id": "B",
+            "text": "Because the economy has no technology"
+          },
+          {
+            "id": "C",
+            "text": "Because producing computers creates no opportunity cost"
+          },
+          {
+            "id": "D",
+            "text": "Because demand curves always slope upward"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "At an efficient PPF point, available resources are fully employed. Producing more of one good requires reallocating specialized resources away from the other, which creates an opportunity cost."
+      },
+      {
+        "question_number": 22,
+        "difficulty": "Hard",
+        "question_text": "Suppose an economy’s resources and technology are unchanged, but it moves from an inefficient point inside the PPF to a point on the curve. This change represents:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Economic growth from better technology"
+          },
+          {
+            "id": "B",
+            "text": "An outward shift of the PPF"
+          },
+          {
+            "id": "C",
+            "text": "A reduction in productive capacity"
+          },
+          {
+            "id": "D",
+            "text": "Improved use of existing resources, not necessarily growth in capacity"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Moving from inside to the frontier uses existing resources more efficiently. Growth in productive capacity is shown by an outward shift, usually due to more/better resources or technology."
+      },
+      {
+        "question_number": 23,
+        "difficulty": "Hard",
+        "question_text": "A policy analyst says, “The government should subsidize basic food because equity matters more than luxury consumption.” How should this claim be classified?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Positive, because every policy statement is a fact"
+          },
+          {
+            "id": "B",
+            "text": "Normative, because it relies on a value judgment"
+          },
+          {
+            "id": "C",
+            "text": "A production function"
+          },
+          {
+            "id": "D",
+            "text": "Inductive, because it contains the word “should”"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "The statement prescribes what should happen and ranks social values, making it normative. Whether a subsidy changes prices or quantities can be studied positively, but the recommendation itself rests on values."
+      },
+      {
+        "question_number": 24,
+        "difficulty": "Hard",
+        "question_text": "An economist begins with an assumed relationship between price and quantity, derives a prediction, and checks it against market data. This is closest to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Horizontal addition"
+          },
+          {
+            "id": "B",
+            "text": "Deductive reasoning followed by empirical testing"
+          },
+          {
+            "id": "C",
+            "text": "A shift in the PPF"
+          },
+          {
+            "id": "D",
+            "text": "Inductive reasoning only"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Deduction starts with a general assumption and derives a particular hypothesis, which is then tested against facts. Collecting observations first to form a rule would be induction."
+      },
+      {
+        "question_number": 25,
+        "difficulty": "Hard",
+        "question_text": "A country’s PPF shifts outward only along the food axis after food-sector technology improves. The module describes this as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Asymmetric growth"
+          },
+          {
+            "id": "B",
+            "text": "A normative change"
+          },
+          {
+            "id": "C",
+            "text": "A movement along an unchanged PPF"
+          },
+          {
+            "id": "D",
+            "text": "A shortage of computers at the prevailing price"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "A sector-specific improvement can increase capacity more in one output than another, producing an asymmetric PPF shift. A movement along the curve does not change capacity."
+      },
+      {
+        "question_number": 26,
+        "difficulty": "Hard",
+        "question_text": "Why is “sunshine is free” not an unconditional economic conclusion in the module’s framework?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sunshine is always capital"
+          },
+          {
+            "id": "B",
+            "text": "A resource is free only when availability exceeds what people want at a zero price"
+          },
+          {
+            "id": "C",
+            "text": "Any resource must be sold for money"
+          },
+          {
+            "id": "D",
+            "text": "All natural resources are scarce in every context"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "The module defines free resources relative to wants at zero price. If clean air becomes limited relative to demand, it may no longer satisfy that definition in the relevant setting."
+      },
+      {
+        "question_number": 27,
+        "difficulty": "Hard",
+        "question_text": "A firm introduces a new technology, seeks opportunities, organizes labour and capital, and bears the risk of loss. The role described is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Entrepreneur"
+          },
+          {
+            "id": "B",
+            "text": "Consumer"
+          },
+          {
+            "id": "C",
+            "text": "Government regulator"
+          },
+          {
+            "id": "D",
+            "text": "Landowner"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Entrepreneurship is the talent for organizing other factors, making business decisions, innovating, seeking opportunities, and bearing risk. Land, consumption, and regulation are different roles."
+      },
+      {
+        "question_number": 28,
+        "difficulty": "Hard",
+        "question_text": "Which description of capitalism best reflects the module, including a potential disadvantage?",
+        "options": [
+          {
+            "id": "A",
+            "text": "State ownership and no private property, but equal incomes"
+          },
+          {
+            "id": "B",
+            "text": "Public/private coexistence by definition and no market competition"
+          },
+          {
+            "id": "C",
+            "text": "Private ownership and profit motive, with possible inequality and negative externalities"
+          },
+          {
+            "id": "D",
+            "text": "Central planning, no prices, and no profit motive"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Capitalism features private property, profit-seeking, competition, consumer choice, and a price mechanism. The module also notes income inequality and negative externalities as possible disadvantages."
+      },
+      {
+        "question_number": 29,
+        "difficulty": "Hard",
+        "question_text": "Why does the module say macroeconomics cannot be studied in isolation from microeconomics?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Microeconomics studies only history"
+          },
+          {
+            "id": "B",
+            "text": "Macroeconomics excludes households and firms"
+          },
+          {
+            "id": "C",
+            "text": "The two branches use identical questions and examples"
+          },
+          {
+            "id": "D",
+            "text": "Aggregate outcomes are built from the behaviour and interaction of individual decision units"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Macroeconomic aggregates emerge from households, firms, and other decision units, so the branches complement one another. Their focus differs, but they are interconnected."
+      },
+      {
+        "question_number": 30,
+        "difficulty": "Hard",
+        "question_text": "In the three-sector circular-flow model, the government’s spending and support are mainly financed by:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Taxes collected from households and firms"
+          },
+          {
+            "id": "B",
+            "text": "Only household savings and never taxes"
+          },
+          {
+            "id": "C",
+            "text": "Firms’ profits paid directly into product markets"
+          },
+          {
+            "id": "D",
+            "text": "Exports only"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The module identifies taxes from households and firms as the main source of government revenue. Government also buys goods/services, hires factors, and may provide transfers or subsidies."
+      }
+    ]
+  },
+  {
+    "chapter_number": 2,
+    "title": "Theory of Demand and Supply",
+    "description": "Demand and supply definitions, schedules, curves and functions; determinants and shifts; price, income and cross elasticity; elasticity of supply; market equilibrium and disequilibrium.",
+    "questions": [
+      {
+        "question_number": 1,
+        "difficulty": "Easy",
+        "question_text": "In economics, demand requires:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Willingness and ability to pay for a good"
+          },
+          {
+            "id": "B",
+            "text": "A product to be free"
+          },
+          {
+            "id": "C",
+            "text": "A government order to buy"
+          },
+          {
+            "id": "D",
+            "text": "A desire alone"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The module distinguishes demand from mere desire: a consumer must both want the good and have purchasing power. Ability without willingness, or willingness without ability, is not demand."
+      },
+      {
+        "question_number": 2,
+        "difficulty": "Easy",
+        "question_text": "The law of demand states that, other things unchanged:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Price and quantity demanded are inversely related"
+          },
+          {
+            "id": "B",
+            "text": "Price and quantity demanded move in the same direction"
+          },
+          {
+            "id": "C",
+            "text": "Demand always equals supply"
+          },
+          {
+            "id": "D",
+            "text": "Price never affects quantity demanded"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Ceteris paribus, a higher price reduces quantity demanded and a lower price increases it. This is a relationship along the demand curve, not a claim that demand always equals supply."
+      },
+      {
+        "question_number": 3,
+        "difficulty": "Easy",
+        "question_text": "A demand schedule is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A statement of government spending"
+          },
+          {
+            "id": "B",
+            "text": "A table listing quantities demanded at different prices"
+          },
+          {
+            "id": "C",
+            "text": "A list of all suppliers’ wages"
+          },
+          {
+            "id": "D",
+            "text": "A graph of production costs"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "A demand schedule tabulates price-quantity demanded pairs. A demand curve graphs those pairs; a demand function expresses the relationship mathematically."
+      },
+      {
+        "question_number": 4,
+        "difficulty": "Easy",
+        "question_text": "Market demand is obtained by:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Averaging all individual quantities"
+          },
+          {
+            "id": "B",
+            "text": "Multiplying price by income"
+          },
+          {
+            "id": "C",
+            "text": "Horizontally adding individual quantities demanded at each price"
+          },
+          {
+            "id": "D",
+            "text": "Adding buyers’ prices vertically"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "At each given price, the quantities demanded by all buyers are summed. This horizontal addition differs from adding prices or averaging quantities."
+      },
+      {
+        "question_number": 5,
+        "difficulty": "Easy",
+        "question_text": "A change in the good’s own price, with all else constant, causes:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A rightward shift in demand"
+          },
+          {
+            "id": "B",
+            "text": "A movement along the existing demand curve"
+          },
+          {
+            "id": "C",
+            "text": "A shift in supply only"
+          },
+          {
+            "id": "D",
+            "text": "A change in consumer tastes"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Own-price changes alter quantity demanded along the same curve. Income, preferences, related-good prices, expectations, and buyer numbers can shift demand."
+      },
+      {
+        "question_number": 6,
+        "difficulty": "Easy",
+        "question_text": "For a normal good, an increase in consumer income generally:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Leaves demand fixed by definition"
+          },
+          {
+            "id": "B",
+            "text": "Increases demand"
+          },
+          {
+            "id": "C",
+            "text": "Changes only the good’s supply"
+          },
+          {
+            "id": "D",
+            "text": "Decreases demand"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Normal-good demand moves in the same direction as income. Inferior-good demand, as defined in the module, moves inversely with income."
+      },
+      {
+        "question_number": 7,
+        "difficulty": "Easy",
+        "question_text": "Tea and coffee are treated as substitutes. If tea becomes more expensive, demand for coffee tends to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Become perfectly inelastic"
+          },
+          {
+            "id": "B",
+            "text": "Increase"
+          },
+          {
+            "id": "C",
+            "text": "Remain unchanged by definition"
+          },
+          {
+            "id": "D",
+            "text": "Decrease"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Substitutes can satisfy similar wants, so a higher price for tea encourages some consumers to switch to coffee. For complements, the relationship would be inverse."
+      },
+      {
+        "question_number": 8,
+        "difficulty": "Easy",
+        "question_text": "Price elasticity of demand measures:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The absolute number of consumers"
+          },
+          {
+            "id": "B",
+            "text": "The responsiveness of quantity demanded to a price change"
+          },
+          {
+            "id": "C",
+            "text": "The firm’s profit as a percentage of revenue"
+          },
+          {
+            "id": "D",
+            "text": "The slope of the supply curve only"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Price elasticity is percentage change in quantity demanded divided by percentage change in price. It measures responsiveness rather than the number of buyers or firm profit."
+      },
+      {
+        "question_number": 9,
+        "difficulty": "Easy",
+        "question_text": "If demand elasticity in absolute value is greater than 1, demand is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Necessarily perfectly elastic"
+          },
+          {
+            "id": "B",
+            "text": "Elastic"
+          },
+          {
+            "id": "C",
+            "text": "Unit elastic"
+          },
+          {
+            "id": "D",
+            "text": "Perfectly inelastic"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Elastic demand responds proportionately more than price: the absolute elasticity exceeds one. Unit elastic equals one, while inelastic demand is below one in absolute value."
+      },
+      {
+        "question_number": 10,
+        "difficulty": "Easy",
+        "question_text": "Market equilibrium occurs where:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Demand is zero"
+          },
+          {
+            "id": "B",
+            "text": "Quantity demanded equals quantity supplied"
+          },
+          {
+            "id": "C",
+            "text": "All firms earn positive economic profit"
+          },
+          {
+            "id": "D",
+            "text": "Price is fixed by every individual buyer"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "At equilibrium, buyers’ desired quantity equals sellers’ desired quantity, so there is no market-wide excess demand or excess supply at that price. Profit outcomes depend on costs and market structure."
+      },
+      {
+        "question_number": 11,
+        "difficulty": "Medium",
+        "question_text": "A demand function is Qd = 15 − 2P. At P = 4, quantity demanded equals:",
+        "options": [
+          {
+            "id": "A",
+            "text": "7"
+          },
+          {
+            "id": "B",
+            "text": "11"
+          },
+          {
+            "id": "C",
+            "text": "15"
+          },
+          {
+            "id": "D",
+            "text": "23"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Substitute P=4: Qd=15−2(4)=7. The negative price coefficient captures the inverse price-quantity relationship in the example; 11, 15, and 23 do not satisfy the function."
+      },
+      {
+        "question_number": 12,
+        "difficulty": "Medium",
+        "question_text": "At a price of 3 birr, three consumers demand 5, 7, and 2 units. Market demand is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "10 units"
+          },
+          {
+            "id": "B",
+            "text": "14 units"
+          },
+          {
+            "id": "C",
+            "text": "12 units"
+          },
+          {
+            "id": "D",
+            "text": "7 units"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Market demand is the horizontal sum: 5+7+2=14 units. The correct total is 14, so the answer index should correspond to the fourth option."
+      },
+      {
+        "question_number": 13,
+        "difficulty": "Medium",
+        "question_text": "If consumers expect a good’s price to be higher in the future, the module predicts current demand will tend to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Fall because future prices are irrelevant"
+          },
+          {
+            "id": "B",
+            "text": "Become perfectly elastic"
+          },
+          {
+            "id": "C",
+            "text": "Shift supply to the right"
+          },
+          {
+            "id": "D",
+            "text": "Increase as consumers buy before the expected rise"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "An expectation of higher future prices can increase present demand as consumers bring purchases forward. This is a demand shifter, not a supply shift or an elasticity category."
+      },
+      {
+        "question_number": 14,
+        "difficulty": "Medium",
+        "question_text": "A product’s price rises by 10% and quantity demanded falls by 20%. The price elasticity of demand is approximately:",
+        "options": [
+          {
+            "id": "A",
+            "text": "+2"
+          },
+          {
+            "id": "B",
+            "text": "−0.5"
+          },
+          {
+            "id": "C",
+            "text": "−2"
+          },
+          {
+            "id": "D",
+            "text": "+0.5"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Using percentage change in quantity divided by percentage change in price gives −20%/10%=−2. The negative sign reflects the law of demand; elasticity is often discussed in absolute value when classifying responsiveness."
+      },
+      {
+        "question_number": 15,
+        "difficulty": "Medium",
+        "question_text": "Why is arc elasticity useful when two observed price-quantity points are relatively far apart?",
+        "options": [
+          {
+            "id": "A",
+            "text": "It ignores the price change"
+          },
+          {
+            "id": "B",
+            "text": "It measures only elasticity at one infinitesimally close point"
+          },
+          {
+            "id": "C",
+            "text": "It assumes the quantity change is zero"
+          },
+          {
+            "id": "D",
+            "text": "It uses midpoint/average values between the two observations"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Arc elasticity measures a segment of the demand curve using averages of the old and new price and quantity. Point elasticity is more suited to a specific point or very small change."
+      },
+      {
+        "question_number": 16,
+        "difficulty": "Medium",
+        "question_text": "Which factor tends to make demand more price elastic?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Consumers have no time to adjust"
+          },
+          {
+            "id": "B",
+            "text": "The good takes a very small share of income"
+          },
+          {
+            "id": "C",
+            "text": "There are no substitutes"
+          },
+          {
+            "id": "D",
+            "text": "Many close substitutes are available"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "More substitutes make it easier for consumers to switch when price rises, increasing responsiveness. A small budget share and fewer adjustment opportunities generally make demand less elastic."
+      },
+      {
+        "question_number": 17,
+        "difficulty": "Medium",
+        "question_text": "If a 10% rise in income causes quantity demanded to rise by 15%, income elasticity is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "−0.67"
+          },
+          {
+            "id": "B",
+            "text": "−1.5"
+          },
+          {
+            "id": "C",
+            "text": "+0.67"
+          },
+          {
+            "id": "D",
+            "text": "+1.5"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Income elasticity equals percentage change in quantity divided by percentage change in income: 15/10=1.5. The positive value indicates a normal good; the magnitude above one signals relatively strong responsiveness."
+      },
+      {
+        "question_number": 18,
+        "difficulty": "Medium",
+        "question_text": "A positive cross-price elasticity between two goods usually indicates that they are:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Complements"
+          },
+          {
+            "id": "B",
+            "text": "Unrelated by definition"
+          },
+          {
+            "id": "C",
+            "text": "Substitutes"
+          },
+          {
+            "id": "D",
+            "text": "Both inferior goods"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "When the price of one good rises and demand for the other rises, cross elasticity is positive, indicating substitutes. Complements generally have negative cross-price elasticity."
+      },
+      {
+        "question_number": 19,
+        "difficulty": "Medium",
+        "question_text": "Which is a determinant of supply rather than a movement along the supply curve?",
+        "options": [
+          {
+            "id": "A",
+            "text": "A movement from one point to another on the same curve"
+          },
+          {
+            "id": "B",
+            "text": "A change in the good’s own price"
+          },
+          {
+            "id": "C",
+            "text": "A change in the quantity supplied caused by price"
+          },
+          {
+            "id": "D",
+            "text": "A change in input costs or production technology"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Input prices and technology shift supply because they alter firms’ willingness or ability to supply at each price. A change in the product’s own price causes movement along the supply curve."
+      },
+      {
+        "question_number": 20,
+        "difficulty": "Medium",
+        "question_text": "Suppose Qd = 50 − P and supply is represented by P = Qs + 5. Equilibrium is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "P = 22.5, Q = 27.5"
+          },
+          {
+            "id": "B",
+            "text": "P = 27.5, Q = 22.5"
+          },
+          {
+            "id": "C",
+            "text": "P = 25, Q = 25"
+          },
+          {
+            "id": "D",
+            "text": "P = 5, Q = 50"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Since Qd=50−P and P=Qs+5 implies Qs=P−5, set 50−P=P−5. Thus 55=2P, P=27.5 and Q=22.5. The other pairs do not satisfy both the demand and supply equations."
+      },
+      {
+        "question_number": 21,
+        "difficulty": "Hard",
+        "question_text": "Demand shifts right while supply remains unchanged. At the new equilibrium, the usual result is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Higher price and higher quantity"
+          },
+          {
+            "id": "B",
+            "text": "No change in either variable"
+          },
+          {
+            "id": "C",
+            "text": "Higher price and lower quantity"
+          },
+          {
+            "id": "D",
+            "text": "Lower price and lower quantity"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "An increase in demand means buyers want more at every price. With the supply curve unchanged, equilibrium price and quantity both rise; the other patterns contradict this standard shift analysis."
+      },
+      {
+        "question_number": 22,
+        "difficulty": "Hard",
+        "question_text": "Supply shifts right while demand remains unchanged. The usual new equilibrium has:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Higher price and higher quantity"
+          },
+          {
+            "id": "B",
+            "text": "Higher price and lower quantity"
+          },
+          {
+            "id": "C",
+            "text": "Lower price and higher quantity"
+          },
+          {
+            "id": "D",
+            "text": "No change in quantity"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "An increase in supply places more quantity on the market at each price. Equilibrium quantity rises while price falls, assuming demand slopes downward."
+      },
+      {
+        "question_number": 23,
+        "difficulty": "Hard",
+        "question_text": "If demand and supply both increase, what can be concluded without knowing the size of the shifts?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Both price and quantity must fall"
+          },
+          {
+            "id": "B",
+            "text": "Price must rise and quantity must fall"
+          },
+          {
+            "id": "C",
+            "text": "Equilibrium price is unchanged in all cases"
+          },
+          {
+            "id": "D",
+            "text": "Equilibrium quantity rises, but the price effect is ambiguous"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Both shifts tend to raise equilibrium quantity, but their effects on price oppose each other: demand raises price while supply lowers it. Relative shift sizes determine the price result."
+      },
+      {
+        "question_number": 24,
+        "difficulty": "Hard",
+        "question_text": "A perfectly inelastic demand curve means:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Consumers buy zero at any price"
+          },
+          {
+            "id": "B",
+            "text": "Demand has elasticity equal to one"
+          },
+          {
+            "id": "C",
+            "text": "Quantity demanded does not respond to price changes"
+          },
+          {
+            "id": "D",
+            "text": "Quantity demanded changes proportionately with price"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Perfectly inelastic demand has elasticity zero: quantity stays fixed as price changes. Unit elasticity means proportional percentage changes, and perfect elasticity is the opposite extreme."
+      },
+      {
+        "question_number": 25,
+        "difficulty": "Hard",
+        "question_text": "On a straight-line demand curve, price elasticity is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Different at different points even though the slope is constant"
+          },
+          {
+            "id": "B",
+            "text": "The same at every point because the slope is constant"
+          },
+          {
+            "id": "C",
+            "text": "Always zero"
+          },
+          {
+            "id": "D",
+            "text": "Always infinite"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The module notes that point elasticity varies along a straight-line demand curve. Slope is constant, but elasticity also depends on the price and quantity at the point."
+      },
+      {
+        "question_number": 26,
+        "difficulty": "Hard",
+        "question_text": "If price rises from 5 to 6 and quantity demanded falls from 100 to 80, the midpoint arc elasticity is approximately:",
+        "options": [
+          {
+            "id": "A",
+            "text": "+1.22"
+          },
+          {
+            "id": "B",
+            "text": "−1.0"
+          },
+          {
+            "id": "C",
+            "text": "−0.2"
+          },
+          {
+            "id": "D",
+            "text": "−1.22"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Using midpoint percentage changes: ΔQ/average Q = −20/90 and ΔP/average P = 1/5.5; their ratio is about −1.22. This indicates elastic demand over the segment."
+      },
+      {
+        "question_number": 27,
+        "difficulty": "Hard",
+        "question_text": "Supply rises from 40 to 52 units when price rises from 10 to 12 birr. Using the original-value percentage-change method, price elasticity of supply is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "2.0"
+          },
+          {
+            "id": "B",
+            "text": "3.0"
+          },
+          {
+            "id": "C",
+            "text": "1.5"
+          },
+          {
+            "id": "D",
+            "text": "0.5"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Quantity supplied changes by 12/40=30%, while price changes by 2/10=20%; elasticity is 30%/20%=1.5. Since it exceeds one, supply is elastic over this interval. The midpoint method could yield a different numerical estimate, so this question explicitly specifies the original-value method."
+      },
+      {
+        "question_number": 28,
+        "difficulty": "Hard",
+        "question_text": "If market price is above equilibrium, the market experiences:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A shortage, pushing price upward"
+          },
+          {
+            "id": "B",
+            "text": "Excess supply, putting downward pressure on price"
+          },
+          {
+            "id": "C",
+            "text": "An automatic shift of both curves"
+          },
+          {
+            "id": "D",
+            "text": "A permanent increase in demand"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Above equilibrium, sellers offer more than buyers want to purchase. Surplus creates pressure for price to fall toward equilibrium; it does not itself shift demand or supply."
+      },
+      {
+        "question_number": 29,
+        "difficulty": "Hard",
+        "question_text": "Which statement best distinguishes “change in demand” from “change in quantity demanded”?",
+        "options": [
+          {
+            "id": "A",
+            "text": "They are identical terms"
+          },
+          {
+            "id": "B",
+            "text": "A demand shift comes from a non-price determinant; quantity demanded changes with own price"
+          },
+          {
+            "id": "C",
+            "text": "Quantity demanded changes only when income changes"
+          },
+          {
+            "id": "D",
+            "text": "A demand shift always means supply changes"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "A non-price determinant such as income or taste shifts the whole demand curve. An own-price change produces a movement along the existing curve, called a change in quantity demanded."
+      },
+      {
+        "question_number": 30,
+        "difficulty": "Hard",
+        "question_text": "A supply elasticity of 0.3 is best interpreted as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Quantity supplied rises by 3% for a 10% price rise"
+          },
+          {
+            "id": "B",
+            "text": "Supply is unit elastic"
+          },
+          {
+            "id": "C",
+            "text": "Supply is perfectly elastic"
+          },
+          {
+            "id": "D",
+            "text": "Quantity supplied changes proportionately less than price, so supply is inelastic"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Elasticity 0.3 is below one, meaning quantity supplied responds proportionately less than price. It is neither unit elastic nor perfectly elastic."
+      }
+    ]
+  },
+  {
+    "chapter_number": 3,
+    "title": "Theory of Consumer Behaviour",
+    "description": "Preferences and utility; cardinal and ordinal utility; total and marginal utility; diminishing marginal utility; consumer equilibrium; indifference curves, MRS, budget line and optimal choice.",
+    "questions": [
+      {
+        "question_number": 1,
+        "difficulty": "Easy",
+        "question_text": "In the module, utility refers to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The total income of a household"
+          },
+          {
+            "id": "B",
+            "text": "The market price of a good"
+          },
+          {
+            "id": "C",
+            "text": "The cost of producing a good"
+          },
+          {
+            "id": "D",
+            "text": "The satisfaction or pleasure derived from consumption"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Utility describes a good’s power to satisfy wants or the satisfaction derived from consuming it. Price, income, and production cost are distinct economic concepts."
+      },
+      {
+        "question_number": 2,
+        "difficulty": "Easy",
+        "question_text": "The cardinal utility approach assumes utility is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Impossible to compare in any way"
+          },
+          {
+            "id": "B",
+            "text": "Only a ranking with no numerical meaning"
+          },
+          {
+            "id": "C",
+            "text": "Identical for every consumer"
+          },
+          {
+            "id": "D",
+            "text": "Measurable in quantitative units"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Cardinalists treat utility as quantitatively measurable, often in “utils.” The module notes that this assumption is doubtful; ordinal utility instead ranks bundles."
+      },
+      {
+        "question_number": 3,
+        "difficulty": "Easy",
+        "question_text": "The ordinal approach assumes consumers can:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Measure utility in exact absolute units"
+          },
+          {
+            "id": "B",
+            "text": "Purchase unlimited goods regardless of income"
+          },
+          {
+            "id": "C",
+            "text": "Avoid making choices"
+          },
+          {
+            "id": "D",
+            "text": "Rank or order bundles by preference"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Ordinal utility needs only rankings of bundles, not exact numerical measurement. Consumers still face budget constraints and must choose among feasible bundles."
+      },
+      {
+        "question_number": 4,
+        "difficulty": "Easy",
+        "question_text": "Marginal utility is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The satisfaction from all goods combined"
+          },
+          {
+            "id": "B",
+            "text": "Total expenditure divided by price"
+          },
+          {
+            "id": "C",
+            "text": "The price of the last unit"
+          },
+          {
+            "id": "D",
+            "text": "The change in total utility from consuming one additional unit"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Marginal utility measures the additional utility from one more unit, i.e. the change in total utility. It is not the same as total utility, price, or expenditure."
+      },
+      {
+        "question_number": 5,
+        "difficulty": "Easy",
+        "question_text": "The law of diminishing marginal utility says that, other things equal:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Marginal utility tends to decline as more units are consumed"
+          },
+          {
+            "id": "B",
+            "text": "Every good has zero utility after one unit"
+          },
+          {
+            "id": "C",
+            "text": "Price always declines as consumption rises"
+          },
+          {
+            "id": "D",
+            "text": "Total utility must fall with every unit"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "As consumption of successive units rises, the extra satisfaction from each additional unit tends to decline. Total utility can still rise while marginal utility remains positive."
+      },
+      {
+        "question_number": 6,
+        "difficulty": "Easy",
+        "question_text": "A budget line shows:",
+        "options": [
+          {
+            "id": "A",
+            "text": "All bundles the consumer prefers equally"
+          },
+          {
+            "id": "B",
+            "text": "The production possibilities of the whole economy"
+          },
+          {
+            "id": "C",
+            "text": "Combinations of two goods the consumer can afford at given prices and income"
+          },
+          {
+            "id": "D",
+            "text": "All bundles giving identical satisfaction"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The budget line represents affordable combinations given income and prices. Indifference curves represent equal utility, while a PPF represents an economy’s production options."
+      },
+      {
+        "question_number": 7,
+        "difficulty": "Easy",
+        "question_text": "A standard indifference curve connects bundles that:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Provide the same level of utility to the consumer"
+          },
+          {
+            "id": "B",
+            "text": "Have the same market price for both goods"
+          },
+          {
+            "id": "C",
+            "text": "Cost exactly the same to produce"
+          },
+          {
+            "id": "D",
+            "text": "Are all unaffordable"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Every bundle on one indifference curve is equally preferred under the model. Equal expenditure is instead represented by a budget line, and affordability depends on that line."
+      },
+      {
+        "question_number": 8,
+        "difficulty": "Easy",
+        "question_text": "For ordinary convex indifference curves, the marginal rate of substitution measures:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The market’s equilibrium quantity"
+          },
+          {
+            "id": "B",
+            "text": "The slope of the supply curve"
+          },
+          {
+            "id": "C",
+            "text": "The consumer’s total income"
+          },
+          {
+            "id": "D",
+            "text": "How much of one good the consumer is willing to give up for more of the other while utility stays constant"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "MRS expresses the trade-off between two goods along an indifference curve. It is not total income or a market supply measure."
+      },
+      {
+        "question_number": 9,
+        "difficulty": "Easy",
+        "question_text": "At an interior consumer optimum in the module’s ordinal approach, the budget line is typically:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Tangent to the highest attainable indifference curve"
+          },
+          {
+            "id": "B",
+            "text": "Below all possible indifference curves"
+          },
+          {
+            "id": "C",
+            "text": "Parallel to every indifference curve"
+          },
+          {
+            "id": "D",
+            "text": "Vertical regardless of prices"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The consumer maximizes utility where the budget line is tangent to the highest attainable indifference curve, with the slope condition MRS equal to the price ratio. A lower curve gives less utility; an unattainable curve exceeds the budget."
+      },
+      {
+        "question_number": 10,
+        "difficulty": "Easy",
+        "question_text": "If a consumer’s income increases while prices stay constant, the budget line generally:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Becomes steeper because preferences change"
+          },
+          {
+            "id": "B",
+            "text": "Shifts outward in parallel"
+          },
+          {
+            "id": "C",
+            "text": "Rotates inward around both intercepts"
+          },
+          {
+            "id": "D",
+            "text": "Turns into an indifference curve"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Higher income makes more bundles affordable and shifts the budget line outward in parallel when prices are unchanged. Its slope, determined by the price ratio, does not change."
+      },
+      {
+        "question_number": 11,
+        "difficulty": "Medium",
+        "question_text": "If total utility rises from 40 to 47 utils after one additional unit is consumed, marginal utility of that unit is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "40 utils"
+          },
+          {
+            "id": "B",
+            "text": "87 utils"
+          },
+          {
+            "id": "C",
+            "text": "7 utils"
+          },
+          {
+            "id": "D",
+            "text": "47 utils"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Marginal utility is the change in total utility: 47−40=7. The initial or final total utility is not the additional utility."
+      },
+      {
+        "question_number": 12,
+        "difficulty": "Medium",
+        "question_text": "If MUx/Px is greater than MUy/Py, a consumer maximizing utility with both goods available should generally:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Stop consuming both goods"
+          },
+          {
+            "id": "B",
+            "text": "Reallocate spending toward X because it gives more marginal utility per birr"
+          },
+          {
+            "id": "C",
+            "text": "Keep the bundle unchanged under all conditions"
+          },
+          {
+            "id": "D",
+            "text": "Buy more Y and less X immediately"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "The equal-marginal-utility-per-birr rule says a consumer can raise utility by shifting expenditure toward the good with the higher MU/price ratio. Equilibrium requires these ratios to be equal for goods consumed at the margin."
+      },
+      {
+        "question_number": 13,
+        "difficulty": "Medium",
+        "question_text": "Why do standard indifference curves not intersect?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Because all indifference curves have positive slopes"
+          },
+          {
+            "id": "B",
+            "text": "Because consumers cannot consume two goods together"
+          },
+          {
+            "id": "C",
+            "text": "Because income must be zero"
+          },
+          {
+            "id": "D",
+            "text": "An intersection would imply contradictory rankings of bundles under consistent preferences"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "If two indifference curves intersected, transitivity and equal-utility relationships would imply inconsistent rankings. Standard curves therefore do not cross."
+      },
+      {
+        "question_number": 14,
+        "difficulty": "Medium",
+        "question_text": "An indifference curve is convex to the origin mainly because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The price ratio changes along the curve"
+          },
+          {
+            "id": "B",
+            "text": "The consumer’s willingness to substitute one good for the other diminishes as the mix changes"
+          },
+          {
+            "id": "C",
+            "text": "The budget is unlimited"
+          },
+          {
+            "id": "D",
+            "text": "The goods must be inferior"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Convexity reflects diminishing MRS: as a consumer has more of X and less of Y, the amount of Y they are willing to sacrifice for another X typically declines. The budget line’s slope is constant for fixed prices."
+      },
+      {
+        "question_number": 15,
+        "difficulty": "Medium",
+        "question_text": "Income is 60 birr, Px=4 and Py=2. The budget equation is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "2X + 4Y = 60"
+          },
+          {
+            "id": "B",
+            "text": "4X + 2Y = 60"
+          },
+          {
+            "id": "C",
+            "text": "4X − 2Y = 60"
+          },
+          {
+            "id": "D",
+            "text": "X + Y = 60"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Total spending equals income, so PxX+PyY=M gives 4X+2Y=60. The other equations swap prices or use an incorrect sign."
+      },
+      {
+        "question_number": 16,
+        "difficulty": "Medium",
+        "question_text": "For the budget equation 4X + 2Y = 60, the maximum affordable X and Y intercepts are:",
+        "options": [
+          {
+            "id": "A",
+            "text": "X=30 and Y=15"
+          },
+          {
+            "id": "B",
+            "text": "X=60 and Y=60"
+          },
+          {
+            "id": "C",
+            "text": "X=4 and Y=2"
+          },
+          {
+            "id": "D",
+            "text": "X=15 and Y=30"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "If all income is spent on X, X=60/4=15; if all is spent on Y, Y=60/2=30. The intercepts depend on income divided by each good’s price."
+      },
+      {
+        "question_number": 17,
+        "difficulty": "Medium",
+        "question_text": "A fall in the price of X, with income and Py unchanged, causes the budget line to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Rotate outward around the Y-intercept"
+          },
+          {
+            "id": "B",
+            "text": "Rotate inward around the X-intercept"
+          },
+          {
+            "id": "C",
+            "text": "Shift inward in parallel"
+          },
+          {
+            "id": "D",
+            "text": "Become an indifference curve"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The Y-intercept M/Py stays fixed while the maximum affordable X rises to M/Px. Thus the line pivots outward around the Y-intercept rather than shifting in parallel."
+      },
+      {
+        "question_number": 18,
+        "difficulty": "Medium",
+        "question_text": "At consumer equilibrium, MUx/MUy equals:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Zero"
+          },
+          {
+            "id": "B",
+            "text": "The price ratio Px/Py, under the module’s interior optimum condition"
+          },
+          {
+            "id": "C",
+            "text": "The ratio Py/Px in all cases"
+          },
+          {
+            "id": "D",
+            "text": "Total income divided by utility"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "The tangency condition equates MRS (MUx/MUy) to Px/Py. Reversing the price ratio would reverse the trade-off; total income does not enter this slope condition directly."
+      },
+      {
+        "question_number": 19,
+        "difficulty": "Medium",
+        "question_text": "If a consumer is on a lower indifference curve while a higher curve is still affordable, the bundle is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Necessarily the best possible bundle"
+          },
+          {
+            "id": "B",
+            "text": "Not utility-maximizing"
+          },
+          {
+            "id": "C",
+            "text": "Proof that utility is cardinally measurable"
+          },
+          {
+            "id": "D",
+            "text": "Outside the budget constraint"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "A higher attainable indifference curve represents a more preferred bundle, so a lower one cannot be the optimum. The consumer should choose the highest attainable curve."
+      },
+      {
+        "question_number": 20,
+        "difficulty": "Medium",
+        "question_text": "The module gives U(X,Y)=XY+2X, Px=4, Py=2, and M=60. At the stated optimum X=8 and Y=14, spending is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "60 birr"
+          },
+          {
+            "id": "B",
+            "text": "64 birr"
+          },
+          {
+            "id": "C",
+            "text": "32 birr"
+          },
+          {
+            "id": "D",
+            "text": "28 birr"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Check the budget: 4(8)+2(14)=32+28=60, so the bundle exhausts income and is feasible. The other totals do not equal the stated expenditure."
+      },
+      {
+        "question_number": 21,
+        "difficulty": "Hard",
+        "question_text": "A consumer’s total utility rises with consumption, but at a decreasing rate. Which is most consistent?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Marginal utility increases without limit"
+          },
+          {
+            "id": "B",
+            "text": "Marginal utility is negative at every quantity"
+          },
+          {
+            "id": "C",
+            "text": "Total utility is constant"
+          },
+          {
+            "id": "D",
+            "text": "Marginal utility is positive but diminishing"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "When marginal utility is positive, each added unit increases total utility; when it diminishes, total utility rises more slowly. Negative marginal utility would make total utility fall."
+      },
+      {
+        "question_number": 22,
+        "difficulty": "Hard",
+        "question_text": "Why is the cardinal utility assumption described as doubtful in the module?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Utility or satisfaction may not be objectively quantifiable in exact units"
+          },
+          {
+            "id": "B",
+            "text": "It assumes income is fixed"
+          },
+          {
+            "id": "C",
+            "text": "It implies every consumer has the same preferences"
+          },
+          {
+            "id": "D",
+            "text": "It requires that all goods have prices"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The module notes that subjective satisfaction is difficult to quantify objectively. Ordinal theory avoids the need for absolute utility measurement by ranking bundles."
+      },
+      {
+        "question_number": 23,
+        "difficulty": "Hard",
+        "question_text": "A consumer spends all income on X and Y. At the chosen bundle, MUx=12, Px=3, MUy=20, Py=5. What does the equal-marginal-utility rule indicate?",
+        "options": [
+          {
+            "id": "A",
+            "text": "The consumer must stop consuming X"
+          },
+          {
+            "id": "B",
+            "text": "The budget line is vertical"
+          },
+          {
+            "id": "C",
+            "text": "Y gives more utility per birr, so all spending should go to Y"
+          },
+          {
+            "id": "D",
+            "text": "The ratios are both 4, consistent with equilibrium on this condition"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "MUx/Px=12/3=4 and MUy/Py=20/5=4. Equal marginal utility per birr is consistent with consumer equilibrium, assuming the other model conditions hold."
+      },
+      {
+        "question_number": 24,
+        "difficulty": "Hard",
+        "question_text": "Suppose a price change makes the budget line steeper while income stays fixed. What has most likely happened, using X on the horizontal axis?",
+        "options": [
+          {
+            "id": "A",
+            "text": "The price of X rose relative to Y"
+          },
+          {
+            "id": "B",
+            "text": "The price of Y fell relative to X"
+          },
+          {
+            "id": "C",
+            "text": "Income doubled"
+          },
+          {
+            "id": "D",
+            "text": "Both prices and income fell in exactly the same proportion"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The budget-line slope in absolute value is Px/Py. A steeper line therefore indicates a higher relative price of X (or lower Py), not a pure income change."
+      },
+      {
+        "question_number": 25,
+        "difficulty": "Hard",
+        "question_text": "Two bundles A and B lie on the same indifference curve. What can be concluded from the model?",
+        "options": [
+          {
+            "id": "A",
+            "text": "A contains equal quantities of both goods"
+          },
+          {
+            "id": "B",
+            "text": "Both bundles must be affordable at every income"
+          },
+          {
+            "id": "C",
+            "text": "The consumer is indifferent between A and B"
+          },
+          {
+            "id": "D",
+            "text": "A costs the same to produce as B"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Same-curve bundles yield the same utility, so the consumer is indifferent between them. Equal utility does not imply equal quantities, equal production costs, or universal affordability."
+      },
+      {
+        "question_number": 26,
+        "difficulty": "Hard",
+        "question_text": "At a point on an indifference curve, MRSxy=3 while Px/Py=2. Under the usual interior optimum condition, the consumer is not at equilibrium because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The budget line is horizontal by definition"
+          },
+          {
+            "id": "B",
+            "text": "The goods are necessarily complements"
+          },
+          {
+            "id": "C",
+            "text": "The willingness to trade differs from the market trade-off, so a reallocation can improve utility"
+          },
+          {
+            "id": "D",
+            "text": "Income must be zero"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Tangency requires MRSxy=Px/Py. When the two slopes differ, the consumer’s subjective trade-off does not match the market’s price trade-off, leaving scope to adjust the bundle."
+      },
+      {
+        "question_number": 27,
+        "difficulty": "Hard",
+        "question_text": "A 25% fall in income, with both prices unchanged, causes the budget line to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Shift outward in parallel"
+          },
+          {
+            "id": "B",
+            "text": "Rotate around one intercept only"
+          },
+          {
+            "id": "C",
+            "text": "Keep both intercepts unchanged"
+          },
+          {
+            "id": "D",
+            "text": "Shift inward in parallel by the income reduction"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Both intercepts are proportional to income, so a lower income reduces each intercept by the same proportion while leaving the slope unchanged. That is a parallel inward shift."
+      },
+      {
+        "question_number": 28,
+        "difficulty": "Hard",
+        "question_text": "Which statement best compares cardinal and ordinal utility?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Cardinal utility means consumers ignore prices"
+          },
+          {
+            "id": "B",
+            "text": "Cardinal utility quantifies utility; ordinal utility ranks bundles"
+          },
+          {
+            "id": "C",
+            "text": "Ordinal utility rejects consumer choice"
+          },
+          {
+            "id": "D",
+            "text": "Both require utility measured in exact units"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Cardinal theory assumes utility can be measured numerically, while ordinal theory only requires a preference ranking. Both approaches analyze consumer choice rather than ignoring prices."
+      },
+      {
+        "question_number": 29,
+        "difficulty": "Hard",
+        "question_text": "If MUx/MUy equals Px/Py and the bundle lies on the budget line, the bundle satisfies:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The standard tangency condition for an interior utility maximum"
+          },
+          {
+            "id": "B",
+            "text": "The condition for a firm’s profit maximum"
+          },
+          {
+            "id": "C",
+            "text": "A condition that demand equals supply in every market"
+          },
+          {
+            "id": "D",
+            "text": "A proof that utility is measurable in utils"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The MRS-price-ratio equality plus affordability is the module’s consumer-equilibrium condition. It is distinct from a firm’s MR=MC rule and does not establish cardinal measurement."
+      },
+      {
+        "question_number": 30,
+        "difficulty": "Hard",
+        "question_text": "A consumer chooses a point outside the budget line. Why can that not be the feasible optimum under the given income and prices?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Because indifference curves cannot exist outside the budget"
+          },
+          {
+            "id": "B",
+            "text": "Because all outside bundles yield zero utility"
+          },
+          {
+            "id": "C",
+            "text": "Because all affordable bundles are less preferred by definition"
+          },
+          {
+            "id": "D",
+            "text": "Because the bundle costs more than the consumer can afford"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "The budget constraint separates affordable from unaffordable bundles. A point beyond it exceeds available income at the stated prices, even if its utility would be high."
+      }
+    ]
+  },
+  {
+    "chapter_number": 4,
+    "title": "The Theory of Production and Cost",
+    "description": "Short-run production function; fixed and variable inputs; total, average and marginal product; law of variable proportions and production stages; explicit/implicit costs; accounting/economic profit; total, average and marginal cost; cost-production relationships.",
+    "questions": [
+      {
+        "question_number": 1,
+        "difficulty": "Easy",
+        "question_text": "A production function describes:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The maximum output obtainable from specified inputs and existing technology"
+          },
+          {
+            "id": "B",
+            "text": "How consumers rank bundles"
+          },
+          {
+            "id": "C",
+            "text": "The amount of tax paid by a firm"
+          },
+          {
+            "id": "D",
+            "text": "Only the selling price of output"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The module defines a production function as the relationship between inputs and maximum output with existing technology. Prices, consumer preferences, and taxes are separate topics."
+      },
+      {
+        "question_number": 2,
+        "difficulty": "Easy",
+        "question_text": "In the short run, at least one input is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Free of cost"
+          },
+          {
+            "id": "B",
+            "text": "Fixed in quantity"
+          },
+          {
+            "id": "C",
+            "text": "Always variable"
+          },
+          {
+            "id": "D",
+            "text": "Unrelated to output"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "The short run is defined as a period too short to adjust all inputs, so at least one remains fixed. This does not mean all inputs are fixed or that a fixed input has no cost."
+      },
+      {
+        "question_number": 3,
+        "difficulty": "Easy",
+        "question_text": "Which is a likely variable input in the module’s short-run example?",
+        "options": [
+          {
+            "id": "A",
+            "text": "A factory building that cannot be changed quickly"
+          },
+          {
+            "id": "B",
+            "text": "The production technology, assumed fixed"
+          },
+          {
+            "id": "C",
+            "text": "Labour hired in different amounts"
+          },
+          {
+            "id": "D",
+            "text": "Installed machinery held constant"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Labour can be adjusted while capital or plant remains fixed in the short run. Buildings and machinery are examples of fixed inputs in the module’s illustration."
+      },
+      {
+        "question_number": 4,
+        "difficulty": "Easy",
+        "question_text": "Total product (TP) is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Output per worker"
+          },
+          {
+            "id": "B",
+            "text": "The market price multiplied by wages"
+          },
+          {
+            "id": "C",
+            "text": "The total output produced by a given input combination"
+          },
+          {
+            "id": "D",
+            "text": "The change in output from one extra worker"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "TP is total output. Average product is output per unit of variable input, and marginal product is the change in output due to an additional unit."
+      },
+      {
+        "question_number": 5,
+        "difficulty": "Easy",
+        "question_text": "Average product of labour is calculated as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Change in TP divided by change in labour"
+          },
+          {
+            "id": "B",
+            "text": "TP divided by the number of labour units"
+          },
+          {
+            "id": "C",
+            "text": "Marginal cost divided by price"
+          },
+          {
+            "id": "D",
+            "text": "Total cost divided by output"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "APL=TP/L. MPL is ΔTP/ΔL, while average and marginal cost use cost rather than output."
+      },
+      {
+        "question_number": 6,
+        "difficulty": "Easy",
+        "question_text": "Marginal product of labour measures:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The change in output from one additional unit of labour, holding other inputs constant"
+          },
+          {
+            "id": "B",
+            "text": "The average output of all inputs"
+          },
+          {
+            "id": "C",
+            "text": "The total number of workers"
+          },
+          {
+            "id": "D",
+            "text": "The wage paid to each worker"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "MPL is the incremental output attributed to one more unit of labour, with other inputs fixed. It is not the wage or average product."
+      },
+      {
+        "question_number": 7,
+        "difficulty": "Easy",
+        "question_text": "When average product is rising, the relationship in the module is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "MPL is below APL"
+          },
+          {
+            "id": "B",
+            "text": "MPL exceeds APL"
+          },
+          {
+            "id": "C",
+            "text": "MPL is necessarily negative"
+          },
+          {
+            "id": "D",
+            "text": "MPL is always zero"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "If marginal product is above average product, it pulls the average upward. When MPL=APL, APL is at its maximum; when MPL falls below APL, APL declines."
+      },
+      {
+        "question_number": 8,
+        "difficulty": "Easy",
+        "question_text": "The law of variable proportions assumes, among other things, that:",
+        "options": [
+          {
+            "id": "A",
+            "text": "All inputs vary freely in the short run"
+          },
+          {
+            "id": "B",
+            "text": "Technology changes continuously"
+          },
+          {
+            "id": "C",
+            "text": "Each successive worker is less skilled than the previous one"
+          },
+          {
+            "id": "D",
+            "text": "Technology is fixed and units of the variable input are of equal quality"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Diminishing returns arise from adding more variable input to fixed input, not because later workers are assumed less skilled. The module assumes fixed technology and equal-quality labour."
+      },
+      {
+        "question_number": 9,
+        "difficulty": "Easy",
+        "question_text": "Stage II of short-run production extends from:",
+        "options": [
+          {
+            "id": "A",
+            "text": "MPL negative to total product zero"
+          },
+          {
+            "id": "B",
+            "text": "APL at its maximum to MPL equal to zero"
+          },
+          {
+            "id": "C",
+            "text": "The point where all inputs are variable to long-run equilibrium"
+          },
+          {
+            "id": "D",
+            "text": "The origin to APL’s maximum"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Stage II begins where APL is maximal and MPL=APL, and ends where MPL=0. In this region total product still rises, but at a diminishing rate."
+      },
+      {
+        "question_number": 10,
+        "difficulty": "Easy",
+        "question_text": "Economic cost differs from accounting cost because economic cost includes:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only purchased inputs"
+          },
+          {
+            "id": "B",
+            "text": "Revenue earned by the firm"
+          },
+          {
+            "id": "C",
+            "text": "Only wages and materials"
+          },
+          {
+            "id": "D",
+            "text": "Explicit costs plus implicit opportunity costs of self-owned inputs"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Accounting cost includes explicit out-of-pocket costs. Economic cost adds implicit costs such as income forgone by using an owner’s own resources in the business."
+      },
+      {
+        "question_number": 11,
+        "difficulty": "Medium",
+        "question_text": "A firm’s output rises from 100 to 118 units when labour rises from 5 to 6 workers. The marginal product of the sixth worker is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "20 units"
+          },
+          {
+            "id": "B",
+            "text": "118 units"
+          },
+          {
+            "id": "C",
+            "text": "18 units"
+          },
+          {
+            "id": "D",
+            "text": "5 units"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "MPL=ΔTP/ΔL=(118−100)/(6−5)=18 units. Dividing total output by labour would yield average product, not the marginal product of the sixth worker."
+      },
+      {
+        "question_number": 12,
+        "difficulty": "Medium",
+        "question_text": "If TP=240 units and labour input is 12 workers, APL equals:",
+        "options": [
+          {
+            "id": "A",
+            "text": "28"
+          },
+          {
+            "id": "B",
+            "text": "20"
+          },
+          {
+            "id": "C",
+            "text": "240"
+          },
+          {
+            "id": "D",
+            "text": "12"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "APL=TP/L=240/12=20 units per worker. 240 is total product, while the other values do not follow the division."
+      },
+      {
+        "question_number": 13,
+        "difficulty": "Medium",
+        "question_text": "When MPL becomes zero, the total product curve is at:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A point where output must be zero"
+          },
+          {
+            "id": "B",
+            "text": "Its minimum by definition"
+          },
+          {
+            "id": "C",
+            "text": "Its maximum, before further labour can make TP decline"
+          },
+          {
+            "id": "D",
+            "text": "A point where average product must be zero"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "MPL is the slope/change in TP. When MPL reaches zero, adding labour no longer increases TP; in the standard pattern this marks TP’s maximum before negative marginal returns."
+      },
+      {
+        "question_number": 14,
+        "difficulty": "Medium",
+        "question_text": "A firm’s explicit costs are 50,000 birr and its implicit costs are 12,000 birr. Total revenue is 80,000 birr. Accounting profit and economic profit are:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Accounting 30,000; economic 18,000"
+          },
+          {
+            "id": "B",
+            "text": "Both 18,000"
+          },
+          {
+            "id": "C",
+            "text": "Both 30,000"
+          },
+          {
+            "id": "D",
+            "text": "Accounting 18,000; economic 30,000"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Accounting profit=80,000−50,000=30,000. Economic profit=80,000−(50,000+12,000)=18,000. Ignoring implicit costs overstates economic profit."
+      },
+      {
+        "question_number": 15,
+        "difficulty": "Medium",
+        "question_text": "Which cost is typically fixed in the short run?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Rent on a facility under a fixed lease"
+          },
+          {
+            "id": "B",
+            "text": "Piece-rate wages that vary with output"
+          },
+          {
+            "id": "C",
+            "text": "Raw materials used per unit"
+          },
+          {
+            "id": "D",
+            "text": "Electricity that rises with machine use"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "A fixed cost does not vary with current output over the relevant short-run range; rent under a fixed lease is a typical example. Materials and output-linked utilities generally vary with production."
+      },
+      {
+        "question_number": 16,
+        "difficulty": "Medium",
+        "question_text": "Average fixed cost (AFC) tends to fall as output rises because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Price must fall"
+          },
+          {
+            "id": "B",
+            "text": "Marginal product is negative"
+          },
+          {
+            "id": "C",
+            "text": "Total fixed cost rises proportionately with output"
+          },
+          {
+            "id": "D",
+            "text": "Fixed total cost is spread over more units"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "AFC=TFC/Q. If total fixed cost remains constant, dividing it among more units reduces average fixed cost. This result does not require price changes."
+      },
+      {
+        "question_number": 17,
+        "difficulty": "Medium",
+        "question_text": "Marginal cost is calculated as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The change in total cost divided by the change in output"
+          },
+          {
+            "id": "B",
+            "text": "TC divided by price"
+          },
+          {
+            "id": "C",
+            "text": "TFC divided by output"
+          },
+          {
+            "id": "D",
+            "text": "TR minus TC"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "MC=ΔTC/ΔQ. Average total cost is TC/Q, and profit is TR−TC."
+      },
+      {
+        "question_number": 18,
+        "difficulty": "Medium",
+        "question_text": "In the short run, total cost is composed of:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Total fixed cost plus total variable cost"
+          },
+          {
+            "id": "B",
+            "text": "Revenue plus profit"
+          },
+          {
+            "id": "C",
+            "text": "Average cost plus marginal cost"
+          },
+          {
+            "id": "D",
+            "text": "Fixed cost minus variable cost"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "TC=TFC+TVC. This decomposition reflects costs that do not vary with output and those that do."
+      },
+      {
+        "question_number": 19,
+        "difficulty": "Medium",
+        "question_text": "If total cost rises from 600 to 660 birr as output rises from 20 to 25 units, marginal cost over that range is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "5 birr per unit"
+          },
+          {
+            "id": "B",
+            "text": "13.2 birr per unit"
+          },
+          {
+            "id": "C",
+            "text": "60 birr per unit"
+          },
+          {
+            "id": "D",
+            "text": "12 birr per unit"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "MC over the interval is ΔTC/ΔQ=(660−600)/(25−20)=60/5=12 birr per additional unit. 60 is the total cost change, not per-unit marginal cost."
+      },
+      {
+        "question_number": 20,
+        "difficulty": "Medium",
+        "question_text": "Why does diminishing marginal product tend to make marginal cost rise, assuming input prices are constant?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Each additional unit of output requires more variable input per unit of extra output"
+          },
+          {
+            "id": "B",
+            "text": "Because fixed cost must rise with every unit"
+          },
+          {
+            "id": "C",
+            "text": "Because average fixed cost becomes zero"
+          },
+          {
+            "id": "D",
+            "text": "Because total revenue necessarily falls"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "When marginal product declines, more variable input is needed to produce each extra unit. With a constant input price, that makes the cost of an additional unit of output rise."
+      },
+      {
+        "question_number": 21,
+        "difficulty": "Hard",
+        "question_text": "At the point where APL is maximum, which relationship holds in the module?",
+        "options": [
+          {
+            "id": "A",
+            "text": "MPL=0 and TP=0"
+          },
+          {
+            "id": "B",
+            "text": "APL is necessarily zero"
+          },
+          {
+            "id": "C",
+            "text": "MPL=APL"
+          },
+          {
+            "id": "D",
+            "text": "MPL is negative"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The marginal product curve crosses the average product curve at APL’s maximum, so MPL=APL there. MPL reaches zero later, at the maximum of TP."
+      },
+      {
+        "question_number": 22,
+        "difficulty": "Hard",
+        "question_text": "A rational firm would generally avoid Stage III because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Marginal product is negative and additional variable input reduces total output"
+          },
+          {
+            "id": "B",
+            "text": "All fixed inputs are underutilized"
+          },
+          {
+            "id": "C",
+            "text": "Average product is at its highest value"
+          },
+          {
+            "id": "D",
+            "text": "The marginal product is positive but falling"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "In Stage III, excessive variable input relative to fixed input causes marginal product to become negative and total product to fall. Stage I is associated with underutilization of fixed input; Stage II is the efficient region described by the module."
+      },
+      {
+        "question_number": 23,
+        "difficulty": "Hard",
+        "question_text": "Which situation illustrates an implicit cost?",
+        "options": [
+          {
+            "id": "A",
+            "text": "The salary an owner gives up by leaving another job to run the firm"
+          },
+          {
+            "id": "B",
+            "text": "A monthly electricity bill"
+          },
+          {
+            "id": "C",
+            "text": "Wages paid to an employee"
+          },
+          {
+            "id": "D",
+            "text": "Cash paid for raw cotton"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Implicit costs are opportunity costs of self-owned resources and need not involve an out-of-pocket payment. Raw materials, electricity, and employee wages are explicit costs."
+      },
+      {
+        "question_number": 24,
+        "difficulty": "Hard",
+        "question_text": "A firm produces 40 units at TC=400 birr and 50 units at TC=470 birr. The marginal cost over the interval is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "10 birr"
+          },
+          {
+            "id": "B",
+            "text": "70 birr"
+          },
+          {
+            "id": "C",
+            "text": "7 birr"
+          },
+          {
+            "id": "D",
+            "text": "47 birr"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "MC=(470−400)/(50−40)=70/10=7 birr per additional unit. The total cost change is 70, but ten extra units were produced."
+      },
+      {
+        "question_number": 25,
+        "difficulty": "Hard",
+        "question_text": "If TFC=200 birr and TVC=300 birr at output 50, average total cost is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "6 birr"
+          },
+          {
+            "id": "B",
+            "text": "10 birr"
+          },
+          {
+            "id": "C",
+            "text": "500 birr"
+          },
+          {
+            "id": "D",
+            "text": "4 birr"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "TC=200+300=500 birr and ATC=TC/Q=500/50=10 birr. The other choices confuse average fixed cost, average variable cost, or total cost with average total cost."
+      },
+      {
+        "question_number": 26,
+        "difficulty": "Hard",
+        "question_text": "The total product curve is steepest where:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Average product is zero"
+          },
+          {
+            "id": "B",
+            "text": "Marginal product is zero"
+          },
+          {
+            "id": "C",
+            "text": "Marginal product is highest"
+          },
+          {
+            "id": "D",
+            "text": "Total fixed cost is lowest"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The slope of TP is marginal product, so the steepest portion corresponds to maximum MPL. When MPL=0, TP is flat at its maximum."
+      },
+      {
+        "question_number": 27,
+        "difficulty": "Hard",
+        "question_text": "If MC is rising and crosses ATC at ATC’s minimum, the curve relationship is consistent with:",
+        "options": [
+          {
+            "id": "A",
+            "text": "ATC always falling"
+          },
+          {
+            "id": "B",
+            "text": "MC being equal to fixed cost"
+          },
+          {
+            "id": "C",
+            "text": "AFC being the same as AVC"
+          },
+          {
+            "id": "D",
+            "text": "The marginal-average relationship: MC below ATC pulls it down, above ATC pushes it up"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "A marginal value intersects the average at its minimum in the standard U-shaped cost-curve relationship. MC below ATC lowers the average; MC above ATC raises it."
+      },
+      {
+        "question_number": 28,
+        "difficulty": "Hard",
+        "question_text": "Which statement correctly compares short run and long run in production analysis?",
+        "options": [
+          {
+            "id": "A",
+            "text": "In the long run all inputs are permanently fixed"
+          },
+          {
+            "id": "B",
+            "text": "In the short run every input is variable"
+          },
+          {
+            "id": "C",
+            "text": "In the short run at least one input is fixed; in the long run all inputs can be adjusted"
+          },
+          {
+            "id": "D",
+            "text": "The distinction is only about calendar days, never input flexibility"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The module defines the short run by the presence of at least one fixed input, not by a universal number of days. In the long run, the firm can adjust all inputs."
+      },
+      {
+        "question_number": 29,
+        "difficulty": "Hard",
+        "question_text": "A firm’s economic profit is zero when:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Total revenue is zero"
+          },
+          {
+            "id": "B",
+            "text": "Total revenue equals explicit costs but ignores opportunity costs"
+          },
+          {
+            "id": "C",
+            "text": "Accounting cost is zero"
+          },
+          {
+            "id": "D",
+            "text": "Total revenue equals explicit plus implicit costs"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Economic profit subtracts both explicit and implicit costs. Zero economic profit means revenue exactly covers all economic costs, including the owner’s opportunity costs."
+      },
+      {
+        "question_number": 30,
+        "difficulty": "Hard",
+        "question_text": "A fixed input’s marginal product can eventually decline as more labour is added because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The fixed input becomes scarce relative to the growing variable input"
+          },
+          {
+            "id": "B",
+            "text": "The firm’s selling price must fall"
+          },
+          {
+            "id": "C",
+            "text": "Workers become less skilled by assumption"
+          },
+          {
+            "id": "D",
+            "text": "Technology is assumed to improve every minute"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Diminishing returns arise because a fixed amount of capital or land is shared among more variable input units. The module explicitly does not assume later workers are inherently less skilled."
+      }
+    ]
+  },
+  {
+    "chapter_number": 5,
+    "title": "Market Structure",
+    "description": "Markets in physical and digital space; perfect competition assumptions; price-taking firms; short-run profit maximization and shutdown; industry equilibrium; monopoly and entry barriers; monopolistic competition; oligopoly and interdependence.",
+    "questions": [
+      {
+        "question_number": 1,
+        "difficulty": "Easy",
+        "question_text": "A perfectly competitive firm is called a price taker because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "It can set any price without losing customers"
+          },
+          {
+            "id": "B",
+            "text": "It is the only seller"
+          },
+          {
+            "id": "C",
+            "text": "It accepts the market price determined by market demand and supply"
+          },
+          {
+            "id": "D",
+            "text": "Government chooses its price in every transaction"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "A competitive firm is small relative to the market and sells a homogeneous product, so it cannot individually influence market price. The firm takes price as given."
+      },
+      {
+        "question_number": 2,
+        "difficulty": "Easy",
+        "question_text": "Which is an assumption of perfect competition in the module?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Few firms that respond strategically to each other"
+          },
+          {
+            "id": "B",
+            "text": "One seller and blocked entry"
+          },
+          {
+            "id": "C",
+            "text": "Many buyers and sellers with homogeneous products"
+          },
+          {
+            "id": "D",
+            "text": "Differentiated products and strong brand loyalty"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Perfect competition assumes many buyers and sellers, homogeneous products, mobility, free entry/exit, and market knowledge. Differentiation describes monopolistic competition; few interdependent firms describe oligopoly."
+      },
+      {
+        "question_number": 3,
+        "difficulty": "Easy",
+        "question_text": "For a perfectly competitive firm, marginal revenue is equal to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Total cost in every output level"
+          },
+          {
+            "id": "B",
+            "text": "Average fixed cost only"
+          },
+          {
+            "id": "C",
+            "text": "The price charged by every rival plus a markup"
+          },
+          {
+            "id": "D",
+            "text": "Market price and average revenue"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "A competitive firm sells each additional unit at the market price, so P=AR=MR. MR does not equal total cost or AFC by definition."
+      },
+      {
+        "question_number": 4,
+        "difficulty": "Easy",
+        "question_text": "The marginal rule for a competitive firm’s profit-maximizing output is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Always produce the largest possible quantity"
+          },
+          {
+            "id": "B",
+            "text": "Produce where price is zero"
+          },
+          {
+            "id": "C",
+            "text": "Choose output where MR=MC and MC is rising through the intersection"
+          },
+          {
+            "id": "D",
+            "text": "Produce where ATC is highest"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The module uses MR=MC and the second-order condition that MC is increasing at the intersection. Merely finding MR=MC where MC is falling may not identify a maximum."
+      },
+      {
+        "question_number": 5,
+        "difficulty": "Easy",
+        "question_text": "A firm earns positive economic profit in the short run when, at its chosen output:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Price exceeds ATC"
+          },
+          {
+            "id": "B",
+            "text": "Price is below every cost measure"
+          },
+          {
+            "id": "C",
+            "text": "Price equals ATC"
+          },
+          {
+            "id": "D",
+            "text": "Price is below AVC"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Profit per unit is P−ATC; if price exceeds average total cost, total revenue exceeds total cost. If P=ATC, economic profit is zero; if price is below ATC, the firm incurs a loss."
+      },
+      {
+        "question_number": 6,
+        "difficulty": "Easy",
+        "question_text": "The shutdown point in the module’s short-run analysis occurs where price equals:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Maximum average total cost"
+          },
+          {
+            "id": "B",
+            "text": "Marginal revenue only"
+          },
+          {
+            "id": "C",
+            "text": "Minimum average variable cost"
+          },
+          {
+            "id": "D",
+            "text": "Average fixed cost"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "If price falls below AVC, revenue does not cover variable costs and the firm minimizes loss by shutting down. P=AVC is the shutdown threshold."
+      },
+      {
+        "question_number": 7,
+        "difficulty": "Easy",
+        "question_text": "A monopoly is characterized primarily by:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A perfectly horizontal demand curve for each firm"
+          },
+          {
+            "id": "B",
+            "text": "A single seller with significant barriers to entry"
+          },
+          {
+            "id": "C",
+            "text": "Many firms selling identical goods"
+          },
+          {
+            "id": "D",
+            "text": "Free entry and no product differentiation"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Pure monopoly is a one-firm industry protected by barriers such as legal restrictions, control of key inputs, or natural-monopoly conditions. Many sellers and free entry characterize other market forms."
+      },
+      {
+        "question_number": 8,
+        "difficulty": "Easy",
+        "question_text": "Monopolistic competition combines:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Central planning and private ownership only"
+          },
+          {
+            "id": "B",
+            "text": "Many sellers and differentiated products, with relatively easy entry and exit"
+          },
+          {
+            "id": "C",
+            "text": "One seller and total entry barriers"
+          },
+          {
+            "id": "D",
+            "text": "Homogeneous products with no advertising"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "The competitive element comes from many firms and easy entry/exit; the monopoly element comes from differentiated products and limited market power. Oligopoly instead has few dominant interdependent firms."
+      },
+      {
+        "question_number": 9,
+        "difficulty": "Easy",
+        "question_text": "The defining feature of oligopoly emphasized in the module is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Every firm is too small to affect rivals"
+          },
+          {
+            "id": "B",
+            "text": "A complete absence of entry barriers"
+          },
+          {
+            "id": "C",
+            "text": "All products must be identical"
+          },
+          {
+            "id": "D",
+            "text": "Interdependence among a few dominant firms"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Because a few firms hold significant market shares, each firm’s decisions affect rivals and provoke responses. Products may be homogeneous or differentiated, and entry barriers are common."
+      },
+      {
+        "question_number": 10,
+        "difficulty": "Easy",
+        "question_text": "A market with exactly two firms is called:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Perfect competition"
+          },
+          {
+            "id": "B",
+            "text": "Monopolistic competition"
+          },
+          {
+            "id": "C",
+            "text": "Monopoly"
+          },
+          {
+            "id": "D",
+            "text": "Duopoly"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "The module identifies a two-firm oligopoly as a duopoly. Monopoly has one seller; the other market structures have different seller counts and product conditions."
+      },
+      {
+        "question_number": 11,
+        "difficulty": "Medium",
+        "question_text": "A competitive firm faces market price P=12. If its marginal cost is 8 at current output, what is the usual profit-maximizing direction of adjustment?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Shut down immediately"
+          },
+          {
+            "id": "B",
+            "text": "Keep output fixed because price takers cannot adjust output"
+          },
+          {
+            "id": "C",
+            "text": "Increase output, because MR=P exceeds MC"
+          },
+          {
+            "id": "D",
+            "text": "Reduce output, because MC is below price"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "For a competitive firm MR=P. When MR>MC, another unit adds more revenue than cost, so increasing output raises profit until MR=MC. Being a price taker does not prevent output adjustment."
+      },
+      {
+        "question_number": 12,
+        "difficulty": "Medium",
+        "question_text": "A firm has P=10 and ATC=8 at its profit-maximizing output of 100 units. Its economic profit is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "1,000 birr"
+          },
+          {
+            "id": "B",
+            "text": "200 birr"
+          },
+          {
+            "id": "C",
+            "text": "100 birr"
+          },
+          {
+            "id": "D",
+            "text": "80 birr"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Profit=(P−ATC)Q=(10−8)×100=200 birr. Revenue alone is 1,000 birr, not profit; the margin per unit is 2 birr."
+      },
+      {
+        "question_number": 13,
+        "difficulty": "Medium",
+        "question_text": "If P is above AVC but below ATC, a competitive firm in the short run should generally:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Exit the industry immediately because profit is negative"
+          },
+          {
+            "id": "B",
+            "text": "Continue producing if revenue covers variable cost, minimizing loss"
+          },
+          {
+            "id": "C",
+            "text": "Earn positive economic profit"
+          },
+          {
+            "id": "D",
+            "text": "Produce where marginal cost is zero"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Although the firm incurs a loss because P<ATC, it covers variable costs and contributes something toward fixed costs. In the short run it minimizes losses by operating; shutdown is preferred if P<AVC."
+      },
+      {
+        "question_number": 14,
+        "difficulty": "Medium",
+        "question_text": "If P falls below minimum AVC, the firm’s short-run loss-minimizing decision is to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Stay open because fixed costs are sunk"
+          },
+          {
+            "id": "B",
+            "text": "Produce where ATC is highest"
+          },
+          {
+            "id": "C",
+            "text": "Increase output indefinitely"
+          },
+          {
+            "id": "D",
+            "text": "Shut down production"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Below AVC, revenue is insufficient to cover variable costs. Producing adds to the loss, so the shutdown decision minimizes short-run loss even though fixed costs remain."
+      },
+      {
+        "question_number": 15,
+        "difficulty": "Medium",
+        "question_text": "Which situation is a likely source of monopoly power described in the module?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Legal restrictions, control of key raw materials, or natural-monopoly efficiency"
+          },
+          {
+            "id": "B",
+            "text": "Many small sellers with free entry"
+          },
+          {
+            "id": "C",
+            "text": "A product with numerous close substitutes"
+          },
+          {
+            "id": "D",
+            "text": "Perfect knowledge and complete factor mobility"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Barriers to entry are the source of monopoly power. The module lists legal restrictions, control of key resources, and natural monopoly arising from efficiency; free entry undermines monopoly."
+      },
+      {
+        "question_number": 16,
+        "difficulty": "Medium",
+        "question_text": "Why does product differentiation give a monopolistically competitive firm some market power?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Its product has no substitutes at all"
+          },
+          {
+            "id": "B",
+            "text": "It can ignore consumer preferences"
+          },
+          {
+            "id": "C",
+            "text": "Some buyers prefer its version, so it faces a downward-sloping firm demand curve"
+          },
+          {
+            "id": "D",
+            "text": "It becomes the only seller in the whole economy"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Differentiation gives a firm limited control over price among customers who prefer its brand or features, but close substitutes limit that power. It is not a pure monopoly."
+      },
+      {
+        "question_number": 17,
+        "difficulty": "Medium",
+        "question_text": "Why do oligopoly firms often rely on non-price competition?",
+        "options": [
+          {
+            "id": "A",
+            "text": "They may fear price wars and compete through quality, advertising, service, or warranties"
+          },
+          {
+            "id": "B",
+            "text": "They are legally forbidden to advertise"
+          },
+          {
+            "id": "C",
+            "text": "Their products are always identical"
+          },
+          {
+            "id": "D",
+            "text": "They have no rivals"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The module notes oligopolists often avoid price competition because rivals may retaliate and start price wars. Non-price methods help influence demand and build brand recognition."
+      },
+      {
+        "question_number": 18,
+        "difficulty": "Medium",
+        "question_text": "The industry supply curve under perfect competition is derived by:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Adding all firms’ average costs"
+          },
+          {
+            "id": "B",
+            "text": "Vertically adding firm demand curves"
+          },
+          {
+            "id": "C",
+            "text": "Taking the highest firm price only"
+          },
+          {
+            "id": "D",
+            "text": "Horizontally summing individual firms’ supply curves"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Market or industry supply is the horizontal sum of quantities supplied by individual firms at each price. Adding demand curves or average costs does not produce industry supply."
+      },
+      {
+        "question_number": 19,
+        "difficulty": "Medium",
+        "question_text": "A firm is at break-even (normal profit) when:",
+        "options": [
+          {
+            "id": "A",
+            "text": "P equals zero regardless of cost"
+          },
+          {
+            "id": "B",
+            "text": "P equals ATC at its chosen output"
+          },
+          {
+            "id": "C",
+            "text": "P is above ATC"
+          },
+          {
+            "id": "D",
+            "text": "P is below AVC"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "At P=ATC, revenue equals total cost and economic profit is zero, which the module calls normal profit or break-even. A price below ATC produces a loss."
+      },
+      {
+        "question_number": 20,
+        "difficulty": "Medium",
+        "question_text": "Which comparison is accurate?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Monopoly has many sellers; oligopoly has one"
+          },
+          {
+            "id": "B",
+            "text": "Monopolistic competition always has blocked entry"
+          },
+          {
+            "id": "C",
+            "text": "Oligopoly has no strategic interdependence"
+          },
+          {
+            "id": "D",
+            "text": "Perfect competition has homogeneous products; monopolistic competition has differentiated products"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "The module distinguishes perfect competition by homogeneous products and monopolistic competition by differentiated products and many sellers. Oligopoly is characterized by interdependence and barriers to entry."
+      },
+      {
+        "question_number": 21,
+        "difficulty": "Hard",
+        "question_text": "A competitive firm has MC=MR at two outputs. At the lower output MC is falling; at the higher output MC is rising. Which is the profit-maximizing candidate in the module?",
+        "options": [
+          {
+            "id": "A",
+            "text": "The lower output because any equality is sufficient"
+          },
+          {
+            "id": "B",
+            "text": "Neither output can ever maximize profit"
+          },
+          {
+            "id": "C",
+            "text": "Both outputs equally in all cases"
+          },
+          {
+            "id": "D",
+            "text": "The higher output, where MC is rising through MR"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "MR=MC is necessary, but the module also requires the appropriate second-order condition: MC should be increasing at the intersection. A falling-MC intersection is not the maximum-profit output in its example."
+      },
+      {
+        "question_number": 22,
+        "difficulty": "Hard",
+        "question_text": "At the profit-maximizing output, P=9, AVC=7 and ATC=11. Which short-run conclusion follows?",
+        "options": [
+          {
+            "id": "A",
+            "text": "The firm should shut down because P<ATC"
+          },
+          {
+            "id": "B",
+            "text": "The firm incurs a loss but should continue producing because P>AVC"
+          },
+          {
+            "id": "C",
+            "text": "The firm earns zero economic profit"
+          },
+          {
+            "id": "D",
+            "text": "The firm earns positive economic profit"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "P is below ATC, so profit is negative, but P exceeds AVC, so variable costs are covered and production helps pay some fixed costs. The firm should not shut down solely because P<ATC."
+      },
+      {
+        "question_number": 23,
+        "difficulty": "Hard",
+        "question_text": "Suppose all firms in a perfectly competitive industry earn positive economic profit in the short run and entry is free. What pressure does the model imply over time?",
+        "options": [
+          {
+            "id": "A",
+            "text": "All firms immediately become monopolies"
+          },
+          {
+            "id": "B",
+            "text": "The market price must rise indefinitely"
+          },
+          {
+            "id": "C",
+            "text": "Entry of firms tends to increase industry supply and erode economic profit"
+          },
+          {
+            "id": "D",
+            "text": "Industry supply must shrink"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Positive profit attracts entry when entry barriers are absent. Additional industry supply tends to put downward pressure on price, reducing excess profit in the long-run competitive adjustment."
+      },
+      {
+        "question_number": 24,
+        "difficulty": "Hard",
+        "question_text": "A monopolist controls a key raw material that rivals cannot obtain. This is an entry barrier based on:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Homogeneous products alone"
+          },
+          {
+            "id": "B",
+            "text": "Control of essential inputs"
+          },
+          {
+            "id": "C",
+            "text": "Perfect factor mobility"
+          },
+          {
+            "id": "D",
+            "text": "Consumer sovereignty"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Control of key raw materials is one of the module’s sources of monopoly power because it blocks potential competitors. Free mobility and consumer sovereignty do not create this barrier."
+      },
+      {
+        "question_number": 25,
+        "difficulty": "Hard",
+        "question_text": "Which statement about a monopolist’s demand differs from a competitive firm’s demand?",
+        "options": [
+          {
+            "id": "A",
+            "text": "A monopolist’s output never affects market quantity"
+          },
+          {
+            "id": "B",
+            "text": "A monopolist faces the market demand curve, while a competitive firm faces a horizontal demand at market price"
+          },
+          {
+            "id": "C",
+            "text": "A monopolist faces a perfectly horizontal demand curve at market price"
+          },
+          {
+            "id": "D",
+            "text": "A monopolist must accept a price determined by many sellers of identical output"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "A pure monopolist is the only seller and faces market demand, whereas a competitive firm can sell at the market price and faces a horizontal demand curve. This reflects their different market power."
+      },
+      {
+        "question_number": 26,
+        "difficulty": "Hard",
+        "question_text": "An industry has four dominant firms; each anticipates rivals’ reactions to price changes, and entry is difficult. This is most consistent with:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Monopolistic competition"
+          },
+          {
+            "id": "B",
+            "text": "Perfect competition"
+          },
+          {
+            "id": "C",
+            "text": "Oligopoly"
+          },
+          {
+            "id": "D",
+            "text": "A market with no firms"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Few dominant firms, strategic interdependence, and entry barriers are the hallmarks of oligopoly. Many firms with easy entry and differentiated goods instead describe monopolistic competition."
+      },
+      {
+        "question_number": 27,
+        "difficulty": "Hard",
+        "question_text": "A firm’s total revenue and total cost curves are farthest apart vertically at output Q=40. Under the total approach, this indicates:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The point of minimum total revenue"
+          },
+          {
+            "id": "B",
+            "text": "The output where total cost equals zero"
+          },
+          {
+            "id": "C",
+            "text": "The output where total profit is maximized"
+          },
+          {
+            "id": "D",
+            "text": "The shutdown point by definition"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Profit equals TR−TC, represented by the vertical gap between the curves. The largest positive gap identifies maximum total profit; the shutdown point is analyzed using AVC and price."
+      },
+      {
+        "question_number": 28,
+        "difficulty": "Hard",
+        "question_text": "Why does free entry and exit matter in perfect competition?",
+        "options": [
+          {
+            "id": "A",
+            "text": "It guarantees every firm earns a permanent monopoly profit"
+          },
+          {
+            "id": "B",
+            "text": "It allows firms to enter when profits attract them and leave when continued operation is not worthwhile"
+          },
+          {
+            "id": "C",
+            "text": "It fixes every firm’s costs at zero"
+          },
+          {
+            "id": "D",
+            "text": "It makes demand perfectly inelastic"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Free entry and exit is an assumption of perfect competition and allows industry adjustment to profit and loss. It does not eliminate costs or make demand inelastic."
+      },
+      {
+        "question_number": 29,
+        "difficulty": "Hard",
+        "question_text": "A market has many sellers, easy entry, and firms compete through brand image, packaging, and customer service. The strongest classification is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Pure perfect competition"
+          },
+          {
+            "id": "B",
+            "text": "Monopolistic competition"
+          },
+          {
+            "id": "C",
+            "text": "Oligopoly by definition"
+          },
+          {
+            "id": "D",
+            "text": "Pure monopoly"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Differentiated products and non-price competition with many sellers and easy entry are characteristic of monopolistic competition. Homogeneous goods are assumed in perfect competition."
+      },
+      {
+        "question_number": 30,
+        "difficulty": "Hard",
+        "question_text": "Which claim is best supported by the module’s market-structure framework?",
+        "options": [
+          {
+            "id": "A",
+            "text": "All market structures have identical pricing power"
+          },
+          {
+            "id": "B",
+            "text": "Market power and entry conditions differ across structures and shape firm behaviour"
+          },
+          {
+            "id": "C",
+            "text": "A monopoly is defined by a large number of sellers"
+          },
+          {
+            "id": "D",
+            "text": "Oligopoly firms never respond to rivals"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "The chapter compares structures using seller numbers, product differentiation, entry barriers, and strategic interdependence. Those features affect firms’ control over price and their competitive strategies."
+      }
+    ]
+  },
+  {
+    "chapter_number": 6,
+    "title": "Fundamental Concepts of Macroeconomics",
+    "description": "Macroeconomic goals; national income accounting and GDP/GNP; product, expenditure and income approaches; other income accounts; nominal/real GDP; GDP deflator and CPI; business cycle; unemployment; inflation; trade and budget deficits; monetary and fiscal policy.",
+    "questions": [
+      {
+        "question_number": 1,
+        "difficulty": "Easy",
+        "question_text": "Macroeconomics studies:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only the production methods of one factory"
+          },
+          {
+            "id": "B",
+            "text": "The economy as a whole and aggregate variables"
+          },
+          {
+            "id": "C",
+            "text": "Only the decisions of one household"
+          },
+          {
+            "id": "D",
+            "text": "Only the prices of one firm’s product"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Macroeconomics examines economy-wide aggregates such as national output, income, employment, and the general price level. Individual firms and product prices are usually microeconomic topics."
+      },
+      {
+        "question_number": 2,
+        "difficulty": "Easy",
+        "question_text": "Gross Domestic Product (GDP) measures the market value of:",
+        "options": [
+          {
+            "id": "A",
+            "text": "All goods ever produced in a country’s history"
+          },
+          {
+            "id": "B",
+            "text": "Only intermediate goods"
+          },
+          {
+            "id": "C",
+            "text": "Currently produced final goods and services within a country"
+          },
+          {
+            "id": "D",
+            "text": "Only goods exported abroad"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "GDP covers current final production within the country’s borders. Intermediate goods are excluded to avoid double counting, and GDP includes more than exports."
+      },
+      {
+        "question_number": 3,
+        "difficulty": "Easy",
+        "question_text": "Gross National Product (GNP) differs from GDP by adding:",
+        "options": [
+          {
+            "id": "A",
+            "text": "The value of used goods sold this year"
+          },
+          {
+            "id": "B",
+            "text": "All imports without adjustment"
+          },
+          {
+            "id": "C",
+            "text": "Net factor income from abroad"
+          },
+          {
+            "id": "D",
+            "text": "Government transfer payments"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The module gives GNP=GDP+NFI, where NFI is net factor income from abroad. Transfers and used goods are not current domestic production."
+      },
+      {
+        "question_number": 4,
+        "difficulty": "Easy",
+        "question_text": "Which item is included in expenditure GDP as a current purchase of final output?",
+        "options": [
+          {
+            "id": "A",
+            "text": "A household’s purchase of a newly produced refrigerator"
+          },
+          {
+            "id": "B",
+            "text": "The purchase of an intermediate tire counted again after the car is sold"
+          },
+          {
+            "id": "C",
+            "text": "A pension transfer with no current production"
+          },
+          {
+            "id": "D",
+            "text": "The resale of a used car"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "A newly produced final good is included. Transfer payments are excluded because they do not pay for current production, used goods were counted when produced, and intermediate goods must not be double counted."
+      },
+      {
+        "question_number": 5,
+        "difficulty": "Easy",
+        "question_text": "The three GDP measurement approaches named in the module are:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Product/value-added, expenditure, and income"
+          },
+          {
+            "id": "B",
+            "text": "Household, firm, and government budgets"
+          },
+          {
+            "id": "C",
+            "text": "Imports, exports, and taxes"
+          },
+          {
+            "id": "D",
+            "text": "Demand, supply, and elasticity"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The module presents the product/value-added, expenditure, and income approaches. In principle they measure the same production flow from different sides."
+      },
+      {
+        "question_number": 6,
+        "difficulty": "Easy",
+        "question_text": "Nominal GDP values output using:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Only quantities, not prices"
+          },
+          {
+            "id": "B",
+            "text": "The consumer price index directly"
+          },
+          {
+            "id": "C",
+            "text": "Prices of the year being measured"
+          },
+          {
+            "id": "D",
+            "text": "Prices of a fixed base year only"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Nominal GDP uses current-year prices and quantities. Real GDP values output at base-year prices to separate quantity changes from price changes."
+      },
+      {
+        "question_number": 7,
+        "difficulty": "Easy",
+        "question_text": "Real GDP is especially useful for comparing output over time because it:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Counts intermediate goods repeatedly"
+          },
+          {
+            "id": "B",
+            "text": "Adjusts for price changes by using base-year prices"
+          },
+          {
+            "id": "C",
+            "text": "Always exceeds nominal GDP"
+          },
+          {
+            "id": "D",
+            "text": "Includes only imported goods"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "Real GDP removes the effect of price-level changes by valuing output at base-year prices. It can be above or below nominal GDP depending on the price level relative to the base year."
+      },
+      {
+        "question_number": 8,
+        "difficulty": "Easy",
+        "question_text": "The GDP deflator is calculated as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Real GDP divided by nominal GDP, without multiplying"
+          },
+          {
+            "id": "B",
+            "text": "CPI minus unemployment"
+          },
+          {
+            "id": "C",
+            "text": "Nominal GDP divided by real GDP, multiplied by 100"
+          },
+          {
+            "id": "D",
+            "text": "GDP plus imports"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "GDP deflator=(Nominal GDP/Real GDP)×100. It reflects prices of domestically produced final output, unlike CPI’s fixed consumer basket."
+      },
+      {
+        "question_number": 9,
+        "difficulty": "Easy",
+        "question_text": "Which type of unemployment results from a mismatch between workers’ skills or locations and available jobs?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Frictional"
+          },
+          {
+            "id": "B",
+            "text": "Cyclical"
+          },
+          {
+            "id": "C",
+            "text": "Structural"
+          },
+          {
+            "id": "D",
+            "text": "Seasonal inflation"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Structural unemployment arises from mismatch of skills or locations. Frictional unemployment is associated with brief transitions/search; cyclical unemployment is related to weak economic activity."
+      },
+      {
+        "question_number": 10,
+        "difficulty": "Easy",
+        "question_text": "Inflation is best described as:",
+        "options": [
+          {
+            "id": "A",
+            "text": "A fall in the general price level"
+          },
+          {
+            "id": "B",
+            "text": "A rise in real GDP by definition"
+          },
+          {
+            "id": "C",
+            "text": "A rise in the price of one good only"
+          },
+          {
+            "id": "D",
+            "text": "A sustained increase in the general price level"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "The module defines inflation as a sustained increase in the general price level. A single price rise is not enough if other prices fall or the general level does not increase."
+      },
+      {
+        "question_number": 11,
+        "difficulty": "Medium",
+        "question_text": "If GDP is 500 billion birr and net factor income from abroad is −20 billion, GNP equals:",
+        "options": [
+          {
+            "id": "A",
+            "text": "500 billion birr"
+          },
+          {
+            "id": "B",
+            "text": "480 billion birr"
+          },
+          {
+            "id": "C",
+            "text": "−20 billion birr"
+          },
+          {
+            "id": "D",
+            "text": "520 billion birr"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "GNP=GDP+NFI=500+(−20)=480 billion birr. Negative NFI means national product is below domestic product."
+      },
+      {
+        "question_number": 12,
+        "difficulty": "Medium",
+        "question_text": "Under the expenditure approach, the standard identity in the module’s framework is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "GDP = consumption + investment + government purchases + net exports"
+          },
+          {
+            "id": "B",
+            "text": "GDP = imports − exports only"
+          },
+          {
+            "id": "C",
+            "text": "GDP = wages + rent only"
+          },
+          {
+            "id": "D",
+            "text": "GDP = tax revenue − transfer payments"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Expenditure GDP sums final spending by households, firms, government, and net exports. Factor incomes are used in the income approach, not as the expenditure identity."
+      },
+      {
+        "question_number": 13,
+        "difficulty": "Medium",
+        "question_text": "Why are intermediate products excluded from GDP when the final product is counted?",
+        "options": [
+          {
+            "id": "A",
+            "text": "To avoid double counting the value of the same production chain"
+          },
+          {
+            "id": "B",
+            "text": "They are never traded in markets"
+          },
+          {
+            "id": "C",
+            "text": "They have no economic value"
+          },
+          {
+            "id": "D",
+            "text": "They are all imported"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Counting both intermediate inputs and the final good would count the same value more than once. The value-added approach avoids this by counting value added at each stage or counting final output."
+      },
+      {
+        "question_number": 14,
+        "difficulty": "Medium",
+        "question_text": "A transfer payment such as an old-age pension is excluded from GDP expenditure because:",
+        "options": [
+          {
+            "id": "A",
+            "text": "It is illegal to include government payments"
+          },
+          {
+            "id": "B",
+            "text": "It is a payment for intermediate production"
+          },
+          {
+            "id": "C",
+            "text": "It is an import"
+          },
+          {
+            "id": "D",
+            "text": "It is not payment for a currently produced final good or service"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Transfer payments redistribute income without purchasing current production. Government purchases of goods and services are included, but pensions and similar transfers are not counted as output."
+      },
+      {
+        "question_number": 15,
+        "difficulty": "Medium",
+        "question_text": "Exports are 150 billion birr and imports are 200 billion birr. Net exports equal:",
+        "options": [
+          {
+            "id": "A",
+            "text": "350 billion birr, a trade surplus"
+          },
+          {
+            "id": "B",
+            "text": "−350 billion birr, a budget deficit"
+          },
+          {
+            "id": "C",
+            "text": "+50 billion birr, a trade surplus"
+          },
+          {
+            "id": "D",
+            "text": "−50 billion birr, a trade deficit"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "Net exports equal exports minus imports: 150−200=−50 billion birr. Negative net exports indicate a trade deficit; a budget deficit instead concerns government spending and revenue."
+      },
+      {
+        "question_number": 16,
+        "difficulty": "Medium",
+        "question_text": "If nominal GDP is 1,500 and real GDP is 625, the GDP deflator is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "41.7"
+          },
+          {
+            "id": "B",
+            "text": "2,125"
+          },
+          {
+            "id": "C",
+            "text": "240"
+          },
+          {
+            "id": "D",
+            "text": "100"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "GDP deflator=(1,500/625)×100=240. A value of 100 corresponds to the base-year price level; the ratio is multiplied by 100."
+      },
+      {
+        "question_number": 17,
+        "difficulty": "Medium",
+        "question_text": "The CPI differs from the GDP deflator because CPI:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Includes every domestically produced capital good"
+          },
+          {
+            "id": "B",
+            "text": "Excludes consumer purchases"
+          },
+          {
+            "id": "C",
+            "text": "Uses a fixed basket of consumer goods and can include imported consumer goods"
+          },
+          {
+            "id": "D",
+            "text": "Changes its basket exactly as domestic production changes"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The module contrasts CPI’s fixed consumer basket with the GDP deflator’s changing weights for domestically produced final output. Imported consumer goods can affect CPI but not the GDP deflator."
+      },
+      {
+        "question_number": 18,
+        "difficulty": "Medium",
+        "question_text": "Which phase of the business cycle marks the high point at the end of expansion and beginning of contraction?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Trough"
+          },
+          {
+            "id": "B",
+            "text": "Recovery"
+          },
+          {
+            "id": "C",
+            "text": "Recession"
+          },
+          {
+            "id": "D",
+            "text": "Peak"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "The peak is the turning point where expansion ends and contraction begins. The trough is the low point and recovery/expansion follows the trough."
+      },
+      {
+        "question_number": 19,
+        "difficulty": "Medium",
+        "question_text": "If personal income is 90 billion birr and personal taxes are 15 billion birr, personal disposable income is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "105 billion birr"
+          },
+          {
+            "id": "B",
+            "text": "75 billion birr"
+          },
+          {
+            "id": "C",
+            "text": "90 billion birr"
+          },
+          {
+            "id": "D",
+            "text": "15 billion birr"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "The module defines disposable income as DI=PI−personal taxes. Therefore DI=90−15=75 billion birr. It is the amount available for consumption and saving, so the other choices add taxes or simply repeat one input."
+      },
+      {
+        "question_number": 20,
+        "difficulty": "Medium",
+        "question_text": "Demand-pull inflation is associated with:",
+        "options": [
+          {
+            "id": "A",
+            "text": "An increase in demand relative to the economy’s ability to supply output"
+          },
+          {
+            "id": "B",
+            "text": "A continuous decline in aggregate demand"
+          },
+          {
+            "id": "C",
+            "text": "A decrease in the general price level"
+          },
+          {
+            "id": "D",
+            "text": "Only a rise in the price of imported goods"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Demand-pull inflation arises when aggregate demand pushes up against available output. Cost-push inflation instead comes from rising costs or adverse supply conditions."
+      },
+      {
+        "question_number": 21,
+        "difficulty": "Hard",
+        "question_text": "GNP is 900 billion birr and capital consumption allowance (depreciation) is 70 billion. NNP equals:",
+        "options": [
+          {
+            "id": "A",
+            "text": "970 billion birr"
+          },
+          {
+            "id": "B",
+            "text": "70 billion birr"
+          },
+          {
+            "id": "C",
+            "text": "900 billion birr"
+          },
+          {
+            "id": "D",
+            "text": "830 billion birr"
+          }
+        ],
+        "correct_option": "D",
+        "explanation": "The module defines NNP=GNP−capital consumption allowance. Thus NNP=900−70=830 billion birr. NNP deducts depreciation; it is not the same as gross national product."
+      },
+      {
+        "question_number": 22,
+        "difficulty": "Hard",
+        "question_text": "Under the income approach, which expression best matches the module’s GDP calculation?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Wages + rental income + interest + profits + indirect business taxes + depreciation − subsidies − transfer payments"
+          },
+          {
+            "id": "B",
+            "text": "Personal income − personal taxes"
+          },
+          {
+            "id": "C",
+            "text": "Exports − imports only"
+          },
+          {
+            "id": "D",
+            "text": "Consumption + investment only"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The module’s income approach sums factor incomes and other claims on current output, then adds indirect business taxes and depreciation and subtracts subsidies and transfer payments. The other options describe only part of expenditure accounting, net exports, or disposable income."
+      },
+      {
+        "question_number": 23,
+        "difficulty": "Hard",
+        "question_text": "If NNP is 700 billion birr and indirect business taxes are 40 billion birr, national income (NI) under the module’s formula is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "40 billion birr"
+          },
+          {
+            "id": "B",
+            "text": "700 billion birr"
+          },
+          {
+            "id": "C",
+            "text": "660 billion birr"
+          },
+          {
+            "id": "D",
+            "text": "740 billion birr"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "The module gives NI=NNP−indirect business taxes. Thus NI=700−40=660 billion birr, because indirect business taxes are not a payment for productive factor services. Adding the tax or leaving NNP unchanged would not follow the stated formula."
+      },
+      {
+        "question_number": 24,
+        "difficulty": "Hard",
+        "question_text": "A country’s labour force has 40 million people and its natural rate of unemployment is 12%. If total unemployment is 6 million, cyclical unemployment is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "1.2 million"
+          },
+          {
+            "id": "B",
+            "text": "12 million"
+          },
+          {
+            "id": "C",
+            "text": "4.8 million"
+          },
+          {
+            "id": "D",
+            "text": "6 million"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "Natural unemployment=0.12×40=4.8 million. Cyclical unemployment=total unemployment−natural unemployment=6−4.8=1.2 million. The natural rate includes frictional and structural unemployment."
+      },
+      {
+        "question_number": 25,
+        "difficulty": "Hard",
+        "question_text": "Why does “full employment” not mean zero unemployment in the module?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Because every unemployed person is voluntarily excluded"
+          },
+          {
+            "id": "B",
+            "text": "Because nobody is counted in the labour force"
+          },
+          {
+            "id": "C",
+            "text": "Because frictional and structural unemployment can remain even when cyclical unemployment is absent"
+          },
+          {
+            "id": "D",
+            "text": "Because cyclical unemployment must always be 50%"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "At the natural rate, frictional and structural unemployment remain. Full employment means unemployment is at its natural rate, not that all job search and skill/location mismatches disappear."
+      },
+      {
+        "question_number": 26,
+        "difficulty": "Hard",
+        "question_text": "Unexpected inflation tends to benefit a borrower with a fixed nominal loan and harm the lender when:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Inflation is zero"
+          },
+          {
+            "id": "B",
+            "text": "The loan is repaid before any price changes"
+          },
+          {
+            "id": "C",
+            "text": "The actual inflation rate is higher than expected, reducing the real value of repayments"
+          },
+          {
+            "id": "D",
+            "text": "Real GDP falls for any reason"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "When inflation is higher than expected, repayment occurs in money with lower purchasing power, benefiting the borrower and hurting the creditor. If inflation is fully anticipated, contracts can adjust nominal rates."
+      },
+      {
+        "question_number": 27,
+        "difficulty": "Hard",
+        "question_text": "A budget deficit occurs when:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Exports exceed imports"
+          },
+          {
+            "id": "B",
+            "text": "Government spending exceeds tax revenue"
+          },
+          {
+            "id": "C",
+            "text": "GDP equals GNP"
+          },
+          {
+            "id": "D",
+            "text": "Private saving exceeds investment in every case"
+          }
+        ],
+        "correct_option": "B",
+        "explanation": "The module defines a budget deficit as government expenditure exceeding tax collection. A trade deficit concerns exports/imports or net exports and is conceptually distinct."
+      },
+      {
+        "question_number": 28,
+        "difficulty": "Hard",
+        "question_text": "Which tool belongs most directly to fiscal policy?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Changing the quantity of money through monetary operations"
+          },
+          {
+            "id": "B",
+            "text": "Changing bank lending rates by the central bank"
+          },
+          {
+            "id": "C",
+            "text": "Changing taxes and government expenditure"
+          },
+          {
+            "id": "D",
+            "text": "Setting a firm’s marginal cost"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Fiscal policy uses taxes, government spending, and public debt. Monetary policy concerns money supply, credit, and interest-rate conditions and is generally managed by the central bank."
+      },
+      {
+        "question_number": 29,
+        "difficulty": "Hard",
+        "question_text": "During a recession with falling aggregate demand, expansionary monetary policy would generally aim to:",
+        "options": [
+          {
+            "id": "A",
+            "text": "Increase money/credit availability and support aggregate demand"
+          },
+          {
+            "id": "B",
+            "text": "Reduce money supply and raise borrowing costs"
+          },
+          {
+            "id": "C",
+            "text": "Eliminate all frictional unemployment immediately"
+          },
+          {
+            "id": "D",
+            "text": "Increase taxes automatically"
+          }
+        ],
+        "correct_option": "A",
+        "explanation": "The module says monetary policy may aim to increase money and credit conditions when output falls with aggregate demand. It cannot guarantee zero unemployment or directly replace fiscal policy."
+      },
+      {
+        "question_number": 30,
+        "difficulty": "Hard",
+        "question_text": "The CPI rises from 150 to 165 over one year. The inflation rate measured by this index is:",
+        "options": [
+          {
+            "id": "A",
+            "text": "110%"
+          },
+          {
+            "id": "B",
+            "text": "5%"
+          },
+          {
+            "id": "C",
+            "text": "10%"
+          },
+          {
+            "id": "D",
+            "text": "15%"
+          }
+        ],
+        "correct_option": "C",
+        "explanation": "Inflation rate=(Pt−Pt−1)/Pt−1×100=(165−150)/150×100=10%. The absolute index change is 15 points, not a 15% inflation rate."
+      }
+    ]
+  }
+]

@@ -1,13 +1,13 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Home, Search, MessageCircle, User, Upload } from 'lucide-react'
+import { Home, Sparkles, Unlock, User, Upload } from 'lucide-react'
 
 // BottomNav – shown only on mobile (md:hidden). Fixed to bottom of viewport.
 const tabs = [
-  { to: '/',       icon: Home,          label: 'Home'    },
-  { to: '/search', icon: Search,        label: 'Search'  },
-  { to: '/upload', icon: Upload,        label: 'Upload'  },
-  { to: '/chat',   icon: MessageCircle, label: 'Chat'    },
-  { to: '/profile',icon: User,          label: 'Profile' },
+  { to: '/',          icon: Home,     label: 'Home' },
+  { to: '/ai',        icon: Sparkles, label: 'Ask AI' },
+  { to: '/upload',    icon: Upload,   label: 'Upload' },
+  { to: '/my-courses',icon: Unlock,   label: 'My Courses' },
+  { to: '/profile',   icon: User,     label: 'Profile' },
 ]
 
 export default function BottomNav() {

@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { Camera, Edit2, Save, BookOpen, Download, Star } from 'lucide-react'
+import { Camera, Edit2, Save, BookOpen, Download } from 'lucide-react'
 import Avatar from '../components/Avatar'
 import { useAuthStore } from '../contexts/useAuthStore'
 import ResourceCard from '../components/ResourceCard'
@@ -122,7 +122,7 @@ export default function Profile() {
 
             {/* Info fields */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-              <Field label="University" field="university" placeholder="e.g. AAU" />
+              <Field label="University" field="university" placeholder="e.g. Jimma University" />
               <Field label="Department" field="department" placeholder="e.g. Computer Science" />
               <Field label="Year / EC" field="year" placeholder="e.g. 3rd Year / 2017 EC" />
             </div>
@@ -131,11 +131,10 @@ export default function Profile() {
       </div>
 
       {/* Stats row */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 gap-4">
         {[
           { icon: BookOpen, label: 'Uploads',    value: MY_UPLOADS.length },
           { icon: Download, label: 'Downloads',  value: '143' },
-          { icon: Star,     label: 'Avg Rating', value: '4.3' },
         ].map(({ icon: Icon, label, value }) => (
           <div key={label} className="bg-white border border-[#E5E7EB] rounded-xl p-4 text-center">
             <Icon size={18} className="text-[#0D9488] mx-auto mb-1" />

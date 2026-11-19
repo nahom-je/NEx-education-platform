@@ -9,9 +9,16 @@ import Search from './pages/Search'
 import ResourceDetail from './pages/ResourceDetail'
 import Upload from './pages/Upload'
 import Profile from './pages/Profile'
-import ChatList from './pages/ChatList'
-import ChatRoom from './pages/ChatRoom'
 import AdminDashboard from './pages/AdminDashboard'
+import CategoryView from './pages/CategoryView'
+import SemesterView from './pages/SemesterView'
+import CourseView from './pages/CourseView'
+import QuizView from './pages/QuizView'
+import AiChat from './pages/AiChat'
+import Pricing from './pages/Pricing'
+import PaymentPage from './pages/PaymentPage'
+import MyCourses from './pages/MyCourses'
+import AdminPayments from './pages/AdminPayments'
 
 // Layout
 import AppLayout from './components/AppLayout'
@@ -23,12 +30,12 @@ const Protected = ({ children }) => {
 }
 
 export default function App() {
-  const { rehydrate, loading } = useAuthStore()
+  const { rehydrate, isRehydrating } = useAuthStore()
 
-  // Rehydrate auth from localStorage on mount
+  // Rehydrate auth from localStorage once on boot
   useEffect(() => { rehydrate() }, [rehydrate])
 
-  if (loading) {
+  if (isRehydrating) {
     return (
       <div className="flex h-screen items-center justify-center bg-[#F9FAFB]">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0D9488]"></div>
@@ -48,14 +55,24 @@ export default function App() {
           element={<Protected><AppLayout /></Protected>}
         >
           <Route index element={<Home />} />
+          <Route path="browse/:categorySlug" element={<CategoryView />} />
+          <Route path="browse/:categorySlug/:semesterSlug" element={<SemesterView />} />
+          <Route path="browse/:categorySlug/:semesterSlug/:courseSlug" element={<CourseView />} />
+          <Route path="browse/:categorySlug/:semesterSlug/:courseSlug/quiz" element={<QuizView />} />
           <Route path="search" element={<Search />} />
           <Route path="resource/:id" element={<ResourceDetail />} />
           <Route path="upload" element={<Upload />} />
           <Route path="profile" element={<Profile />} />
           <Route path="profile/:userId" element={<Profile />} />
-          <Route path="chat" element={<ChatList />} />
-          <Route path="chat/:roomId" element={<ChatRoom />} />
+          <Route path="ai" element={<AiChat />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="payment" element={<PaymentPage />} />
+          <Route path="my-courses" element={<MyCourses />} />
           <Route path="admin" element={<AdminDashboard />} />
+          <Route path="admin/payments" element={<AdminPayments />} />
+          {/* Legacy chat routes redirect to home */}
+          <Route path="chat" element={<Navigate to="/" replace />} />
+          <Route path="chat/*" element={<Navigate to="/" replace />} />
         </Route>
 
         {/* Fallback */}

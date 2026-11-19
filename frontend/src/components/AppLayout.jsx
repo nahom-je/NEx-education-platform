@@ -1,13 +1,9 @@
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
 import BottomNav from './BottomNav'
 
 // AppLayout wraps all protected pages with Navbar (top) + BottomNav (mobile)
 export default function AppLayout() {
-  const { pathname } = useLocation()
-  // Hide bottom nav in chat room (full-height immersive)
-  const isChatRoom = pathname.startsWith('/chat/') && pathname.length > 6
-
   return (
     <div className="min-h-screen flex flex-col bg-[#F9FAFB]">
       <Navbar />
@@ -16,7 +12,7 @@ export default function AppLayout() {
         <Outlet />
       </main>
       {/* Bottom nav only on mobile, hidden on md+ */}
-      {!isChatRoom && <BottomNav />}
+      <BottomNav />
     </div>
   )
 }

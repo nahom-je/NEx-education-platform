@@ -21,6 +21,7 @@ build/
 # Uploads & Media (keep directory structure, ignore user-uploaded files)
 backend/uploads/*
 !backend/uploads/.gitkeep
+Resourses/
 
 # Logs
 logs/

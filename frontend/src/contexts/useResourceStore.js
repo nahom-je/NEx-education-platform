@@ -4,8 +4,38 @@ import api from '../utils/api';
 export const useResourceStore = create((set, get) => ({
   resources: [],
   currentResource: null,
+  categories: [],
+  courses: [],
   loading: false,
   error: null,
+
+  fetchCategories: async () => {
+    try {
+      const { data } = await api.get('/categories');
+      set({ categories: data });
+      return data;
+    } catch (err) {
+      console.error('Failed to fetch categories:', err);
+      return [];
+    }
+  },
+
+  fetchCourses: async (categoryId, semester = null) => {
+    if (!categoryId) {
+      set({ courses: [] });
+      return [];
+    }
+    try {
+      const params = semester ? { semester } : {};
+      const { data } = await api.get(`/categories/${categoryId}/courses`, { params });
+      set({ courses: data });
+      return data;
+    } catch (err) {
+      console.error('Failed to fetch courses:', err);
+      set({ courses: [] });
+      return [];
+    }
+  },
 
   fetchResources: async (filters = {}) => {
     set({ loading: true, error: null });
@@ -23,32 +53,41 @@ export const useResourceStore = create((set, get) => ({
     try {
       const { data } = await api.get(`/resources/${id}`);
       set({ currentResource: data, loading: false });
+      return data;
     } catch (err) {
       set({ error: err.response?.data?.message || 'Failed to fetch resource', loading: false });
+    }
+  },
+
+  downloadResource: async (id) => {
+    try {
+      const { data } = await api.get(`/resources/${id}/download`);
+      // Update local download counts optimistically in state
+      set((state) => ({
+        resources: state.resources.map((r) =>
+          r._id === id || r.id === id ? { ...r, downloads: (r.downloads || 0) + 1 } : r
+        ),
+        currentResource:
+          state.currentResource && (state.currentResource._id === id || state.currentResource.id === id)
+            ? { ...state.currentResource, downloads: (state.currentResource.downloads || 0) + 1 }
+            : state.currentResource
+      }));
+      return data.fileUrl;
+    } catch (err) {
+      console.error('Failed to record download:', err);
+      return null;
     }
   },
 
   uploadResource: async (formData) => {
     set({ loading: true, error: null });
     try {
-      // Axios automatically sets "multipart/form-data" and the correct boundary when sending FormData objects
       const { data } = await api.post('/resources', formData);
       set({ loading: false });
       return data;
     } catch (err) {
       set({ error: err.response?.data?.message || 'Upload failed', loading: false });
       throw err;
-    }
-  },
-
-  rateResource: async (id, score) => {
-    try {
-      const { data } = await api.post(`/resources/${id}/rate`, { score });
-      set((state) => ({
-        currentResource: state.currentResource ? { ...state.currentResource, ratings: data } : null
-      }));
-    } catch (err) {
-      console.error('Failed to rate', err);
     }
   },
 
@@ -81,7 +120,7 @@ export const useResourceStore = create((set, get) => ({
     try {
       await api.put(`/admin/resources/${id}/approve`);
       set((state) => ({
-        resources: state.resources.filter((r) => r._id !== id)
+        resources: state.resources.filter((r) => (r._id || r.id) !== id)
       }));
     } catch (err) {
       console.error('Failed to approve resource', err);
@@ -92,7 +131,7 @@ export const useResourceStore = create((set, get) => ({
     try {
       await api.put(`/admin/resources/${id}/reject`);
       set((state) => ({
-        resources: state.resources.filter((r) => r._id !== id)
+        resources: state.resources.filter((r) => (r._id || r.id) !== id)
       }));
     } catch (err) {
       console.error('Failed to reject resource', err);
