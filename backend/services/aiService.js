@@ -7,11 +7,11 @@
  * and 24-hour question caching.
  */
 
-// Centralized model configurations (check provider consoles for the latest free model names)
+// Centralized model configurations
 const MODEL_CONFIG = {
-  gemini: 'gemini-2.5-flash',
+  gemini: 'gemini-1.5-flash',
   groq: 'openai/gpt-oss-120b',
-  openrouter: 'nvidia/nemotron-3.5-lightning:free'
+  openrouter: 'meta-llama/llama-3.2-3b-instruct:free'
 };
 
 // Base system prompt tailored for Ethiopian university students
@@ -21,13 +21,24 @@ const SYSTEM_PROMPT = `You are the NEx Study Assistant for university students i
 const responseCache = new Map();
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 
+// Helper to extract keys from either singular or plural env names (e.g. GROQ_API_KEY or GROQ_API_KEYS)
+function parseKeys(...envVars) {
+  for (const envVal of envVars) {
+    if (envVal && typeof envVal === 'string') {
+      const parsed = envVal.split(',').map(k => k.trim()).filter(Boolean);
+      if (parsed.length > 0) return parsed;
+    }
+  }
+  return [];
+}
+
 // Provider configurations: all use OpenAI-compatible chat completions format
 const PROVIDERS = [
   {
     name: 'groq',
     baseUrl: 'https://api.groq.com/openai/v1/chat/completions',
     model: MODEL_CONFIG.groq,
-    getKeys: () => (process.env.GROQ_API_KEYS || '').split(',').map(k => k.trim()).filter(Boolean),
+    getKeys: () => parseKeys(process.env.GROQ_API_KEYS, process.env.GROQ_API_KEY),
     currentIndex: 0,
     cooldowns: new Map()
   },
@@ -35,7 +46,7 @@ const PROVIDERS = [
     name: 'gemini',
     baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions',
     model: MODEL_CONFIG.gemini,
-    getKeys: () => (process.env.GEMINI_API_KEYS || '').split(',').map(k => k.trim()).filter(Boolean),
+    getKeys: () => parseKeys(process.env.GEMINI_API_KEYS, process.env.GEMINI_API_KEY),
     currentIndex: 0,
     cooldowns: new Map()
   },
@@ -43,7 +54,7 @@ const PROVIDERS = [
     name: 'openrouter',
     baseUrl: 'https://openrouter.ai/api/v1/chat/completions',
     model: MODEL_CONFIG.openrouter,
-    getKeys: () => (process.env.OPENROUTER_API_KEYS || '').split(',').map(k => k.trim()).filter(Boolean),
+    getKeys: () => parseKeys(process.env.OPENROUTER_API_KEYS, process.env.OPENROUTER_API_KEY),
     currentIndex: 0,
     cooldowns: new Map()
   }
@@ -162,7 +173,7 @@ async function askStudyAssistant({ question, context, history = [] }) {
 
   messages.push({ role: 'user', content: question.trim() });
 
-  // 4. Try providers in priority order (Gemini -> Groq -> OpenRouter)
+  // 4. Try providers in priority order (Groq -> Gemini -> OpenRouter)
   for (const provider of PROVIDERS) {
     const keys = provider.getKeys();
     if (!keys || keys.length === 0) continue;
