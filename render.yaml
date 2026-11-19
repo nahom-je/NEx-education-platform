@@ -22,3 +22,9 @@ services:
         value: "@nahomJT"
       - key: FRONTEND_URL
         sync: false
+      - key: GROQ_API_KEYS
+        sync: false
+      - key: GEMINI_API_KEYS
+        sync: false
+      - key: OPENROUTER_API_KEYS
+        sync: false

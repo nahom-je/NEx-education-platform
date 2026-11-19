@@ -95,6 +95,7 @@ router.post('/ask', authMiddleware, async (req, res, next) => {
       provider: response.provider || null
     });
   } catch (err) {
+    console.error('AI ask error:', err.message || err);
     if (err.status === 503) {
       return res.status(503).json({ message: err.message });
     }

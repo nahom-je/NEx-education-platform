@@ -4,10 +4,11 @@ import { useParams, Link, useSearchParams, useNavigate } from 'react-router-dom'
 import { 
   BookOpen, Search, Download, Eye, Upload, FileText, 
   HelpCircle, Sparkles, Filter, CheckCircle2, AlertCircle, ArrowUpRight,
-  Lock, ArrowRight, Send, ChevronRight
+  Lock, ArrowRight, Send, ChevronRight, Shield, ChevronLeft
 } from 'lucide-react'
 import Breadcrumbs from '../components/Breadcrumbs'
 import { useResourceStore } from '../contexts/useResourceStore'
+import { useAuthStore } from '../contexts/useAuthStore'
 import api from '../utils/api'
 
 const TYPE_CONFIG = [
@@ -25,6 +26,7 @@ export default function CourseView() {
   const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const { downloadResource } = useResourceStore()
+  const user = useAuthStore((s) => s.user)
 
   const currentType = searchParams.get('type') || 'all'
   const currentSearch = searchParams.get('q') || ''
@@ -34,6 +36,7 @@ export default function CourseView() {
   const [error, setError] = useState(null)
   const [searchInput, setSearchInput] = useState(currentSearch)
   const [quizCount, setQuizCount] = useState(0)
+  const [selectedExamId, setSelectedExamId] = useState(null)
 
   useEffect(() => {
     // Fetch count of chapter quizzes
@@ -50,9 +53,16 @@ export default function CourseView() {
     const params = new URLSearchParams()
     if (currentType && currentType !== 'all') params.set('type', currentType)
     if (currentSearch) params.set('search', currentSearch)
+    if (currentType === 'exam') params.set('limit', '200') // fetch all exams
 
     api.get(`/browse/${categorySlug}/${semesterSlug}/${courseSlug}/materials?${params.toString()}`)
-      .then((res) => setData(res.data))
+      .then((res) => {
+        setData(res.data)
+        // Automatically select the first exam when in exams tab
+        if (currentType === 'exam' && res.data?.materials?.length > 0) {
+          setSelectedExamId(res.data.materials[0]._id || res.data.materials[0].id)
+        }
+      })
       .catch((err) => setError(err.response?.data?.message || err.message))
       .finally(() => setLoading(false))
   }, [categorySlug, semesterSlug, courseSlug, currentType, currentSearch])
@@ -83,19 +93,11 @@ export default function CourseView() {
     setSearchParams(next)
   }
 
-  const handleDownload = async (resource) => {
-    try {
-      await downloadResource(resource._id || resource.id)
-      const link = document.createElement('a')
-      link.href = resource.file_url
-      link.download = resource.title || 'download'
-      link.target = '_blank'
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
-    } catch (err) {
-      console.error('Download error:', err)
-      window.open(resource.file_url, '_blank')
+  const handleSelectExam = (examId) => {
+    setSelectedExamId(examId)
+    const el = document.getElementById('exam-inline-viewer')
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
 
@@ -213,6 +215,17 @@ export default function CourseView() {
 
   const { category, semester, course, counts = {}, materials = [], total = 0 } = data
 
+  // Watermark text for protected reading
+  const watermarkText = `${user?.name || 'Jimma Student'} • ${user?.phone || 'NEx Platform'} • ${new Date().toLocaleDateString()}`
+
+  // Active exam object for inline viewing
+  const activeExam = (materials || []).find((m) => (m._id || m.id) === selectedExamId) || materials?.[0]
+  const activeExamIndex = (materials || []).findIndex((m) => (m._id || m.id) === (activeExam?._id || activeExam?.id))
+
+  const cleanActiveUrl = (activeExam?.file_url || '').split('?')[0].toLowerCase()
+  const isActivePdf = cleanActiveUrl.endsWith('.pdf')
+  const isActiveImage = cleanActiveUrl.endsWith('.png') || cleanActiveUrl.endsWith('.jpg') || cleanActiveUrl.endsWith('.jpeg') || cleanActiveUrl.endsWith('.webp')
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
       {/* Breadcrumbs */}
@@ -328,6 +341,127 @@ export default function CourseView() {
         </form>
       </div>
 
+      {/* ───────────────────────────────────────────────────────────────── */}
+      {/* EXAMS TAB: INLINE PROTECTED DOCUMENT VIEWER                       */}
+      {/* ───────────────────────────────────────────────────────────────── */}
+      {currentType === 'exam' && activeExam && (
+        <div id="exam-inline-viewer" className="mb-8 bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm select-none">
+          {/* Header Bar with Protected Tag & Prev/Next Exam Navigation */}
+          <div className="bg-[#1F2937] text-white px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-9 h-9 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center shrink-0">
+                <FileText size={18} />
+              </div>
+              <div className="min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-teal-900/60 text-teal-300 border border-teal-700/50">
+                    Exam Reader
+                  </span>
+                  <span className="text-xs text-gray-400">·</span>
+                  <span className="text-xs text-gray-300 font-medium">
+                    {activeExamIndex >= 0 ? `Exam ${activeExamIndex + 1} of ${materials.length}` : 'Exam Preview'}
+                  </span>
+                </div>
+                <h2 className="text-sm sm:text-base font-bold text-white truncate mt-0.5">
+                  {activeExam.title}
+                </h2>
+              </div>
+            </div>
+
+            {/* Prev / Next Buttons & Protected Badge */}
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                onClick={() => {
+                  if (activeExamIndex > 0) {
+                    handleSelectExam(materials[activeExamIndex - 1]._id || materials[activeExamIndex - 1].id)
+                  }
+                }}
+                disabled={activeExamIndex <= 0}
+                className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold bg-gray-800 hover:bg-gray-700 disabled:opacity-30 disabled:pointer-events-none text-gray-200 rounded-xl transition"
+                title="Previous Exam"
+              >
+                <ChevronLeft size={14} />
+                <span className="hidden sm:inline">Prev</span>
+              </button>
+              <button
+                onClick={() => {
+                  if (activeExamIndex < materials.length - 1) {
+                    handleSelectExam(materials[activeExamIndex + 1]._id || materials[activeExamIndex + 1].id)
+                  }
+                }}
+                disabled={activeExamIndex >= materials.length - 1}
+                className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold bg-gray-800 hover:bg-gray-700 disabled:opacity-30 disabled:pointer-events-none text-gray-200 rounded-xl transition"
+                title="Next Exam"
+              >
+                <span className="hidden sm:inline">Next</span>
+                <ChevronRight size={14} />
+              </button>
+              <div className="flex items-center gap-1.5 text-[11px] text-teal-300 bg-teal-950/70 px-3 py-1.5 rounded-xl border border-teal-800/60">
+                <Shield size={12} className="text-teal-400" />
+                <span className="font-semibold">Protected View</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Embedded Document View with Dynamic Watermark */}
+          <div
+            className="relative bg-gray-100 overflow-hidden"
+            onContextMenu={(e) => e.preventDefault()}
+          >
+            {/* Dynamic Watermark Stamp */}
+            <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-around items-center opacity-[0.07] rotate-[-25deg] select-none text-[#1F2937] font-black text-xs sm:text-sm tracking-widest uppercase">
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+              <div>{watermarkText}</div>
+            </div>
+
+            {isActivePdf ? (
+              <iframe
+                src={`${activeExam.file_url}#toolbar=0&navpanes=0`}
+                title={activeExam.title}
+                className="w-full h-[580px] sm:h-[800px] border-none"
+              />
+            ) : isActiveImage ? (
+              <div className="p-4 sm:p-6 bg-gray-50 flex items-center justify-center min-h-[350px] max-h-[85vh] overflow-y-auto">
+                <img
+                  src={activeExam.file_url}
+                  alt={activeExam.title}
+                  className="w-auto max-w-full rounded-xl shadow-xs pointer-events-none"
+                />
+              </div>
+            ) : (
+              <div className="p-10 text-center text-gray-500">
+                <FileText className="w-12 h-12 text-gray-400 mx-auto mb-2" />
+                <p className="text-sm font-semibold">{activeExam.title}</p>
+                <p className="text-xs text-gray-400 mt-1">
+                  Preview is protected. Direct downloads are disabled on NEx.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Viewer Footer Note */}
+          <div className="bg-gray-50 border-t border-gray-200 px-4 py-2.5 flex items-center justify-between text-[11px] text-gray-500">
+            <span>Official Protected Exam · Read-only inside NEx Platform</span>
+            <span>{activeExam.file_size ? `${activeExam.file_size} MB` : 'Exam Material'}</span>
+          </div>
+        </div>
+      )}
+
+      {/* ───────────────────────────────────────────────────────────────── */}
+      {/* SECTION TITLE: FOR EXAMS TAB                                      */}
+      {/* ───────────────────────────────────────────────────────────────── */}
+      {currentType === 'exam' && materials.length > 0 && (
+        <div className="mb-3 flex items-center justify-between">
+          <h2 className="text-sm font-bold text-gray-900 flex items-center gap-2">
+            <BookOpen className="w-4 h-4 text-[#0D9488]" />
+            <span>Available Exams ({materials.length})</span>
+          </h2>
+          <span className="text-xs text-gray-500">Click any exam below to open in reader</span>
+        </div>
+      )}
+
       {/* Materials List */}
       {materials.length === 0 ? (
         <div className="bg-white border border-dashed border-gray-300 rounded-2xl p-10 text-center my-6">
@@ -353,6 +487,9 @@ export default function CourseView() {
           {materials.map((m) => {
             const uploaderName = m.uploader?.name || 'Jimma Student'
             const uploadDate = new Date(m.created_at).toLocaleDateString()
+            const isExam = currentType === 'exam' || m.type === 'exam' || m.type === 'mid_exam' || m.type === 'final_exam'
+            const isSelected = (m._id || m.id) === selectedExamId
+
             const typeLabel = {
               exam: 'Exam (Mid/Final)',
               mid_exam: 'Exam (Mid/Final)',
@@ -366,6 +503,73 @@ export default function CourseView() {
               project: 'Project'
             }[m.type] || m.type
 
+            // ─────────────────────────────────────────────────────────────
+            // EXAM CARD: NO "View Material" button! Clicking selects exam
+            // ─────────────────────────────────────────────────────────────
+            if (isExam) {
+              return (
+                <div
+                  key={m._id || m.id}
+                  onClick={() => handleSelectExam(m._id || m.id)}
+                  className={`group cursor-pointer rounded-2xl p-4 sm:p-5 transition-all duration-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border ${
+                    isSelected
+                      ? 'bg-teal-50/60 border-[#0D9488] ring-2 ring-teal-500/20 shadow-sm'
+                      : 'bg-white border-gray-200 hover:border-teal-400 hover:shadow-xs'
+                  }`}
+                >
+                  <div className="flex items-start gap-3.5">
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${
+                      isSelected ? 'bg-[#0D9488] text-white' : 'bg-teal-50 text-[#0D9488] group-hover:bg-[#0D9488] group-hover:text-white'
+                    }`}>
+                      <FileText className="w-5 h-5" />
+                    </div>
+
+                    <div>
+                      <div className="flex items-center gap-2 flex-wrap mb-1">
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-gray-100 text-gray-700">
+                          {typeLabel}
+                        </span>
+                        <span className="text-xs text-gray-400">·</span>
+                        <span className="text-xs text-gray-500">{uploaderName}</span>
+                        <span className="text-xs text-gray-400">·</span>
+                        <span className="text-xs text-gray-400">{uploadDate}</span>
+                      </div>
+
+                      <h3 className={`font-bold text-sm sm:text-base line-clamp-2 transition-colors ${
+                        isSelected ? 'text-[#0D9488]' : 'text-gray-900 group-hover:text-[#0D9488]'
+                      }`}>
+                        {m.title}
+                      </h3>
+
+                      <div className="flex items-center gap-3 mt-1 text-xs text-gray-400">
+                        <span>{m.file_size ? `${m.file_size} MB` : 'Exam File'}</span>
+                        <span>·</span>
+                        <span>Protected View (In-Browser)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Clean status pill — NO "View Material" button */}
+                  <div className="flex items-center gap-2 sm:self-center flex-shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-gray-100">
+                    {isSelected ? (
+                      <span className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-white bg-[#0D9488] rounded-xl shadow-xs">
+                        <Eye className="w-3.5 h-3.5" />
+                        <span>Viewing in Reader Above</span>
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-[#0D9488] bg-teal-50 group-hover:bg-[#0D9488] group-hover:text-white rounded-xl transition-colors border border-teal-200/60">
+                        <Eye className="w-3.5 h-3.5" />
+                        <span>Click to Open</span>
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )
+            }
+
+            // ─────────────────────────────────────────────────────────────
+            // NON-EXAM CARD (Worksheets, Notes, Slides, etc.)
+            // ─────────────────────────────────────────────────────────────
             return (
               <div
                 key={m._id || m.id}
@@ -402,7 +606,7 @@ export default function CourseView() {
                   </div>
                 </div>
 
-                {/* Actions: View inside website */}
+                {/* Actions: View Material button for non-exams */}
                 <div className="flex items-center gap-2 sm:self-center flex-shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-gray-100">
                   <Link
                     to={`/resource/${m._id || m.id}`}
@@ -420,4 +624,3 @@ export default function CourseView() {
     </div>
   )
 }
-
