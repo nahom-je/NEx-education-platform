@@ -29,10 +29,18 @@
 
 
 
-body {
+html, body {
   min-height: 100vh;
+  height: 100%;
   background-color: #F9FAFB;
   color: #1F2937;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Scrollbar styling */
