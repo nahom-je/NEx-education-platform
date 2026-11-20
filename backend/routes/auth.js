@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const supabase = require('../lib/supabase');
 const authMiddleware = require('../middleware/auth');
 const { normalizeEthiopianPhone } = require('../utils/phone');
+const deviceService = require('../services/deviceService');
 
 // ── In-Memory Rate Limiter ──────────────────────────────────────────────────
 // Max 5 failed attempts per 15 minutes per phone number & per IP
@@ -109,8 +110,15 @@ router.post('/register', async (req, res) => {
 
     if (insertError) throw insertError;
 
-    // 7. Issue JWT
-    const payload = { user: { id: newUser.id, role: newUser.role } };
+    // 7. Register device for student
+    const clientDeviceId = req.body.deviceId || req.header('x-device-id');
+    const clientDeviceName = req.body.deviceName || req.header('x-device-name') || 'Unknown Device';
+    if (newUser.role !== 'admin' && clientDeviceId) {
+      await deviceService.registerUserDevice(newUser.id, clientDeviceId, clientDeviceName);
+    }
+
+    // 8. Issue JWT
+    const payload = { user: { id: newUser.id, role: newUser.role, deviceId: clientDeviceId } };
     jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '7d' }, (err, token) => {
       if (err) throw err;
       res.json({
@@ -189,8 +197,38 @@ router.post('/login', async (req, res) => {
     clearFailedAttempts(normalizedPhone);
     clearFailedAttempts(clientIp);
 
-    // 6. Issue JWT
-    const payload = { user: { id: user.id, role: user.role } };
+    // 6. Check if user account is blocked
+    if (user.is_blocked) {
+      return res.status(403).json({
+        message: 'Your account has been suspended. Please contact admin on Telegram (@nahomJT).'
+      });
+    }
+
+    // 7. Check device lock (enforce 1 registered device per student; admins exempt)
+    const clientDeviceId = req.body.deviceId || req.header('x-device-id');
+    const clientDeviceName = req.body.deviceName || req.header('x-device-name') || 'Unknown Device';
+
+    if (user.role !== 'admin' && clientDeviceId) {
+      const registeredDevice = await deviceService.getUserDevice(user.id);
+
+      if (!registeredDevice) {
+        // First login — bind this device
+        await deviceService.registerUserDevice(user.id, clientDeviceId, clientDeviceName);
+      } else if (registeredDevice.deviceId !== clientDeviceId) {
+        // Device mismatch! Account is locked to another device
+        return res.status(403).json({
+          deviceLocked: true,
+          registeredDeviceName: registeredDevice.deviceName || 'another device',
+          message: `This account is locked to another device (${registeredDevice.deviceName || 'another phone'}). Only 1 device is allowed per student. If you switched phones or cleared your browser, message @nahomJT on Telegram to reset your device.`
+        });
+      } else {
+        // Device matches — update last active time in background
+        deviceService.touchUserDevice(user.id, registeredDevice);
+      }
+    }
+
+    // 8. Issue JWT
+    const payload = { user: { id: user.id, role: user.role, deviceId: clientDeviceId } };
     jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '7d' }, (err, token) => {
       if (err) throw err;
       res.json({

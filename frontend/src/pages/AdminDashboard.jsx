@@ -15,7 +15,9 @@ import {
   Check,
   Copy,
   ExternalLink,
-  Unlock
+  Unlock,
+  Smartphone,
+  RotateCcw
 } from 'lucide-react'
 import Avatar from '../components/Avatar'
 import api from '../utils/api'
@@ -115,6 +117,34 @@ export default function AdminDashboard() {
       setMessage({
         type: 'error',
         text: err.response?.data?.message || 'Failed to update user status.'
+      })
+    } finally {
+      setActionLoadingId(null)
+    }
+  }
+
+  // Reset Device Lock
+  const handleResetDevice = async (user) => {
+    const confirmAction = window.confirm(
+      `Reset device lock for ${user.name}? This will allow the student to bind a new device on their next sign-in.`
+    )
+    if (!confirmAction) return
+
+    try {
+      setActionLoadingId(user.id)
+      const res = await api.post(`/admin/users/${user.id}/reset-device`)
+      setMessage({ type: 'success', text: res.data.message })
+      // Update local state
+      setUsers((prev) =>
+        prev.map((u) => (u.id === user.id ? { ...u, device: null } : u))
+      )
+      if (selectedUser && selectedUser.id === user.id) {
+        setSelectedUser((prev) => (prev ? { ...prev, device: null } : null))
+      }
+    } catch (err) {
+      setMessage({
+        type: 'error',
+        text: err.response?.data?.message || 'Failed to reset user device.'
       })
     } finally {
       setActionLoadingId(null)
@@ -393,6 +423,7 @@ export default function AdminDashboard() {
                       <th className="py-3.5 px-5">Student / User</th>
                       <th className="py-3.5 px-4">Contact</th>
                       <th className="py-3.5 px-4 text-center">Role</th>
+                      <th className="py-3.5 px-4 text-center">Device</th>
                       <th className="py-3.5 px-4 text-center">Uploads</th>
                       <th className="py-3.5 px-4 text-center">Accesses</th>
                       <th className="py-3.5 px-4 text-center">Status</th>
@@ -433,6 +464,23 @@ export default function AdminDashboard() {
                           </span>
                         </td>
 
+                        {/* Device Lock */}
+                        <td className="py-4 px-4 text-center">
+                          {u.role === 'admin' ? (
+                            <span className="text-xs text-[#9CA3AF]">All devices</span>
+                          ) : u.device ? (
+                            <div
+                              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-teal-50 border border-teal-200/80 text-teal-850 text-xs font-semibold"
+                              title={`Bound: ${new Date(u.device.registeredAt).toLocaleString()}`}
+                            >
+                              <Smartphone size={12} className="text-teal-600 shrink-0" />
+                              <span className="truncate max-w-[120px]">{u.device.deviceName || 'Bound'}</span>
+                            </div>
+                          ) : (
+                            <span className="text-xs text-[#9CA3AF] italic">Not bound</span>
+                          )}
+                        </td>
+
                         {/* Uploads */}
                         <td className="py-4 px-4 text-center font-semibold text-[#1F2937]">
                           {u.uploadsCount}
@@ -466,6 +514,17 @@ export default function AdminDashboard() {
                             >
                               <Eye size={13} /> Details
                             </button>
+
+                            {u.role !== 'admin' && u.device && (
+                              <button
+                                onClick={() => handleResetDevice(u)}
+                                disabled={actionLoadingId === u.id}
+                                title="Reset device lock (allows student to bind new phone)"
+                                className="px-2.5 py-1.5 text-xs font-semibold rounded-lg border border-amber-200 bg-amber-50 text-amber-800 hover:bg-amber-100 transition flex items-center gap-1"
+                              >
+                                <RotateCcw size={13} /> Reset Dev
+                              </button>
+                            )}
 
                             <button
                               onClick={() => {
@@ -561,6 +620,28 @@ export default function AdminDashboard() {
                         Joined {new Date(u.created_at).toLocaleDateString()}
                       </div>
                     </div>
+
+                    {/* Device status row on mobile */}
+                    {u.role !== 'admin' && (
+                      <div className="flex items-center justify-between text-xs bg-slate-50 p-2.5 rounded-xl border border-slate-200/60">
+                        <div className="flex items-center gap-1.5 min-w-0">
+                          <Smartphone size={13} className="text-teal-600 shrink-0" />
+                          <span className="text-slate-500">Device:</span>
+                          <span className="font-semibold text-slate-800 truncate">
+                            {u.device?.deviceName || 'Not bound yet'}
+                          </span>
+                        </div>
+                        {u.device && (
+                          <button
+                            onClick={() => handleResetDevice(u)}
+                            disabled={actionLoadingId === u.id}
+                            className="text-[11px] font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-2 py-0.5 rounded-lg shrink-0 transition"
+                          >
+                            Reset Lock
+                          </button>
+                        )}
+                      </div>
+                    )}
 
                     {/* Mobile Action Buttons */}
                     <div className="grid grid-cols-3 gap-2 pt-1 border-t border-[#F3F4F6]">
@@ -727,6 +808,35 @@ export default function AdminDashboard() {
                   </span>
                 </div>
               </div>
+
+              {/* Registered Device Lock Info */}
+              {selectedUser.role !== 'admin' && (
+                <div className="p-3.5 bg-slate-50 border border-slate-200/70 rounded-2xl space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-slate-600 flex items-center gap-1.5 uppercase tracking-wider">
+                      <Smartphone size={14} className="text-teal-600" />
+                      Registered Device
+                    </span>
+                    {selectedUser.device && (
+                      <button
+                        onClick={() => handleResetDevice(selectedUser)}
+                        disabled={actionLoadingId === selectedUser.id}
+                        className="text-[11px] font-bold text-amber-800 bg-amber-100 hover:bg-amber-200 px-2.5 py-1 rounded-lg transition cursor-pointer"
+                      >
+                        Reset Device Lock
+                      </button>
+                    )}
+                  </div>
+                  <p className="text-sm font-bold text-slate-800">
+                    {selectedUser.device?.deviceName || 'No device registered yet (will bind on next login)'}
+                  </p>
+                  {selectedUser.device?.registeredAt && (
+                    <p className="text-xs text-slate-500">
+                      Bound since: {new Date(selectedUser.device.registeredAt).toLocaleString()}
+                    </p>
+                  )}
+                </div>
+              )}
 
               {/* Unlocked Courses / Access List */}
               <div className="pt-2">

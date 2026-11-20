@@ -3,6 +3,7 @@ const router = express.Router();
 const supabase = require('../lib/supabase');
 const authMiddleware = require('../middleware/auth');
 const bcrypt = require('bcryptjs');
+const deviceService = require('../services/deviceService');
 
 // Admin Auth Middleware
 const adminMiddleware = async (req, res, next) => {
@@ -146,14 +147,16 @@ router.get('/users', [authMiddleware, adminMiddleware], async (req, res) => {
     const [
       { data: users, error: userError },
       { data: resources, error: resError },
-      { data: accesses, error: accError }
+      { data: accesses, error: accError },
+      devicesMap
     ] = await Promise.all([
       supabase
         .from('users')
         .select('id, name, email, phone, university, department, year, role, is_blocked, status, created_at')
         .order('created_at', { ascending: false }),
       supabase.from('resources').select('uploader_id'),
-      supabase.from('course_access').select('user_id')
+      supabase.from('course_access').select('user_id'),
+      deviceService.getAllUserDevices()
     ]);
 
     if (userError) throw userError;
@@ -179,7 +182,8 @@ router.get('/users', [authMiddleware, adminMiddleware], async (req, res) => {
       _id: u.id,
       uploadsCount: uploadCounts[u.id] || 0,
       accessesCount: accessCounts[u.id] || 0,
-      contact: u.phone || u.email || 'No contact'
+      contact: u.phone || u.email || 'No contact',
+      device: devicesMap[u.id] || null
     }));
 
     res.json(formatted);
@@ -268,6 +272,27 @@ router.post('/users/:id/reset-password', [authMiddleware, adminMiddleware], asyn
     });
   } catch (err) {
     console.error('Error resetting user password:', err.message);
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
+
+// @route   POST api/admin/users/:id/reset-device
+// @desc    Admin unbind / reset student registered device lock
+// @access  Private/Admin
+router.post('/users/:id/reset-device', [authMiddleware, adminMiddleware], async (req, res) => {
+  try {
+    const targetUserId = req.params.id;
+    const ok = await deviceService.resetUserDevice(targetUserId);
+
+    if (!ok) {
+      return res.status(500).json({ message: 'Failed to reset device binding' });
+    }
+
+    res.json({
+      message: 'Device lock reset successfully. The student can now sign in on their new device.'
+    });
+  } catch (err) {
+    console.error('Error resetting user device:', err.message);
     res.status(500).json({ message: 'Server Error' });
   }
 });

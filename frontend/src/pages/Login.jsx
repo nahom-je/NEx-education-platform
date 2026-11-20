@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { BookOpen, Eye, EyeOff, Phone, Lock, User, ArrowRight, AlertCircle, MessageSquare } from 'lucide-react'
+import { BookOpen, Eye, EyeOff, Phone, Lock, User, ArrowRight, AlertCircle, MessageSquare, Smartphone, Send } from 'lucide-react'
 import { useAuthStore } from '../contexts/useAuthStore'
 
 export default function Login() {
@@ -15,7 +15,7 @@ export default function Login() {
   const [pwError, setPwError] = useState('')
   const [clientError, setClientError] = useState('')
 
-  const { login, registerUser, changePassword, isAuthenticated, mustChangePassword, loading, error, clearError } = useAuthStore()
+  const { login, registerUser, changePassword, isAuthenticated, mustChangePassword, loading, error, deviceLocked, clearError } = useAuthStore()
   const navigate = useNavigate()
 
   // Redirect if already authenticated
@@ -165,9 +165,30 @@ export default function Login() {
           </div>
 
           {displayError && (
-            <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-600 text-sm rounded-xl flex items-start gap-2">
-              <AlertCircle size={16} className="mt-0.5 shrink-0" />
-              <span>{displayError}</span>
+            <div className={`mb-6 p-3.5 rounded-xl flex items-start gap-3 border ${
+              deviceLocked 
+                ? 'bg-amber-50 border-amber-300 text-amber-900' 
+                : 'bg-red-50 border-red-200 text-red-600'
+            }`}>
+              {deviceLocked ? (
+                <Smartphone size={18} className="mt-0.5 shrink-0 text-amber-600" />
+              ) : (
+                <AlertCircle size={16} className="mt-0.5 shrink-0" />
+              )}
+              <div className="space-y-2 text-xs sm:text-sm">
+                <p className="font-semibold leading-relaxed">{displayError}</p>
+                {deviceLocked && (
+                  <a
+                    href="https://t.me/nahomJT"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-600 text-white font-bold text-xs hover:bg-teal-700 transition shadow-xs"
+                  >
+                    <Send size={12} />
+                    <span>Message @nahomJT on Telegram to Reset</span>
+                  </a>
+                )}
+              </div>
             </div>
           )}
 

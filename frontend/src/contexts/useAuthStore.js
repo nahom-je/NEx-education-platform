@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import api from '../utils/api';
+import { getDeviceId, getDeviceName } from '../utils/device';
 
 // ─── Auth Store ─────────────────────────────────────────────────────────────
 export const useAuthStore = create((set) => ({
@@ -9,48 +10,57 @@ export const useAuthStore = create((set) => ({
   loading: false,                                    // For button spinners on login/register/password
   isRehydrating: !!localStorage.getItem('nex_token'), // ONLY for initial page load token check
   error: null,
+  deviceLocked: false,
   mustChangePassword: false,
 
-  // Register new student with phone
+  // Register new student with phone & device
   registerUser: async ({ name, phone, password }) => {
-    set({ loading: true, error: null });
+    set({ loading: true, error: null, deviceLocked: false });
     try {
-      const res = await api.post('/auth/register', { name, phone, password });
+      const deviceId = getDeviceId();
+      const deviceName = getDeviceName();
+      const res = await api.post('/auth/register', { name, phone, password, deviceId, deviceName });
       localStorage.setItem('nex_token', res.data.token);
       set({
         user: res.data.user,
         token: res.data.token,
         isAuthenticated: true,
         loading: false,
+        deviceLocked: false,
         mustChangePassword: !!res.data.user?.must_change_password
       });
       return true;
     } catch (err) {
       set({
         error: err.response?.data?.message || 'Registration failed',
+        deviceLocked: !!err.response?.data?.deviceLocked,
         loading: false
       });
       return false;
     }
   },
 
-  // Login existing student/admin with phone
+  // Login existing student/admin with phone & device
   login: async (phone, password) => {
-    set({ loading: true, error: null });
+    set({ loading: true, error: null, deviceLocked: false });
     try {
-      const res = await api.post('/auth/login', { phone, password });
+      const deviceId = getDeviceId();
+      const deviceName = getDeviceName();
+      const res = await api.post('/auth/login', { phone, password, deviceId, deviceName });
       localStorage.setItem('nex_token', res.data.token);
       set({
         user: res.data.user,
         token: res.data.token,
         isAuthenticated: true,
         loading: false,
+        deviceLocked: false,
         mustChangePassword: !!res.data.user?.must_change_password
       });
       return true;
     } catch (err) {
       set({
         error: err.response?.data?.message || 'Invalid phone number or password.',
+        deviceLocked: !!err.response?.data?.deviceLocked,
         loading: false
       });
       return false;
