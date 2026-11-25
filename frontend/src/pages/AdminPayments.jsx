@@ -452,7 +452,7 @@ export default function AdminPayments() {
                                 onChange={e => setTelegramChecked(t => ({ ...t, [req.id]: e.target.checked }))}
                               />
                               <span className="text-xs text-teal-900 font-semibold leading-relaxed">
-                                I verified the screenshot receipt on Telegram <strong>@nahomJT</strong> for payment code <strong className="text-[#0D9488] font-mono">{req.payment_code}</strong> ({req.amount} ETB).
+                                I verified the screenshot receipt on Telegram <strong>@bekiJng</strong> for payment code <strong className="text-[#0D9488] font-mono">{req.payment_code}</strong> ({req.amount} ETB).
                               </span>
                             </label>
 

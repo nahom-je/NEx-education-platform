@@ -169,12 +169,12 @@ export default function MyCourses() {
       {/* Support */}
       <div className="text-center pt-2">
         <a
-          href="https://t.me/nahomJT"
+          href="https://t.me/bekiJng"
           target="_blank"
           rel="noreferrer"
           className="text-xs text-gray-400 hover:text-[#0D9488] transition"
         >
-          Need help? Contact @nahomJT on Telegram
+          Need help? Contact @bekiJng on Telegram
         </a>
       </div>
     </div>

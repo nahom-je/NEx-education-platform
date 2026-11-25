@@ -156,7 +156,7 @@ export default function CourseView() {
               {course?.name} Materials
             </h1>
             <p className="text-sm text-slate-600 leading-relaxed">
-              This course is locked. Full access to all official midterm exams, final exam solutions, lecture slides, and worksheets requires the <strong>{semester || 'Semester'} Package (70 ETB)</strong>.
+              This course is locked. Full access to all official midterm exams, final exam solutions, lecture slides, and worksheets requires the <strong>{semester || 'Semester'} Package (150 ETB)</strong>.
             </p>
           </div>
 
@@ -166,7 +166,7 @@ export default function CourseView() {
                 <p className="text-xs font-bold text-slate-800 uppercase tracking-wide">Semester Package</p>
                 <p className="text-[11px] text-slate-500">Unlocks all courses in this semester</p>
               </div>
-              <span className="text-base font-black text-[#0D9488]">70 ETB Total</span>
+              <span className="text-base font-black text-[#0D9488]">150 ETB Total</span>
             </div>
 
             <ul className="text-xs text-slate-600 space-y-2.5">
@@ -184,7 +184,7 @@ export default function CourseView() {
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Fast Telegram verification with Admin (@nahomJT)</span>
+                <span>Fast Telegram verification with Admin (@bekiJng)</span>
               </li>
             </ul>
 
@@ -193,17 +193,17 @@ export default function CourseView() {
                 to="/pricing"
                 className="w-full flex items-center justify-center gap-2 bg-[#0D9488] hover:bg-teal-700 text-white font-bold py-3.5 rounded-xl transition shadow-sm text-sm cursor-pointer"
               >
-                <span>Unlock Semester Package (70 ETB)</span>
+                <span>Unlock Semester Package (150 ETB)</span>
                 <ChevronRight className="w-4 h-4" />
               </Link>
               <a
-                href="https://t.me/nahomJT"
+                href="https://t.me/bekiJng"
                 target="_blank"
                 rel="noreferrer"
                 className="w-full flex items-center justify-center gap-2 text-xs font-semibold text-slate-600 hover:text-slate-900 py-2 transition"
               >
                 <Send className="w-3.5 h-3.5 text-teal-600" />
-                <span>Already paid? Contact Admin on Telegram (@nahomJT)</span>
+                <span>Already paid? Contact Admin on Telegram (@bekiJng)</span>
               </a>
             </div>
           </div>

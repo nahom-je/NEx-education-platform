@@ -90,7 +90,7 @@ export default function Pricing() {
     })
   }, [categoriesData, myAccess])
 
-  const pricePerPackage = parseInt(settings?.course_price || '70')
+  const pricePerPackage = parseInt(settings?.course_price || '150')
 
   // Generate unified packages list from categories:
   // ONLY Freshman Natural Science is currently live with materials (208+ resources).
@@ -132,7 +132,7 @@ export default function Pricing() {
               isAvailable: isNaturalScience,
               isLockedDepartment: !isNaturalScience,
               description: isNaturalScience
-                ? `Complete academic package for Freshman Natural Science (${sem}). Unlocks all ${semCourses.length} core courses, 208+ verified midterms, final exam solutions, lecture slides, and notes for a one-time 70 ETB.`
+                ? `Complete academic package for Freshman Natural Science (${sem}). Unlocks all ${semCourses.length} core courses, 208+ verified midterms, final exam solutions, lecture slides, and notes for a one-time 150 ETB.`
                 : `Academic materials for ${cat.name} (${sem}) are currently under preparation by tutors. This department is currently locked.`
             })
           }
@@ -231,18 +231,18 @@ export default function Pricing() {
             </h1>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
-              Pay just <span className="font-extrabold text-white bg-teal-500/30 px-2 py-0.5 rounded-md border border-teal-400/40">70 ETB</span> for the entire{' '}
+              Pay just <span className="font-extrabold text-white bg-teal-500/30 px-2 py-0.5 rounded-md border border-teal-400/40">150 ETB</span> for the entire{' '}
               <strong>Freshman First Semester</strong> package — unlocking all past exams, lecture notes, and worksheets across all 6 courses.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-slate-300">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-teal-400" />
-                <span>70 ETB Covers All Courses in Semester</span>
+                <span>150 ETB Covers All Courses in Semester</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Zap className="w-4 h-4 text-amber-400" />
-                <span>Fast Telegram Activation (@nahomJT)</span>
+                <span>Fast Telegram Activation (@bekiJng)</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
@@ -286,13 +286,13 @@ export default function Pricing() {
               <h2 className="text-lg font-bold text-slate-900">How Semester Package Access Works</h2>
             </div>
             <a
-              href="https://t.me/nahomJT"
+              href="https://t.me/bekiJng"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-700 bg-teal-50 hover:bg-teal-100 border border-teal-200 px-3 py-1.5 rounded-lg transition"
             >
               <Send className="w-3.5 h-3.5 text-teal-600" />
-              <span>Admin Telegram: @nahomJT</span>
+              <span>Admin Telegram: @bekiJng</span>
             </a>
           </div>
           
@@ -302,10 +302,10 @@ export default function Pricing() {
                 <div className="w-8 h-8 rounded-lg bg-teal-600 text-white font-black text-sm flex items-center justify-center shadow-sm">
                   1
                 </div>
-                <h3 className="font-bold text-sm text-slate-900">Select Package (70 ETB)</h3>
+                <h3 className="font-bold text-sm text-slate-900">Select Package (150 ETB)</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Choose your semester package (<strong>Freshman Natural Science — Semester 1</strong>). 70 ETB unlocks all 6 core subjects.
+                Choose your semester package (<strong>Freshman Natural Science — Semester 1</strong>). 150 ETB unlocks all 6 core subjects.
               </p>
             </div>
 
@@ -314,10 +314,10 @@ export default function Pricing() {
                 <div className="w-8 h-8 rounded-lg bg-teal-600 text-white font-black text-sm flex items-center justify-center shadow-sm">
                   2
                 </div>
-                <h3 className="font-bold text-sm text-slate-900">Transfer 70 ETB</h3>
+                <h3 className="font-bold text-sm text-slate-900">Transfer 150 ETB</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Send 70 ETB via <strong>CBE</strong> or <strong>Telebirr</strong> to the account shown on checkout and save your receipt screenshot.
+                Send 150 ETB via <strong>CBE</strong> or <strong>Telebirr</strong> to the account shown on checkout and save your receipt screenshot.
               </p>
             </div>
 
@@ -329,7 +329,7 @@ export default function Pricing() {
                 <h3 className="font-bold text-sm text-slate-900">Instant Telegram Unlock</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Forward your screenshot to <strong>@nahomJT</strong> on Telegram. Admin verifies and unlocks the entire semester package immediately!
+                Forward your screenshot to <strong>@bekiJng</strong> on Telegram. Admin verifies and unlocks the entire semester package immediately!
               </p>
             </div>
           </div>
@@ -361,7 +361,7 @@ export default function Pricing() {
             <div>
               <h3 className="font-extrabold text-sm sm:text-base text-white">Current Active Enrollment: Freshman Natural Science</h3>
               <p className="text-xs text-teal-200/90 mt-0.5">
-                70 ETB unlocks all 6 core courses with 208+ verified materials. Other departments stay locked while our tutors compile and verify materials.
+                150 ETB unlocks all 6 core courses with 208+ verified materials. Other departments stay locked while our tutors compile and verify materials.
               </p>
             </div>
           </div>
@@ -528,12 +528,12 @@ export default function Pricing() {
           <div className="divide-y divide-slate-100">
             {[
               {
-                q: 'Does 70 ETB cover the entire semester or just one course?',
-                a: '70 ETB covers the ENTIRE semester package! For example, purchasing Freshman Natural Science Semester 1 unlocks all 6 courses (Physics, Math, English, Geography, Logic, Psychology) at once.'
+                q: 'Does 150 ETB cover the entire semester or just one course?',
+                a: '150 ETB covers the ENTIRE semester package! For example, purchasing Freshman Natural Science Semester 1 unlocks all 6 courses (Physics, Math, English, Geography, Logic, Psychology) at once.'
               },
               {
                 q: 'How fast is my payment verified?',
-                a: 'Once you transfer via CBE or Telebirr and send your receipt screenshot to @nahomJT on Telegram, our admin approves and unlocks your entire semester package within 5 to 15 minutes.'
+                a: 'Once you transfer via CBE or Telebirr and send your receipt screenshot to @bekiJng on Telegram, our admin approves and unlocks your entire semester package within 5 to 15 minutes.'
               },
               {
                 q: 'What materials are included inside the package?',
@@ -541,7 +541,7 @@ export default function Pricing() {
               },
               {
                 q: 'Is this a monthly subscription or lifetime access?',
-                a: 'It is a one-time lifetime payment of 70 ETB per semester. You will always maintain access to your unlocked materials.'
+                a: 'It is a one-time lifetime payment of 150 ETB per semester. You will always maintain access to your unlocked materials.'
               }
             ].map((faq, i) => (
               <div key={i} className="py-3">
@@ -565,13 +565,13 @@ export default function Pricing() {
         {/* ── FOOTER ── */}
         <div className="text-center py-4 space-y-2">
           <a
-            href="https://t.me/nahomJT"
+            href="https://t.me/bekiJng"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-teal-50 border border-teal-200/70 text-xs font-semibold text-teal-800 hover:bg-teal-100 transition shadow-xs"
           >
             <Send className="w-4 h-4 text-[#0D9488]" />
-            <span>Questions or need manual assistance? Contact admin on Telegram <strong>@nahomJT</strong></span>
+            <span>Questions or need manual assistance? Contact admin on Telegram <strong>@bekiJng</strong></span>
           </a>
         </div>
 

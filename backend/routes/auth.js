@@ -200,7 +200,7 @@ router.post('/login', async (req, res) => {
     // 6. Check if user account is blocked
     if (user.is_blocked) {
       return res.status(403).json({
-        message: 'Your account has been suspended. Please contact admin on Telegram (@nahomJT).'
+        message: 'Your account has been suspended. Please contact admin on Telegram (@bekiJng).'
       });
     }
 
@@ -219,7 +219,7 @@ router.post('/login', async (req, res) => {
         return res.status(403).json({
           deviceLocked: true,
           registeredDeviceName: registeredDevice.deviceName || 'another device',
-          message: `This account is locked to another device (${registeredDevice.deviceName || 'another phone'}). Only 1 device is allowed per student. If you switched phones or cleared your browser, message @nahomJT on Telegram to reset your device.`
+          message: `This account is locked to another device (${registeredDevice.deviceName || 'another phone'}). Only 1 device is allowed per student. If you switched phones or cleared your browser, message @bekiJng on Telegram to reset your device.`
         });
       } else {
         // Device matches — update last active time in background

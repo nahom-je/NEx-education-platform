@@ -24,13 +24,13 @@ CREATE TABLE IF NOT EXISTS public.settings (
 -- Seed initial settings
 INSERT INTO public.settings (key, value, description)
 VALUES 
-  ('course_price', '70', 'Price per course in ETB'),
-  ('cbe_account_number', '1000591061155', 'Commercial Bank of Ethiopia account number'),
-  ('cbe_account_name', 'NAHOM JEMBERU', 'Commercial Bank of Ethiopia account holder name'),
-  ('telebirr_number', '0964549757', 'Telebirr account phone number'),
-  ('telebirr_name', 'NAHOM JEMBERU', 'Telebirr account holder name'),
-  ('telegram_admin_handle', 'nahomJT', 'Telegram admin handle for payment verification'),
-  ('telegram_admin_id', '7308473615', 'Telegram admin user ID')
+  ('course_price', '150', 'Price per course in ETB'),
+  ('cbe_account_number', '1000531330041', 'Commercial Bank of Ethiopia account number'),
+  ('cbe_account_name', 'Bereket Alemayehu', 'Commercial Bank of Ethiopia account holder name'),
+  ('telebirr_number', '0974715586', 'Telebirr account phone number'),
+  ('telebirr_name', 'Walala shumi', 'Telebirr account holder name'),
+  ('telegram_admin_handle', 'bekiJng', 'Telegram admin handle for payment verification'),
+  ('telegram_admin_id', '5627133176', 'Telegram admin user ID')
 ON CONFLICT (key) DO UPDATE SET
   value = EXCLUDED.value,
   updated_at = now();

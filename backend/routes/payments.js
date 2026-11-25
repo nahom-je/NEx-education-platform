@@ -102,15 +102,15 @@ router.post('/create', authMiddleware, async (req, res) => {
       return res.status(400).json({ message: 'You already have access to all selected courses.' });
     }
 
-    // Get price from settings (70 ETB per semester / department package)
+    // Get price from settings (150 ETB per semester / department package)
     const { data: priceSetting } = await supabase
       .from('settings')
       .select('value')
       .eq('key', 'course_price')
       .maybeSingle();
-    const price = parseInt(priceSetting?.value || process.env.COURSE_PRICE || '70');
+    const price = parseInt(priceSetting?.value || process.env.COURSE_PRICE || '150');
     
-    // 70 ETB per entire PACKAGE (e.g. "Freshman First Semester")
+    // 150 ETB per entire PACKAGE (e.g. "Freshman First Semester")
     const numPackages = Math.max(1, parseInt(packageCount) || (Array.isArray(packageNames) && packageNames.length ? packageNames.length : 1));
     const amount = price * numPackages;
 

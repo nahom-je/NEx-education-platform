@@ -22,13 +22,13 @@ router.get('/', async (req, res) => {
     }
 
     // Always fallback to environment variables
-    if (!map.course_price) map.course_price = process.env.COURSE_PRICE || '70';
-    if (!map.cbe_account_number) map.cbe_account_number = process.env.CBE_ACCOUNT_NUMBER || '1000591061155';
-    if (!map.cbe_account_name) map.cbe_account_name = process.env.CBE_ACCOUNT_NAME || 'NAHOM JEMBERU';
-    if (!map.telebirr_number) map.telebirr_number = process.env.TELEBIRR_NUMBER || '0964549757';
-    if (!map.telebirr_name) map.telebirr_name = process.env.TELEBIRR_NAME || 'NAHOM JEMBERU';
-    if (!map.telegram_admin_handle) map.telegram_admin_handle = process.env.TELEGRAM_ADMIN_HANDLE || 'nahomJT';
-    if (!map.telegram_admin_id) map.telegram_admin_id = process.env.TELEGRAM_ADMIN_ID || '7308473615';
+    if (!map.course_price) map.course_price = process.env.COURSE_PRICE || '150';
+    if (!map.cbe_account_number) map.cbe_account_number = process.env.CBE_ACCOUNT_NUMBER || '1000531330041';
+    if (!map.cbe_account_name) map.cbe_account_name = process.env.CBE_ACCOUNT_NAME || 'Bereket Alemayehu';
+    if (!map.telebirr_number) map.telebirr_number = process.env.TELEBIRR_NUMBER || '0974715586';
+    if (!map.telebirr_name) map.telebirr_name = process.env.TELEBIRR_NAME || 'Walala shumi';
+    if (!map.telegram_admin_handle) map.telegram_admin_handle = process.env.TELEGRAM_ADMIN_HANDLE || 'bekiJng';
+    if (!map.telegram_admin_id) map.telegram_admin_id = process.env.TELEGRAM_ADMIN_ID || '5627133176';
 
     res.json(map);
   } catch (err) {

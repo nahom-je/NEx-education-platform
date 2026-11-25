@@ -17,9 +17,9 @@ services:
       - key: JWT_SECRET
         sync: false
       - key: COURSE_PRICE
-        value: 70
+        value: 150
       - key: ADMIN_TELEGRAM
-        value: "@nahomJT"
+        value: "@bekiJng"
       - key: FRONTEND_URL
         sync: false
       - key: GROQ_API_KEYS

@@ -72,8 +72,8 @@ export default function PaymentPage() {
     return () => socket.disconnect()
   }, [draft, step, user])
 
-  const adminTelegramHandle = settings?.telegram_admin_handle || 'nahomJT'
-  const price = parseInt(settings?.course_price || '70')
+  const adminTelegramHandle = settings?.telegram_admin_handle || 'bekiJng'
+  const price = parseInt(settings?.course_price || '150')
   const totalAmount = packageCount * price
 
   // ── Helpers ──────────────────────────────────────────────

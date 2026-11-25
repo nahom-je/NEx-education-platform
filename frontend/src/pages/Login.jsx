@@ -179,13 +179,13 @@ export default function Login() {
                 <p className="font-semibold leading-relaxed">{displayError}</p>
                 {deviceLocked && (
                   <a
-                    href="https://t.me/nahomJT"
+                    href="https://t.me/bekiJng"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-600 text-white font-bold text-xs hover:bg-teal-700 transition shadow-xs"
                   >
                     <Send size={12} />
-                    <span>Message @nahomJT on Telegram to Reset</span>
+                    <span>Message @bekiJng on Telegram to Reset</span>
                   </a>
                 )}
               </div>
@@ -271,13 +271,13 @@ export default function Login() {
           <div className="mt-6 pt-5 border-t border-[#E5E7EB] text-center">
             <p className="text-xs text-gray-500 mb-2">Forgot your password?</p>
             <a
-              href="https://t.me/nahomJT"
+              href="https://t.me/bekiJng"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0D9488] hover:underline"
             >
               <MessageSquare size={13} />
-              Contact Admin on Telegram (@nahomJT) for a temporary password
+              Contact Admin on Telegram (@bekiJng) for a temporary password
             </a>
           </div>
         </div>

@@ -67,7 +67,7 @@ router.get('/stats', authMiddleware, adminOnly, async (req, res) => {
       supabase.from('payment_requests').select('id', { count: 'exact', head: true }).eq('status', 'approved'),
     ]);
 
-    const price = parseInt(process.env.COURSE_PRICE || '70');
+    const price = parseInt(process.env.COURSE_PRICE || '150');
     const revenueToday = (approvedTodayRes.data || []).reduce((sum, r) => sum + (r.amount || 0), 0);
 
     res.json({
